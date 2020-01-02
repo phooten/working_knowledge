@@ -1,8 +1,10 @@
-# source:
-#	->https://www.hackerearth.com/practive/data-structures/arrays/1-d/practice-problems/maximize-the-earning-137963bc-323025a6/
+# Code by Parker Hooten
+# Purpose: 
+#	Complete a challenge from "hackerearth.com" relating to arrays and finding similar
+#	characteristics.
+# Problem Source: 
+# 	-> https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/pairs-having-similar-element-eed098aa/description/
 
-# AUTHOR
-# PURPOSE
 
 # Log
 #--------------------------------------------------------------------------------------
@@ -13,9 +15,6 @@
 # - still having issues with the transitivity portion. I forsee an issue where the number of 
 #	of matches will out number what I have alloted for the array
 #--------------------------------------------------------------------------------------
-
-
-# INSERT PROBLEM STATEMENET HERE
 
 
 
