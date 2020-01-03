@@ -4,10 +4,12 @@
 # perfect pair is (Ai, Aj) where (Ai + Aj) is a perfect square and i != j
 # Note (Ai, Aj) = (Aj, Ai) and not unique
 
-#log
+# Log
+#--------------------------------------------------------------------------------------
 # [1/2/2019]
-# Most of the code is done. I have not incorporated code to check if 
-# (Ai, Aj) and (Aj, Ai) are both included or not. 
+# - Most of the code is done. I have not incorporated code to check if (Ai, Aj) and (Aj, Ai)
+#   are both included or not. 
+#--------------------------------------------------------------------------------------
 
 
 # Libraries
