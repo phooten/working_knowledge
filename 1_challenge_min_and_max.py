@@ -1,5 +1,5 @@
 # problem 1
-# start date: [ december 30 2019 ]
+# start date: [ december 30 2019 ] 
 # source:
 #		https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/min-max-8/
 
