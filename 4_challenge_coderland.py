@@ -6,6 +6,9 @@
 #--------------------------------------------------------------------------------------
 # [1/6/2020]
 #     - Finding a way to use the ternary search algorithem is quite difficult
+# [1/6/2020]
+#	  - After viewing other solutions, it appears no one else is using the actual searching 
+#		Algo
 #--------------------------------------------------------------------------------------
 
 
@@ -29,17 +32,11 @@ for h in range(0, t):
 	c = list(map(int, input().split()))
 	l = list(map(int, input().split()))
 	
-	
-	""" attempt 1-------------------------------------
-	
 	combined = []
 	for i in range(0, n):
 		combined.append((c[i], l[i], i))
-	duplicate = combined
-	duplicate.sort()
-	least = duplicated[0][0]
-	---------------------------------------------
-	"""
+	
+	
 	# search(l, r, arr, least)
 
 	print(combined)
