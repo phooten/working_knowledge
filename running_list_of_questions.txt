@@ -6,4 +6,7 @@ C and C++"
 	1. What is the difference between the two?
 	2. What is the difference between malloc and calloc?
 	3. What is the size of a char, string, int, short, long, double, float, pointer?
+	4. Difference between structs and classes, why pick one over the other i.e. linked list
+
+
 
