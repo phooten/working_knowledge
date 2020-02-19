@@ -1,0 +1,13 @@
+compile: 
+	"gcc program-source-code.c -o executable-file-name"
+		-> basic compile 
+
+	"make executable-file-name"
+
+	"g++ -g -Wall input.cpp -o executable"
+		-> for gdb and warning messages
+
+	"cc myth1.c -o executable -lm"
+		-> for math functions
+
+

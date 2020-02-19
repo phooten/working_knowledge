@@ -1,0 +1,12 @@
+to disable the bell sound:
+	terminal ->  "vim ~/.inputrc" add  "set bell-style none"
+	vim  	 ->  "vim ~/.vimrc"   add  "set visualbellC"
+ 
+shortcuts:
+	$ or <end>	 -> end of line
+	0 or <home>  -> first character of line
+	
+
+
+
+
