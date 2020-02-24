@@ -3,6 +3,13 @@
 # source:
 #		https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/min-max-8/
 
+# Status: INCOMPLETE - [2/23/2020]
+
+# Log:
+#-------------------------------------------------------------------
+# [1/30/2019]
+#	- 
+#-------------------------------------------------------------------
 
 # PROJECT NAME
 # PROJECT DESCRIPTION

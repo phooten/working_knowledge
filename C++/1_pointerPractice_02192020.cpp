@@ -1,31 +1,64 @@
-// started 2/19/2020
+// NOTE: built off of code from -> https://www.hackerrank.com/challenges/c-tutorial-pointer/problem
 
-// built off of code from -> https://www.hackerrank.com/challenges/c-tutorial-pointer/problem
+/*
+	Author:		Parker Hooten (see note above, not all mine)
+	Purpose:	to familiarize myself with the basic usage of pointers
+	Language:	C++
+*/
 
+
+// Status: INCOMPLETE - [2/19/2020]
+
+
+// Log:
+//--------------------------------------------------------------------------
+// [//]
+//		-
+//--------------------------------------------------------------------------
+
+
+// Sample Input/Output:
+/*
+ 	1:	4 5
+
+	gives:
+
+	1:	9 1
+*/
+
+
+#include <math.h>
 #include <stdio.h>
 
+
+
 void update(int* a, int* b){
-	// a' = 4 + 5 = 9
-	printf("%p %d end 1\n", a, *a);	
-	*a = 4 + 5;	
-	printf("%p %d end 2\n", a, *a);
-	
-	printf("%p %d end 3\n", b, *b);
-	*b = 4 - 5;
-	if(*b < 0){
-		*b *= -1;
-	}
-	printf("%p %d end 4\n", b, *b);
-	// b' = |4 - 5| = 1
+	// variables
+	int aa, bb;
+
+	aa = *a + *b;
+	bb = abs(*a - *b);
+
+	*a = aa;	
+	*b = bb;
 }
 
 int main(){
 	int a, b;
 	int* pa = &a;
 	int* pb = &b;
-
+	
+	// user input
 	scanf("%d %d", &a, &b);
+	
+	// calculation function
 	update(pa, pb);
-	//printf("%d %d\n",a, b);
+	
+	// output
+	printf("%d %d\n",a, b);
+	
 	return 0;
 }
+
+
+

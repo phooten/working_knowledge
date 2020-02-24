@@ -2,13 +2,15 @@
 # Problem Source: 
 
 
+#Status: INCOMPLETE - [1/6/2020]
+
 # Log
 #--------------------------------------------------------------------------------------
 # [1/6/2020]
 #     - Finding a way to use the ternary search algorithem is quite difficult
-# [1/6/2020]
+# [1/7/2020]
 #	  - After viewing other solutions, it appears no one else is using the actual searching 
-#		Algo
+#		Algo. I will learn more about this and come back.
 #--------------------------------------------------------------------------------------
 
 

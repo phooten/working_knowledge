@@ -4,12 +4,14 @@
 # perfect pair is (Ai, Aj) where (Ai + Aj) is a perfect square and i != j
 # Note (Ai, Aj) = (Aj, Ai) and not unique
 
+# Status: INCOMPLETE - [1/5/2020]
+
 # Log
 #--------------------------------------------------------------------------------------
-# [1/2/2019]
+# [1/2/2020]
 # 		- Most of the code is done. I have not incorporated code to check if (Ai, Aj) and (Aj, Ai)
 #   	  are both included or not. 
-# [1/5/2019]
+# [1/5/2020]
 # 		- I think I need to learn more about hashing then come back to this.   
 #--------------------------------------------------------------------------------------
 

@@ -1,8 +1,10 @@
 /*
-	Author:
+	Author:		Parker Hooten
 	Purpose:
-	Language:
+	Language:	C++
 */
+
+// Status: INCOMPLETE - [1/12/2020]
 
 // log
 //---------------------------------
@@ -13,6 +15,12 @@
 //		  how many elements in each list will be, nor how many groupings 
 //		  there will be. 
 //---------------------------------
+
+//	Sample Input:
+/*
+	1: 8
+	2: 1 3 5 7 8 2 5 7
+*/
 
 
 // Challenge:

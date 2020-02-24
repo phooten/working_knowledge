@@ -1,5 +1,6 @@
-# Status: [
-#		incomplete as of [1/4/2020]
+# Status: INCOMPLETE - [1/4/2020]
+
+
 #		1 forseeable issue
 # Purpose: 
 #		Complete a challenge from "hackerearth.com" relating to arrays and finding similar

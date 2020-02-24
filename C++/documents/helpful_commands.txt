@@ -1,4 +1,8 @@
 compile: 
+	"gcc program-source-code.cpp < input.txt > output.txt"
+		-> takes input from "input.txt"
+		-> prints output in "output.txt"
+
 	"gcc program-source-code.c -o executable-file-name"
 		-> basic compile 
 
