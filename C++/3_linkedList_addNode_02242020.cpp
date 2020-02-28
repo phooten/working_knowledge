@@ -12,10 +12,10 @@
 				completed entirely on my own.
 */
 
-// Status: INCOMPLETE - [2/25/2020] - 
+// Status: INCOMPLETE - [2/27/2020] - [40.ish minutes]
 //						[2/24/2020] - [2.ish hours]
 //
-//							   Total:  
+//							   Total:  2.66 hours
 
 // Log:
 //---------------------------------------------------------------------------
@@ -24,8 +24,13 @@
 // 		  linked list right, but also got a seg fault right after. I'll probably have
 //		  to valgrind if I can't visually check my code, so I'm taking a break for tonight. 
 //		  I have a much better grasp on this after drawing everything out. 
-// [2/25/2020]
-//		-
+// [2/27/2020]
+//		- The memory leak was caused on line 106: " while(tmpHead->next != NULL){ ... etc.
+//		  When the "insertAtEnd" function was called and it was an empty list, there was
+//		  No tmpHead->next, so it was accessing illeagal memory. I created an if statement 
+//		  to counter this, but there is probably a better way to counter this. I'll probably 
+//		  look into this next time I work on this. Other than that, the code runs well and 
+// 		  I have a much better understanding of this code. 
 //---------------------------------------------------------------------------
 
 
@@ -52,6 +57,7 @@
 using namespace std;
  
 struct _node{
+	// variables
 	int data;
 	struct _node *next;
 	
@@ -62,8 +68,12 @@ struct _node{
 	}
 };
 
+
+
 void printList(_node *head){
+	// Variables
 	_node *node = head;
+
 	while(node != NULL){
 		cout << node->data <<  ' ';
 		node = node->next;
@@ -71,9 +81,10 @@ void printList(_node *head){
 	cout << endl;
 }
 
-// _node *insertAtBegining(_node *head, int newData);
-// _node *insertAtEnd(_node *head, int newData);=
+
+
 _node *insertAtBegining(_node *head, int newData){
+	// Variables
 	_node *next;
 	
 	next = head;
@@ -83,25 +94,34 @@ _node *insertAtBegining(_node *head, int newData){
 	return head;
 }
 
+
+
 _node *insertAtEnd(_node *head, int newData){
-	int count;
+	// Variables	
 	_node *tmpHead;
 	_node *tmpNext;
 
 	tmpHead = head;
-	while(tmpHead->next != NULL){
-		tmpHead = tmpHead->next;
-		count++;
+	if(tmpHead != NULL){
+		while(tmpHead->next != NULL){
+			tmpHead = tmpHead->next;
+		}
+		
+		tmpHead->next = new _node(newData);
+		tmpNext = tmpHead->next;
+		tmpNext->next = NULL;
+	} else {
+		head = new _node(newData);
+		head->next = NULL;
 	}
-	tmpHead->next = new _node(newData);
-	tmpNext = tmpHead->next;
-	tmpNext->next = NULL;
-
+	
 	return head;
 }
 
+
+
 int main(){
-   	// Driver Code:
+   	// Driver Code (written by link listed at top)
    	int test;
    	cin >> test;
    	while(test--){
@@ -119,36 +139,6 @@ int main(){
 	}
 	return 0;
 }
-
-/*
-_node *insertAtBegining(_node *head, int newData){
-	_node *next;
-	
-	next = head;
-	head = _node node(newData);
-	head->next = next;
-
-	return head;
-}
-*/
-/*
-_node *insertAtEnd(node *head, int newData){
-	int count;
-	_node *tmpHead;
-	_node *tmpNext;
-
-	tmpHead = head;
-	while(tmpHead->next != NULL){
-		tmpHead = tmpHead->next
-		count++;
-	}
-	tmpHead->next = _node node(newData);
-	tmpNext = tmpHead->next;
-	tmpNext->next = NULL;
-
-	return head;
-}
-*/
 
 
 
