@@ -81,11 +81,6 @@ void printList(_node *head){
 	cout << endl;
 }
 
-_node *erase(_node *head, _node *next){
-
-	
-}
-
 _node *insertAtBegining(_node *head, int newData){
 	// Variables
 	_node *next;
@@ -124,7 +119,7 @@ _node *insertAtEnd(_node *head, int newData){
 
 
 int main(){
-   	// Driver Code (written by link listed at top)
+   	// Driver Code (written by website linked at top)
    	int test;
    	cin >> test;
    	while(test--){
@@ -140,9 +135,6 @@ int main(){
 		}
 		printList(head);
 	}
-	
-	// start of delete code 
-	
 	
 	return 0;
 }
