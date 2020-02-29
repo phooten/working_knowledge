@@ -81,7 +81,10 @@ void printList(_node *head){
 	cout << endl;
 }
 
+_node *erase(_node *head, _node *next){
 
+	
+}
 
 _node *insertAtBegining(_node *head, int newData){
 	// Variables
@@ -137,6 +140,10 @@ int main(){
 		}
 		printList(head);
 	}
+	
+	// start of delete code 
+	
+	
 	return 0;
 }
 
