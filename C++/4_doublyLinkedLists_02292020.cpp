@@ -16,8 +16,9 @@
 //		  test if everything is linked correctly or not. The program takes an input
 //		  as "n" total elements. Each number after is taken as an input and added to
 //		  the end of the list. The next step is to sort the list. 
-// [2/30/2020]
-//		- 
+// [3/2/2020]
+//		- started writing a delete function node function. It works except for the edge
+//		  cases of the initial node and the final node, expectedly. 
 //---------------------------------------------------------------------------
 
 
@@ -59,7 +60,6 @@ _node *addNode(_node *head, int data){
 	_node *node;
 
 	node = new _node(data);
-
 	if(tHead != NULL){
 		// gets to the last node
 		while(tHead->next != NULL){
@@ -69,11 +69,36 @@ _node *addNode(_node *head, int data){
 		node->next = tHead->next;
 		node->prev = tHead;
 		tHead->next = node;
-	
+
 	} else {
 		node->next = head;
 		head = node;
 	}
+
+	return head;
+}
+
+_node *deleteNode(_node *head, int index){
+	int count;
+	_node *tmpHead;
+
+	tmpHead = head;	
+	for(count = 1; count < index; count++){
+		if(tmpHead->next != NULL){
+			//cout << tmpHead << " - " << tmpHead->next << endl;
+			tmpHead = tmpHead->next;
+		} else {
+			return head;
+		}
+	}
+//	cout << "prev: " << tmpHead->prev; //->next ;//= tmpHead->next;
+//	cout << "Bout to hit, count: " << count << endl;
+	tmpHead->next->prev = tmpHead->prev;
+	tmpHead->prev->next = tmpHead->next;
+	while(tmpHead->next !=NULL){
+		tmpHead = tmpHead->next;
+	}
+	tmpHead->prev->next = NULL;
 
 	return head;
 }
@@ -84,6 +109,7 @@ _node *addNode(_node *head, int data){
 		- i.e. Bubble sorting
 */
 
+/*
 // to sort the list
 _node *sortList(_node *head){
 	
@@ -91,12 +117,14 @@ _node *sortList(_node *head){
 
 	return;
 }
+*/
 
 int main(){
 	// Variables
 	// int test;
 	int tmp;
 	int n;
+	_node *tmpHead;
 	_node *head = NULL;
 
 	cin >> n;
@@ -104,14 +132,24 @@ int main(){
 		cin >> tmp;
 		head = addNode(head, tmp);
 	}
-
-	while(head->next != NULL){
-		cout << head->data << " ";
-		head = head->next;
+	
+	tmpHead = head;
+	while(tmpHead->next != NULL){
+		cout << tmpHead->data << " ";
+		tmpHead = tmpHead->next;
 	}
 	cout << endl;
 
-	sortList(head);
+	//sortList(head);
+	tmpHead = head;
+	deleteNode(tmpHead, 2);
+	deleteNode(tmpHead, 1);	
+	tmpHead = head;
+	while(tmpHead != NULL){
+		cout << tmpHead->data << endl;
+		tmpHead = tmpHead->next;
+	}
+
 
 	return 0;
 }
