@@ -65,13 +65,13 @@ _node *addNode(_node *head, int data){
 		while(tHead->next != NULL){
 			tHead = tHead->next;
 		}
-		// node->next = NULL;
-		node->next = tHead->next;
+
 		node->prev = tHead;
 		tHead->next = node;
 
-	} else {
-		node->next = head;
+	} else {				// first node
+		node->next = NULL;
+		node->prev = NULL; 
 		head = node;
 	}
 
@@ -79,27 +79,48 @@ _node *addNode(_node *head, int data){
 }
 
 _node *deleteNode(_node *head, int index){
+	// Variables
 	int count;
 	_node *tmpHead;
 
+	// Checks: DLL (doubly linked list)
+	if(tmpHead == NULL){	// if DLL is empty
+		return head;
+	}
+
+	// goes to the index of the DLL
 	tmpHead = head;	
 	for(count = 1; count < index; count++){
-		if(tmpHead->next != NULL){
-			//cout << tmpHead << " - " << tmpHead->next << endl;
+		if(tmpHead->next != NULL){	
 			tmpHead = tmpHead->next;
-		} else {
+		
+		} else {							// checks that index !> length of DLL
 			return head;
 		}
 	}
-//	cout << "prev: " << tmpHead->prev; //->next ;//= tmpHead->next;
-//	cout << "Bout to hit, count: " << count << endl;
-	tmpHead->next->prev = tmpHead->prev;
-	tmpHead->prev->next = tmpHead->next;
-	while(tmpHead->next !=NULL){
+	
+	// removes the connections before and after node
+	if(tmpHead->next != NULL){				// checks for last node
+		tmpHead->next->prev = tmpHead->prev;
+	} else {
+		tmpHead->prev->next = NULL;
+		//tmpHead->prev = NULL;
+	}
+
+	if(tmpHead->prev != NULL){				// checks for first node
+		tmpHead->prev->next = tmpHead->next;
+	} else {
+		head = tmpHead->next;
+		tmpHead->next->prev = NULL;
+		//tmpHead->next = NULL;
+	}
+/*
+	// removes duplicate value at the end of DLL
+	while(tmpHead->next != NULL){ 
 		tmpHead = tmpHead->next;
 	}
 	tmpHead->prev->next = NULL;
-
+*/
 	return head;
 }
 
@@ -124,17 +145,19 @@ int main(){
 	// int test;
 	int tmp;
 	int n;
+	int del;
 	_node *tmpHead;
 	_node *head = NULL;
-
+	
+	cin >> del;
 	cin >> n;
-	for(int i = 0; i <= n; i++){
+	for(int i = 0; i < n; i++){
 		cin >> tmp;
 		head = addNode(head, tmp);
 	}
 	
 	tmpHead = head;
-	while(tmpHead->next != NULL){
+	while(tmpHead != NULL){
 		cout << tmpHead->data << " ";
 		tmpHead = tmpHead->next;
 	}
@@ -142,13 +165,16 @@ int main(){
 
 	//sortList(head);
 	tmpHead = head;
-	deleteNode(tmpHead, 2);
-	deleteNode(tmpHead, 1);	
+	
+	head = deleteNode(tmpHead, del);
+	//deleteNode(tmpHead, 1);	
+	
 	tmpHead = head;
 	while(tmpHead != NULL){
-		cout << tmpHead->data << endl;
+		cout << tmpHead->data << " ";
 		tmpHead = tmpHead->next;
 	}
+	cout << endl;
 
 
 	return 0;
