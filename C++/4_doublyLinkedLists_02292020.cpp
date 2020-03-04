@@ -5,8 +5,9 @@
 
 */
 
-// Status: INCOMPLETE - [2/29/2020] - [1.5 hours]
-//
+// Status: INCOMPLETE - [2/29/2020] - [1.5 hours ]
+//						[3/2/2020]  - [1.0 hour  ]
+//						[3/3/2020]  - [1.7 hours ]
 //							   Total:  
 
 // Log:
@@ -19,6 +20,12 @@
 // [3/2/2020]
 //		- started writing a delete function node function. It works except for the edge
 //		  cases of the initial node and the final node, expectedly. 
+// [3/3/2020]
+//		- I had tons of memory leak, but was able to resolve all issues without valgrind. 
+//		  there are many checks I haven't accounted for, so for now just assume the 
+//		  inputs are what would be expected. The deleting of nodes function is 
+// 		  complete and the next step is to sort the list with a function. Ideally I'd love to 
+//		  learn merge sorting and use it. 
 //---------------------------------------------------------------------------
 
 
