@@ -26,6 +26,9 @@
 #include <iostream>
 using namespace std;
 
+/*
+	printArr:
+*/
 void printArr(int arr[], int len){
 	for(int i = 0; i < len; i++){
 		cout << "a[" << i <<"]: " << arr[i] << endl; 
@@ -36,31 +39,58 @@ void printArr(int arr[], int len){
 
 
 /*
-int quickSort(int arr[], int start, int end){
-	if(start < end){
-		int pivot;
-		// pivot = partition(arr, start, end);
-		quickSort(arr, start, pivot - 1);
-		quickSort(arr, pivot + 1, end);
-	}
-}
+	reveral:
 */
-/*
-int partition(int arr[], int start, int end){
-	len = len(arr);
-	int pivot = arr[end];
-	int i = begin - 1;
+void reveral(int x, int y){
+	int *tmp = arr[];
+	arr[] = arr[];
+	arrp[] = tmp;
 
-	for(int j = begin; j <= end - 1; j++){
-		if(arr[j] <= pivot){
+	return;
+}
+
+
+/*
+	partision:
+*/
+int partision(int arr[], int start, int end){
+	int pivot = arr[end - 1];
+	int i = start - 1;
+
+	for(int j = 0; j < end; j++){
+		if(j < pivot){
 			i++;
-			swap(&arr[i], &arr[end]);
+			reveral(arr[i], arr[j]);
 		}
 	}
-	swap(&arr[i + 1], &arr[end]);
-
-	return (i + 1);
+	
+	reveral(arr[end - 1], arr[i]);	// is it arr[i] or arr[i+1]?
+	return pivot;
 }
+
+
+/*
+	Concerns:
+		- Case were start == end but inbetween are different:
+				[10 50 90 20 30 10 pivot 110 120 140 160 110] pivot = 100;
+*/
+void quickSort(int arr[], int start, int end){
+	int pivot;
+
+	if(start < end){
+
+		pivot = partision(int arr[], int start, int end);
+
+		quickSort(int arr[], int start, int pivot - 1);
+		quickSort(int arr[], int pivot + 1, int end);
+	}
+
+	return;
+}
+
+
+/*
+	main: 
 */
 int main(){
 	int length = 100;
