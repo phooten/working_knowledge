@@ -1,0 +1,20 @@
+Microsoft Visual Code Changes:
+
+files:exclude -> to exclude seeing these in explorer
+    .bash_history
+    .bash_logout
+    .bashrc
+    .cache
+    .gitconfig
+    .landscape
+    .local
+    .motd_shown
+    .profile
+    .ssh
+    .sudo_as_admin_successful
+    .viminfo
+    .vs-liveshare-keychain
+    .vscode
+    .vscode-server
+    .wget-hsts
+    supplimentalGithub
