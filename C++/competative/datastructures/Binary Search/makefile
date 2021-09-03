@@ -1,5 +1,6 @@
 main:
-	g++ binarySearch.cpp node.cpp
+	g++ -o main main.cpp BsTree.cpp
 	
 clean:
-	rm -r a.out
+	rm -r main
+	

@@ -11,7 +11,13 @@
 	Log:
     -------------------------------------------------------
 	[x/x/xxxx]
-		- 
+		- learned:
+            Class a = new Class();
+            Class *aPtr = &a;
+
+            (*aPtr).method() =  aPtr->method()
+
+            The dot operator gives direct member selection via object name.
 
     -------------------------------------------------------
 */
@@ -27,13 +33,14 @@
         - Balanced tree = 
         - Perfect tree = 
         - The tree becomes unbalanced in inserting and deleting 
+        - A new data point is always inserted at the leaf node
     -------------------------------------------------------
 
 */
 
 #include <iostream>
 #include <memory>
-#include "node.h"
+#include "BsTree.h"
 
 
 /*
@@ -46,24 +53,22 @@
 */
 int main(){
     // variables
-	int length = 100;
-	int tmp;
-    int result;
-    bool success;
-	
+	int arr[5] = {3, 1, 5, 2, 4};
+    int length = 10;
     /*
         The thought here is that I declare 1 class, then the binary search is handled
         inside of that class. 
     */
-    Node binary;
-    binary.data = rand() % 10000;
+
+    BsTree *root = NULL;
+    BsTree tree;
+    root = tree.Insert(arr[0], root);
 
     // Generate random array values	
 	for(int i = 0; i < length; i++){
-        success = binary.insert(rand() % 10000);
-        result = binary.seach(rand() % 10000);
-        success = binary.remove(rand() % 10000);    
+        tree.Insert(rand() % 100, root);
     }
-	
+	tree.Print(root);
+    
 	return 0;
 }
