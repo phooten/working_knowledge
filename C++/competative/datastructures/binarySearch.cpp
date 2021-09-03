@@ -1,9 +1,10 @@
 /*
-	Author:
+	Author:     Parker Hooten
 	Purpose:
+        to learn and understand binary search trees
 */
 
-// Status: INCOMPLETE - [x/x/xxxx]
+// Status: INCOMPLETE - [9/2/2021]
 
 /*
 	Log:
@@ -27,9 +28,4 @@ int main(){
 
 	return 0;
 }
-
-
-
-
-
 
