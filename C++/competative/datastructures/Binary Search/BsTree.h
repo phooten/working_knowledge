@@ -1,4 +1,5 @@
-
+#ifndef BSTREE_H
+#define BSTREE_H
 
 class BsTree{
     public:
@@ -14,3 +15,5 @@ class BsTree{
     private:    
 
 };
+
+#endif  // BSTREE_H
