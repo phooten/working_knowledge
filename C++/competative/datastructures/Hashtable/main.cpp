@@ -14,29 +14,31 @@
 #include "hashTable.h"
 using namespace std;
 
-
-
-/**
-    Description of the function
-	@param input the input into the function.
-    @return what is being returned.
-*/
-int placeHolder();
-
 // Controls operation of the program.
 int main(int argc, char** argv){
-    // Variables
-    string key = "Kevin";
+    // Variables  
+
+    
+    // Personal Testing:
+
+    int size = 11;
+    string name[size] = {"Sara", "Tyler", "Josh", "Chloe", "Joe", "Matt", "Terry", "Adrian", "Adrian", "Tanjiro", "Channing"};
+    string drink[size] = {"Coffee", "Coke", "Water", "Latte", "Budlight", "Vizzy", "Milk", "Tea", "Tea", "Sake", "Protein Shake"};
     
     Hash a;
-    cout << "preHash: " << a.preHash(key) << endl;
+    
+    for(int i = 0; i < size; i++){
+        a.AddItem(name[i], drink[i]);
+    }
+
+    a.PrintTable();
+    
+    // for(int i = 0; i < size; i++){
+    //     cout << name[i] << " - preHash: " << a.PreHash(name[i]) << endl;
+    // }
+    
 
 	return 0;
 }
 
-// Description of the function 
-int placeHolder(){
-
-	return 0;
-}
 

@@ -8,9 +8,13 @@ using namespace std;
 class Hash{
     public:
         Hash();
-        Hash(string key);
+        // Hash(string key);
         
-        int preHash(string key);    // Maps Key to non neg int
+        int PreHash(string key);        // Maps Key to non neg int
+        void AddItem(string name, string drink);
+        int IndexCount(int bucket);     // Number of items in the index
+        void PrintTable();
+        void PrintBucketList(int bucket);
 
     private:
         static const int tableSize = 10;
