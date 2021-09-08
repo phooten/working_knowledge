@@ -1,19 +1,26 @@
-chrontab is used to run the batMiner. Helpful link: https://www.youtube.com/watch?v=llUw3RtD-Yw
-	- crontab -e 			: adds a new task to run
+chrontab:
+	- Helpful links:
+		- Installation for WSL 2: https://www.howtogeek.com/746532/how-to-launch-cron-automatically-in-wsl-on-windows-10-and-11/ 
+		- Utility: https://www.youtube.com/watch?v=llUw3RtD-Yw
+	- crontab -e 				: adds a new task to run
+	- sudo service cron start 	: starts running cron
 	- sudo service cron start 	: starts running cron
 	- service cron status 		: shows cron status 
 
-	- chmod +x testminer.sh 	: gives access to the bash file to be ran
-	- ls -lsa			:  
-
-
 xserver:
-	- https://www.youtube.com/watch?v=4SZXbl9KVsw
-	- I started working on using the xserv in hopes of opening brave via terminal
+	- Helpful Links:
+		- Installation for WSL 2: https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+		- Installation for WSL 2: https://www.youtube.com/watch?v=4SZXbl9KVsw
 	- IP ADDRESS FOR WINDOWS MACHINE: cat /etc/resolv.conf
 		1: nameserver
 		2: nameserver
 		3: nameserver
+	- export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+
+Other 
+	- chmod +x testminer.sh 	: gives access to the bash file to be ran
+	- ls -lsa			
+	
 
 
 

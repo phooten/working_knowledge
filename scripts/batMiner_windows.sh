@@ -6,9 +6,10 @@
 #Variables 
 RELOAD_KEYS="CTRL+R"
 FILENAME="new.txt"
-TIMER=0.5
-COUNT=10
+TIMER=0.25
+COUNT=25
 
+echo "passed" >> output.txt
 
 for i in $( seq 1 $COUNT)
 do 
