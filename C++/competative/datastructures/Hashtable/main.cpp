@@ -6,7 +6,7 @@
 */
 
 // Helpful Video: https://www.youtube.com/watch?v=m6n_rozU8dA&list=PLTxllHdfUq4f7-uHOpxXnBUbsuLiI9pmb&index=2
-// Stopping point: part 6
+// go to: part 11
 
 #include <iostream>
 #include <cstdlib>

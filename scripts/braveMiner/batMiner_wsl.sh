@@ -14,8 +14,8 @@ gnome-terminal -- ./dummyTerminal.sh
 
 pid=$(pgrep -f gnome-terminal)
 
-count=25    
-time=0.5
+count=20    
+time=0.75
 for i in $( seq 0 $count)
 do 
     echo $i

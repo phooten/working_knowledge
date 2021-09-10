@@ -1,3 +1,22 @@
+Purpose: 
+	Easily earn BAT from reloading brave homepage every hour ~20 times to get 0.020 BAT.
+	The WSL script runs brave through xserv and linux. The windows script navigates to the 
+	windows partition and performs a similar task, but executed differently.
+
+Downloaded to make work:
+	- puppeteer: https://github.com/puppeteer/puppeteer
+	- nvm, Node.js, npm: https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+	- yarn
+
+
+
+
+
+
+
+
+Organize Notes:
+
 chrontab:
 	- Helpful links:
 		- Installation for WSL 2: https://www.howtogeek.com/746532/how-to-launch-cron-automatically-in-wsl-on-windows-10-and-11/ 
@@ -21,7 +40,5 @@ Other
 	- chmod +x testminer.sh 	: gives access to the bash file to be ran
 	- ls -lsa			
 	
-
-
 
 
