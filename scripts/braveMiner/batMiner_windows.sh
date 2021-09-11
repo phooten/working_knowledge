@@ -7,7 +7,7 @@
 RELOAD_KEYS="CTRL+R"
 FILENAME="new.txt"
 COUNT=20
-TIMER=0.75
+TIMER=0.5
 
 
 for i in $( seq 1 $COUNT)
