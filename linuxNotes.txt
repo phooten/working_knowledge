@@ -1,3 +1,7 @@
 zShell
     - What is this?
-    
+
+
+commands:
+	export PS1='\u@\h: '    
+

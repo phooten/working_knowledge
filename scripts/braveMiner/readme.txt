@@ -8,6 +8,23 @@ Prereq Libraries:
 	- nvm, Node.js, npm: https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
 	- yarn
 
+Issues:
+	- 	Description: 
+			(running wsl 2, fresh from boot up)
+			./runBat.sh : 
+				"	Authorization required, but no authorization protocol specified		"
+					Unable to init server: Could not connect: Connection refused
+					# Failed to parse arguments: Cannot open display:
+					0
+			echo $DISPLAY :
+				x.x.x.x:0
+			xeyes :
+				"	Authorization required, but no authorization protocol specified		"
+					Error: Can't open display: x.x.x.x:0
+		Solution:
+			Uninstalled then reinstalled vcxsrv. I think next time try to force quit in task manager then try to run
+			vcxsrv again and use xeyes to test
+
 
 
 Organize Notes:
@@ -34,6 +51,7 @@ Organize Notes:
 	Other 
 		- chmod +x testminer.sh 	: gives access to the bash file to be ran
 		- ls -lsa			
+		- cat /etc/resolv.conf | grep nameserver | awk '{print $2}'  	: Shows IP only
 	
 
 
