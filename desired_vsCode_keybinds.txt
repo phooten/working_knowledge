@@ -1,0 +1,7 @@
+Key Bind                        Changed to                  Previously in VSCode
+
+ctrl + alt + i                move up line                Developer: Toggle Developer Tools
+ctrl + alt + k                delete Line
+ctrl + alt + j
+ctrl + alt + l
+

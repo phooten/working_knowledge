@@ -15,7 +15,7 @@ gnome-terminal -- ./dummyTerminal.sh
 pid=$(pgrep -f gnome-terminal)
 
 count=20    
-time=0.4
+time=0.5
 for i in $( seq 0 $count)
 do 
     echo $i
@@ -23,6 +23,8 @@ do
     xdotool key CTRL+R    
 done
 
-kill "$pid"
+#kill "$pid"
+
+
 
 # ./~/General-Practice/scripts/batMiner_wsl.sh
