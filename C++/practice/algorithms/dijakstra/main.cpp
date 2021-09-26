@@ -32,18 +32,32 @@
 
 */
 
-class VertexList{
-    int node;
-    int shortestDist;   // shortest distance from x
-    int prevVertex;
-};
+//#include<stdio.h>
+#include<iostream>
+
+unsigned int dijkstra(unsigned int nodeStart, unsigned int nodeTotal, unsigned int nodeList);
+void getGraph();
 
 // Controls operation of the program.
 int main() {
 
 
-
     return 0;
 }
 
+unsigned int dijkstra(unsigned int nodeStart, unsigned int nodeTotal, unsigned int nodeList) {
+    unsigned int dist[nodeTotal] = {0 - 1};       // initialize everything to infinity
+    dist[nodeStart] = 0;
 
+    return dist[0];
+}
+
+void getGraph() {
+    unsigned short length;  // 2^16 = 65,536
+    
+    std::cin >> length;
+    
+    unsigned int graph[length][length];
+    
+    return;
+}
