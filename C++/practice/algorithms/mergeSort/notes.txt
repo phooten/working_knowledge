@@ -1,0 +1,4 @@
+Notes:
+	- Averages: O(n + k) 
+	- Worst Case: O(n + k)
+    - Space Complexity: O(k)

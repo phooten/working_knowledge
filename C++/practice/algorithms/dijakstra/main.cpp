@@ -1,36 +1,29 @@
 /*
-    Notes:
-        - Cannot be used if edges have negative weight
-        - Versions: 
-            - "Lazy" Dijkstra's
-            - 
+    Date:           9-23-2021
+    File:           main.cpp
+    Version:        1.0
+    Status:         INCOMPLETE
+    
+    Contributers:   Parker Hooten
 
-    Algorithm:
-        - Initialize all distances to get to each node from node A to infinity
-        - Assign start node to be 0
-        - Visit all nodes directly attached to node 0, and reassign shortest distances IF they are shorter
-        - Visit the next most promising node in the priority queue
+    Purpose:        To sort a given set of numbers using Dijakstra's method. 
+                    In doing so, I will learn about how this algorithm works and
+                    will be able to compare it's efficiency to other algorithms
+                    when I come in contact with them. 
 
-    References: 
-        - Graph Data Structure 4. Dijkstra’s Shortest Path Algorithm: https://www.youtube.com/watch?v=pVfj6mxhdMw
-        - 
-*/
 
-/**
-    Overview: Description of the file
-    @file       main.cpp
-    @author     Parker Hooten
-    @version    1.1 
-    @date       9/23/2021 [ D/M/Y ]
-*/
+    Current Status [ 9-28-2021 ]:
+                    I am currently learning how to make a Graph data structure.
+                    Once this is complete, i will move back to this algorithm 
+                    to finish.  
 
-/**
-    Description of the function
-	@param input the input into the function.
-    @return what is being returned.
+    Questions to think about:
+        1. What is Dijakstra's time/space complexity?
+        2. What are some different variations of this algorithm?
 
 
 */
+
 
 //#include<stdio.h>
 #include<iostream>

@@ -1,8 +1,0 @@
-zShell
-    - What is this?
-
-
-commands:
-    Change Default Shell Prompt:
-	    export PS1='[\u ~]: '    
-        https://access.redhat.com/solutions/505983#:~:text=PS1%20is%20a%20primary%20prompt,logs%20in%20using%20a%20terminal.

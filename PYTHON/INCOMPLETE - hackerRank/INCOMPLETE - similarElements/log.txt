@@ -1,0 +1,13 @@
+Log
+--------------------------------------------------------------------------------------
+[12/31/2019]
+     - Most of the code is completed with ease. Ran into a transitivity matching issue. I can't 
+		seem to complete this without a massive chunk of code.
+[1/1/2020] 
+     - still having issues with the transitivity portion. I forsee an issue where the number of 
+		of matches will out number what I have alloted for the array
+[1/4/2020]
+     - Found another way to add dynamically add to matches list AND nest lists, helping with keep
+		track of pairs. Transitiviy checking doesn't account for the first element of the 
+			first element in pairs() i.e. pairs[0][0] 
+--------------------------------------------------------------------------------------
