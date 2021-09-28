@@ -33,45 +33,41 @@
 */
 
 //#include<stdio.h>
-#include <iostream>
-#include <string>
 
-const unsigned short tmp = 10;
+#include "GeneralHeaders.h"
+#include "GraphClass.h"
 
-class Vertex
-{
-public:
-    std::string name;
-    bool visited;
 
-    Vertex(std::string name)
-    {
-        name = "";
-        visited = false;
-    }
-
-private:
-};
-
-class Graph
-{
-public:
-    Graph()
-    {
-        const unsigned int totalVertices;
-        Vertex vertices[totalVertices];
-        double adjacentcyMatrix[tmp][tmp];
-    }
-
-private:
-    const unsigned int totalVertices;
-    Vertex vertices[tmp];
-    double adjacentcyMatrix[tmp][tmp];
-};
 
 // Controls operation of the program.
-int main()
-{
+int main() {
 
+    int count = 5;
+    std::string nameList[] = {"A", "B", "C", "D", "E"};
+    int nameListLen = sizeof(nameList)/sizeof(nameList[0]);
+
+
+
+    // Graph Sample;
+    // Sample.print();
+    // Sample.fill();
+    // Sample.print();
+
+    Graph Sample(0);
+    Sample.print();
+
+    // Sample.fill();
+    // Sample.addVertex("Marseille");
+    // Sample.print();
+    
+
+    for(int i = 0; i < nameListLen; i++){
+        Sample.addVertex(nameList[i]);
+        // std::cout << nameList[i] << std::endl;
+    }
+    Sample.print();
+
+    Sample.removeVertex("A");
+    Sample.print();
     return 0;
 }
