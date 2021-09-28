@@ -1,28 +1,15 @@
-# Status: INCOMPLETE - [1/4/2020]
+# Date:         1-4-2019
+# File:         similarElements.py
+# Version:      1.0
+# Status        INCOMPLETE
+# Contributers	Parker Hooten
+#
+# Purpose:      to complete a problem statement from hackerrank relating to
+# 				arrays and finding similar characteristics:
+# 				https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/pairs-having-similar-element-eed098aa/description/
 
 
-#		1 forseeable issue
-# Purpose: 
-#		Complete a challenge from "hackerearth.com" relating to arrays and finding similar
-#		characteristics.
-# Problem Source: 
-# 		-> https://www.hackerearth.com/practice/data-structures/arrays
-#		   /1-d/practice-problems/algorithm/pairs-having-similar-element-eed098aa/description/
 
-
-# Log
-#--------------------------------------------------------------------------------------
-# [12/31/2019]
-#     - Most of the code is completed with ease. Ran into a transitivity matching issue. I can't 
-#		seem to complete this without a massive chunk of code.
-# [1/1/2020] 
-#     - still having issues with the transitivity portion. I forsee an issue where the number of 
-#		of matches will out number what I have alloted for the array
-# [1/4/2020]
-#     - Found another way to add dynamically add to matches list AND nest lists, helping with keep
-#		track of pairs. Transitiviy checking doesn't account for the first element of the 
-#			first element in pairs() i.e. pairs[0][0] 
-#--------------------------------------------------------------------------------------
 
 
 
