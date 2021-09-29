@@ -1,0 +1,3 @@
+notes:
+    - dynamically changes it's size, so when declaring you do NOT have to 
+    declare the size
