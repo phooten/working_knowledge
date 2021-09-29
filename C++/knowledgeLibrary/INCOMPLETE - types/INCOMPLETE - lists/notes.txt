@@ -1,0 +1,10 @@
+Notes:
+    - Slow to traverse, but quick add/remove once found
+    - Basically doubly linked lists (DLL) 
+
+
+
+References:
+    1. GeeksforGeeks: https://www.geeksforgeeks.org/list-cpp-stl/
+
+
