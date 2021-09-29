@@ -1,0 +1,4 @@
+Log:
+    [9-28-2021]
+		- can't print out: 
+             cout << graph.verticesPtr[i] << ", "; 

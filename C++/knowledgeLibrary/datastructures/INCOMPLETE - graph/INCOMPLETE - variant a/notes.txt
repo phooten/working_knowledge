@@ -1,0 +1,15 @@
+Notes:
+    - Cannot be used if edges have negative weight
+    - Versions: 
+        - "Lazy" Dijkstra's
+        - 
+
+Algorithm:
+    - Initialize all distances to get to each node from node A to infinity
+    - Assign start node to be 0
+    - Visit all nodes directly attached to node 0, and reassign shortest distances IF they are shorter
+    - Visit the next most promising node in the priority queue
+
+References: 
+    - Graph Data Structure 4. Dijkstra’s Shortest Path Algorithm: https://www.youtube.com/watch?v=pVfj6mxhdMw
+    - 

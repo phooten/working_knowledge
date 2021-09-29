@@ -1,0 +1,14 @@
+
+Log:
+-------------------------------------------------------
+[x/x/xxxx]
+    - learned:
+        Class a = new Class();
+        Class *aPtr = &a;
+
+        (*aPtr).method() =  aPtr->method()
+
+        The dot operator gives direct member selection via object name.
+
+-------------------------------------------------------
+/

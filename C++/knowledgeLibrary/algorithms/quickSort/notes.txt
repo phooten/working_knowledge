@@ -1,0 +1,7 @@
+Notes:
+    - Averages: O(n logn) 
+    - Worst Case: O(n^2)
+    - "divide and conquer algorithm"
+    - Recursivley perform: Bring PIVOT to where left of the pivot is smaller than the right
+
+
