@@ -1,3 +1,10 @@
 notes:
-    - dynamically changes it's size, so when declaring you do NOT have to 
-    declare the size
+    -   dynamically changes it's size, so when declaring you do NOT have to 
+        declare the size
+    -   This re-sizing isn't very efficient, so keep that in mind 
+
+important:
+    -   When ever moving or passing a vector, you need to pass it by reference
+        so the whole vector isn't coppied over: 
+                void Function(const std::vector<Vertex>& vertices){}
+
