@@ -1,6 +1,12 @@
 Notes:
+    - An unordered, unique set of objects. "Does an element exist, or does 
+        it not"
     - 
 
-    
+
 References:
     1. TecWithTim: https://www.youtube.com/watch?v=682xT_TcKUg
+
+
+
+
