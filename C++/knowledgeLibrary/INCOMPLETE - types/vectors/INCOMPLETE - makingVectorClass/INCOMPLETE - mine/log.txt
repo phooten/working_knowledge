@@ -1,0 +1,19 @@
+[9-29-2021]
+-   Other:
+    -   Only working with an int, no other type def
+-   Done:
+    -   .size() and .capacity()
+    -   .Resizing
+        -   working between array of size 1, to size 402653184 (2^29 * 3/4).
+            This includes bot upSize() and downSize()
+-   Having issues with:
+    -   .first() need to deal with the case of .first() = NULL
+    -   .back() need to deal with it's special case of size = 0 vector
+    -   overloading "<>" 
+-   Next Steps:
+    -   Finish:
+        -   .push_back() I have most of the basic code written, it just needs
+            to be debugged and polished. 
+
+
+
