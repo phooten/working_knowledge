@@ -1,3 +1,15 @@
+/*
+    Date:           2-29-2021
+    File:           main.cpp
+    Version:        1.0
+    Status:         INCOMPLETE
+    
+    Contributers:   Parker Hooten
+					
+    Purpose:        
+		
+*/
+
 #include"vector.h"
 #include<iostream>
 #include<string>
