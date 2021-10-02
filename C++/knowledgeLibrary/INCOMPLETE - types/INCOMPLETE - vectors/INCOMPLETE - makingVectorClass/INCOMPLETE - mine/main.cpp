@@ -17,23 +17,20 @@ using namespace std;
 
 
 
+void testFunctionality(vector* vectorPtr);
+
 void printer(string str, int var);
 
 int main(){
     vector a;
 
-    // a.print();
-    // printer("capacity: ", a.capacity());
-    // printer("size: ", a.size());
-    a.push_back(1);
-    a.push_back(2);
-    a.push_back(3);
-    a.print();
-    for(int i = 0; i < a.capacity(); i++){
-        std::cout << i << ": " << *(a.frontPosition() + i) << std::endl;
+
+
+    for(int i = 0; i < 20; i++){
+        a.push_back(i);
     }
-    // printer("capacity: ", a.capacity());
-    // printer("size: ", a.size());
+
+    testFunctionality(&a);
 
     return 0;
 }
@@ -41,5 +38,22 @@ int main(){
 void printer(string str, int var){
     cout << str << ": "<< var << endl;
     
+    return;
+}
+
+void testFunctionality(vector* vectorPtr){
+    std::cout << std::endl << "--------------Testing--------------" << std::endl;
+    vectorPtr->print();
+    printer("capacity: ", vectorPtr->capacity());
+    printer("size: ", vectorPtr->size());
+    printer("size: ", vectorPtr->front());
+    printer("front: ", *vectorPtr->frontPosition());
+    printer("size: ", vectorPtr->back());
+    printer("capacity: ", *vectorPtr->backPosition());
+    printer("size: ", vectorPtr->upSize());
+    printer("capacity: ", vectorPtr->downSize());
+    std::cout << "------------------------------------" << std::endl << std::endl;
+    
+
     return;
 }

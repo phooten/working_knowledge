@@ -59,13 +59,15 @@ vector::~vector(){
     NOT IN USE, PROGRESS PAUSED while working on resize
 */
 bool vector::push_back(int value){
-    debug(std::cout << "__vector::push_back(int value)__" << std::endl);
+    debug(std::cout << "__vector::push_back(int value)__" <<  " " << value << std::endl);
 
     if(m_size > m_capacity){   // size should never be more than capacity, only =      
         bool resize;
         resize = this->upSize();
+        std::cout << " resize: " << (char)resize << std::endl;
         if(!resize){                
             return false;
+            std::cout << "[ERROR vector::push_back() ] -> m_size > m_capacity, resize = false" << std::endl;
         }
     }
 
@@ -73,7 +75,7 @@ bool vector::push_back(int value){
     int tmpCount = 0;
     
     while(*curr != -1 && tmpCount < m_capacity){
-        std::cout << *curr << std::endl; 
+        // std::cout << *curr << std::endl; 
         curr++;
         tmpCount++;
     }
@@ -85,9 +87,11 @@ bool vector::push_back(int value){
     }
     */
     
-    
+    std::cout << "UH" << std::endl;
     // IF returning here, bigger issue, vector max size
     if (tmpCount > m_capacity){
+        
+        std::cout << "OH" << std::endl;
         return false;
     }
 
@@ -112,14 +116,17 @@ bool vector::upSize(){
     
     if(newSize <= M_INTMAX * 3 / 4 ){     // 75% of (2 ^ 14)
         int* newVectorPtr;
-
+        std::cout << "newSize: " << newSize << std::endl;
         newVectorPtr = new int[newSize];
-
+        std::cout << "NOO" << std::endl;
         // Copying old vector into new vector
         for(int i = 0; i < m_size; i++){
+            std::cout << "." << i <<  std::endl;
+            
             newVectorPtr[i] = vectorPtr[i];
         }
-
+        std::cout << "2" << std::endl;
+        
         for(int i = m_size; i < m_capacity; i++){
             newVectorPtr[i] = 0;
         }
@@ -130,6 +137,9 @@ bool vector::upSize(){
         vectorPtr = newVectorPtr;
         m_capacity = newSize;
         // m_size stays the same
+
+        std::cout << "3" << std::endl;
+        
         return true;
     } 
 
@@ -196,10 +206,31 @@ int* vector::frontPosition(){
 */
 int vector::back(){
     if(m_size >= 1){
-        return *vectorPtr;
-    } else {
-        return -1;  // needs to be null or error
+        return vectorPtr[m_size - 1];
+
     }
+
+    std::cout << "[ ERROR (int vector::back()): Vector size is <1 ] " << std::endl;
+
+    return -1;  // needs to be null or error
+}
+
+
+/*
+    Purpose:    To return the last position in the vector
+
+    Return:     the last position of the vector
+*/
+int* vector::backPosition(){
+    if(m_size >= 1){
+        return &vectorPtr[m_size - 1];
+
+    }
+
+    std::cout << "[ ERROR (int* vector::backPosition()): Vector size is <1 ] " << std::endl;
+
+    return NULL;  // needs to be null or error
+
 }
 
 
@@ -242,3 +273,4 @@ void vector::print(){
     
     std::cout << results << std::endl;
 }
+

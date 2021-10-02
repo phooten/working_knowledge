@@ -1,7 +1,7 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#define _DEBUG false
+#define _DEBUG true
 #if _DEBUG == true
     #define debug(x) x
 #else 
@@ -36,6 +36,7 @@ public:
     int front();
     int* frontPosition();
     int back();
+    int*backPosition();
     int size();
     int capacity();
     void print();
