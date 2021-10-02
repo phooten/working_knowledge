@@ -1,4 +1,4 @@
-[9-29-2021]
+[ 9-29-2021 ]
 -   Other:
     -   Only working with an int, no other type def
 -   Done:
@@ -15,5 +15,7 @@
         -   .push_back() I have most of the basic code written, it just needs
             to be debugged and polished. 
 
+[ 10-1-2021 ]
+-   
 
 

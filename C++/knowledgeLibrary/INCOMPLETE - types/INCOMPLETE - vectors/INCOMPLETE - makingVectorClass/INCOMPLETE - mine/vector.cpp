@@ -11,16 +11,16 @@ void vector::operator< (std::string TYPE){
     Default constructor
 */
 vector::vector(){
-    std::cout << "__vector::constructor__" << std::endl;
-    
-    
+    debug(std::cout << "__vector::vector()__" << std::endl);
+
     m_capacity = 10;
     m_size = 0;
     vectorPtr = new int[m_capacity];
 
     // initialize default size
     for(int i = 0; i < m_capacity; i++){
-        vectorPtr[i] = 0;
+        //vectorPtr[i] = 0;
+        vectorPtr[i] = -1;
     }     
 
 
@@ -31,7 +31,9 @@ vector::vector(){
     Constructor
 */
 vector::vector(int size){
-    std::cout << "__vector::constructor(int size)__" << std::endl;
+
+    debug(std::cout << "__vector::vector(int size)__" << std::endl);
+
     m_capacity = size;
     m_size = 0;
     vectorPtr = new int[m_capacity];
@@ -47,7 +49,9 @@ vector::vector(int size){
     Deconstructor
 */
 vector::~vector(){
-    std::cout << "__vector::~vector__" << std::endl;
+    
+    debug(std::cout << "__vector::~vector()__" << std::endl);
+
 }
 
 
@@ -55,9 +59,9 @@ vector::~vector(){
     NOT IN USE, PROGRESS PAUSED while working on resize
 */
 bool vector::push_back(int value){
-    std::cout << "__vector::push_back(int value)__" << std::endl;
-    
-    if(m_size + 1 > m_capacity){   // size should never be more than capacity, only =
+    debug(std::cout << "__vector::push_back(int value)__" << std::endl);
+
+    if(m_size > m_capacity){   // size should never be more than capacity, only =      
         bool resize;
         resize = this->upSize();
         if(!resize){                
@@ -67,11 +71,21 @@ bool vector::push_back(int value){
 
     int* curr = vectorPtr;
     int tmpCount = 0;
-    while(curr != NULL && tmpCount < m_capacity){
+    
+    while(*curr != -1 && tmpCount < m_capacity){
+        std::cout << *curr << std::endl; 
         curr++;
         tmpCount++;
     }
-
+    /* 
+    while(curr != NULL && tmpCount < m_capacity){
+        std::cout << *curr << std::endl; 
+        curr++;
+        tmpCount++;
+    }
+    */
+    
+    
     // IF returning here, bigger issue, vector max size
     if (tmpCount > m_capacity){
         return false;
@@ -91,8 +105,9 @@ bool vector::push_back(int value){
                 Increasing by 1/4 the size seems reasonable.
 */
 bool vector::upSize(){
-    std::cout << "__vector::upSize()__" << std::endl;
+    debug(std::cout << "__vector::upSize()__" << std::endl);
 
+    
     int newSize = m_capacity * 5/4;     // 25 % bigger
     
     if(newSize <= M_INTMAX * 3 / 4 ){     // 75% of (2 ^ 14)
@@ -123,7 +138,7 @@ bool vector::upSize(){
 }
 
 bool vector::downSize(){
-    std::cout << "__vector::downSize()__" << std::endl;
+    debug(std::cout << "__vector::downSize()__" << std::endl);
 
     int newCapacity = m_capacity * 3/4;     // 75 % smaller
     if(newCapacity >= 1){
@@ -159,11 +174,20 @@ bool vector::downSize(){
     Return:     the first value of the vector
 */
 int vector::front(){
-    std::cout << "__vector::front()__" << std::endl;
-
     // if vectorPtr != Null
     return *vectorPtr;
 }
+
+/*
+    Purpose:    To return the first position in the vector
+
+    Return:     the first position of the vector
+*/
+int* vector::frontPosition(){
+    // if vectorPtr != Null
+    return vectorPtr;
+}
+
 
 /*
     Purpose:    To return the last value in the vector
@@ -171,8 +195,6 @@ int vector::front(){
     Return:     the last value of the vector
 */
 int vector::back(){
-    std::cout << "__vector::back()__" << std::endl;
-
     if(m_size >= 1){
         return *vectorPtr;
     } else {
@@ -201,10 +223,22 @@ int vector::size(){
 }
 
 void vector::print(){
-    std::cout << "__vector::print()__" << std::endl;
-    
-    for(int i = 0; i < m_size; i++){
-        std::cout << vectorPtr[i] << ", " << std::endl;
-    }
-}
+    debug(std::cout << "__vector::print()__" << std::endl);
 
+    std::string results = "";
+
+    for(int i = 0; i < m_size; i++){
+        // vectorString.append(vectorPtr[i]);
+        results += std::to_string(vectorPtr[i]);
+        results += ", ";
+    }
+
+    if (!results.empty()) {
+        results.pop_back();
+        results.pop_back();
+    } else {
+        std::cout << "[ EMPTY VECTOR ]";
+    }
+    
+    std::cout << results << std::endl;
+}
