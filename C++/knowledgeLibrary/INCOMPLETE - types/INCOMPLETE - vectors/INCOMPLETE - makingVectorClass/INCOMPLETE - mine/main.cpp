@@ -26,11 +26,25 @@ int main(){
 
 
 
-    for(int i = 0; i < 20; i++){
+    for(int i = 0; i < 23; i++){
         a.push_back(i);
     }
-
     testFunctionality(&a);
+
+    a.erase(a.backPosition());
+    a.erase(a.backPosition());
+    a.erase(a.backPosition());
+    a.erase(a.backPosition());
+    a.erase(a.backPosition());
+    a.insert(17, 55);
+    
+    testFunctionality(&a);
+    
+    a.erase(a.search(55));
+    testFunctionality(&a);
+    
+
+
 
     return 0;
 }
@@ -46,12 +60,12 @@ void testFunctionality(vector* vectorPtr){
     vectorPtr->print();
     printer("capacity: ", vectorPtr->capacity());
     printer("size: ", vectorPtr->size());
-    printer("size: ", vectorPtr->front());
-    printer("front: ", *vectorPtr->frontPosition());
-    printer("size: ", vectorPtr->back());
-    printer("capacity: ", *vectorPtr->backPosition());
-    printer("size: ", vectorPtr->upSize());
-    printer("capacity: ", vectorPtr->downSize());
+    printer("front: ", vectorPtr->front());
+    printer("frontPosition: ", *vectorPtr->frontPosition());
+    printer("back: ", vectorPtr->back());
+    printer("backPosition: ", vectorPtr->backPosition());
+    printer("upSize: ", vectorPtr->upSize());
+    printer("downSize: ", vectorPtr->downSize());
     std::cout << "------------------------------------" << std::endl << std::endl;
     
 

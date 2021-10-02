@@ -18,7 +18,7 @@ public:
 
     // debug vars:
     //-----------
-    
+    int* m_null = new int; 
     //-----------
 
     // Goal is to input "int, short, string, etc" into this vector
@@ -30,15 +30,21 @@ public:
 
     bool upSize();
     bool downSize();
+
     bool push_back(int value);
-    // void erase();
-    // void insert();
+    bool insert(int position, int value);
+    bool erase(int position);
+    int search(int value);
+    
     int front();
     int* frontPosition();
     int back();
-    int*backPosition();
-    int size();
+    int backPosition();
+    
+    
     int capacity();
+    int size();
+    
     void print();
 
 private:
