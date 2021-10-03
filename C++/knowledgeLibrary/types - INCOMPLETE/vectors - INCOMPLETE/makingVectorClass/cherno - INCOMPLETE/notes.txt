@@ -1,0 +1,6 @@
+Assignment operators:
+    Vector3& operator=(const Vector3& other)        // Copy
+    Vector3& operator=(const Vector3&& other)       // Move
+    Reference:
+        https://www.youtube.com/watch?v=OWNeCTd7yQE
+
