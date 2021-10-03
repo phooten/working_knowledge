@@ -1,0 +1,19 @@
+-   lvalues:
+        Variables that have some kind of storage backing them
+-   rvalue:
+        temporary value
+-   References:
+        lvalue refs can only take in lvalues, unless they are const:
+            void PrintName(const std::string& name);
+        rvalue refs can only take in temp rvalues.
+            void PrintName(std::string&& name);
+-   GENERALLY speaking, an lvalue is on the left side of an operator, and an rvalue
+    is on the right size of an operator.
+
+-   Cannot take an lvalue reference from a rvalue. See usage of SetValue_B();
+
+Why are these important?
+    If we know we are taking in a temporary object, we know we don't have to worry
+    about keeping it alive, making sure we keep it in tact making sure we copy
+    it, etc. We can take advantage of this and use it for optomization. 
+
