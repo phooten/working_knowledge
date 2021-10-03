@@ -1,0 +1,41 @@
+[ 10-3-2021 ]
+
+-   Using Vector vs Array can greatly reduce the run time of the program
+    because Arrays are allocated on the stack which is local, while Vectors 
+    are allocated on the heap
+        ex:
+            int array[5];                   // Stored on stack
+            int* heapArray = new int[5];    // Stored on heap
+
+
+Descriptions:
+    constexpr size_t Size() const { return S; }
+        -   There is not extra storage space for this size. It's literally just
+            using the template argument. When the template gets created, S is
+            replaced with a number, so we can hard code the reutrn to return
+            a constant. 
+        -   labeling it "const" because it's not going to modify this class
+        -   by saying "constexpr" we are saying that this function can be 
+            compiled at compile time. Because of this, we can do checks like:
+                static_assert(data.size() < 10, "size too large!);
+                Array<std::string, data.Size()> newArray;
+
+    T& operator[](size_t index){ return m_Data[index]; }
+        -   Better way than returning a pointer. 
+        -   "&" -> Without this, we are creating a copy of the index every single
+            time. If our T was a string, and not an int, we wouldn't want to 
+            make a copy of it. That would be alot of used memory. This means the
+            also means the data will be read only, and we can't change the value
+        -   If we make a copy of the array that is const, we won't be able to
+            read the index value, or write to it. See the next point for fixes.  
+ 
+    const T& operator[](size_t index) const { return m_Data[index]; }
+        -   First "const" returns a const, and ensures we can't write to it. 
+        -   Second "const" means we can call this function if the Array is
+            constant: 
+                const auto& dataReadOnly = data;
+  
+    
+
+    
+
