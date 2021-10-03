@@ -1,0 +1,17 @@
+-   Templates isn't actually real code. The code is only written when the 
+    function is called. When it is called, with the type that we want to use, 
+    then the function is written. It doesn't exist untill we call it.
+
+-   Every time a template is called with a different type, a new function is
+    created with the type used. 
+
+-   template<typename T>
+    -   Here, type name is the template param, and T is the name which could
+        be anything.
+
+-   typename vs class:
+    -   In the context of templates, these are synonomous, and either can be 
+        used. Typename is prefered for readability purposes.  
+
+
+
