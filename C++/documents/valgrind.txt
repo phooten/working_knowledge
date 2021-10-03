@@ -1,0 +1,6 @@
+https://valgrind.org/
+
+valgrind -s --leak-check=full ./Program 
+
+
+

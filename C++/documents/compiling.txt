@@ -1,0 +1,7 @@
+Flags:
+    -Wall   -> Shows all warnings and turns on all standard C++ warnings about code
+                that might cause unexpected or undefined behaviors
+    -g      -> provides debugging features, used when gbd or valgrind will be used  
+
+G++:
+    https://bytes.usc.edu/cs104/wiki/gcc/
