@@ -1,0 +1,15 @@
+
+DeepCopy:
+    Exact replica of something. Complete replication and no sharing of memory
+
+std::move():
+    "this is a direct transfer of content". This is also known as an "Xvalue". 
+    This treats any value as an rvalue. If you do end up using this, be careful
+    about using an lvalue that has been move()'d. There will be no warning. 
+
+
+Why are these important?
+    When we don't really need or want to copy someone from one place to another
+    these become useful. For instance, when copying a string into a function or 
+    object. 
+
