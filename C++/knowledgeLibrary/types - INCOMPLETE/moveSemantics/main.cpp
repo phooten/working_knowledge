@@ -26,6 +26,7 @@
 class String{
 public:
     String() = default;
+    
     String(const char* string){
         printf("Created!\n");
         m_Size = strlen(string);
