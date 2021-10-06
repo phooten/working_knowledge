@@ -12,7 +12,7 @@ export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 sleep 2
 
 # opens up a new terminal and runs brave
-gnome-terminal -- ./dummyTerminal.sh
+gnome-terminal -- ./3_dummyTerminal.sh
 
 sleep 7
 
