@@ -1,0 +1,68 @@
+[ 9-29-2021 ]
+    General Notes:
+    -   Only working with an int, no other type def when declaring a vector class
+
+    Done:
+    -   .size() and .capacity()
+    -   vector resizing (vector.upSize(), vector.downSize)
+        -   working between array of size 1, to size 402653184 (2^29 * 3/4).
+
+    Having issues with:
+    -   vector.first() need to deal with the case of .first() = NULL
+    -   vector.back() need to deal with it's special case of size = 0 vector
+    -   overloading "<>" 
+
+    Next Steps:
+    -   Finish:
+        -   vector.push_back() I have most of the basic code written, it just needs
+            to be debugged and polished. 
+
+[ 10-1-2021 ]
+    -   Added "frontPosition()" and "backPosition" to help move through the array, 
+        because front()/back() returns the value and not the address. 
+    -   Completed front()/back() to function properly
+    -   Updated a testing functions and printing the vector with all it 
+        characteristics out. 
+    -   Working on push_back when it goes to line 120: newVectorPtr = new int[newSize];
+        It appears to have a memory leak so I need to download valgrind and fix
+        it.
+
+[ 10-2-2021 ]
+    Done:
+        -   vector.erase()
+        -   vector.search() 
+                -   This could be more efficient if I sort it the vector
+
+    Fixed with valgrind:
+        -   constructors and deconstructor
+        -   upSize(): bad pointer call when initializing new values in vector 
+                      array 
+    
+    Having issues with:
+        -   backPosition can't return null and be printed out, so I added m_null = 7777777
+            This is hacky and meant to be a place holder until it can be worked out
+    
+    Next Steps:
+        -   More testing to make sure functions all work
+        -   Figure out how to declare a vector<type> i.e. vector<int> a(5);
+    
+
+[ 10-3-2021 ]
+    -   I think this is a good place to see how cherno did this: https://www.youtube.com/watch?v=ryRf4Jh_YC0&t=407s
+
+
+[ 10-5-2021 ]
+    -   I tried to add templates into this but it didn't seem as easy as adding 
+        template<typename T> above vector in the .h file. 
+        TLDR: 
+            look at stack overflow link: https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file
+        TL:
+            Stack overview is saying that I would need to add template infront 
+        of every member function in the .cpp file, and this shouldn't be done 
+        anyway becase "the compiler won't be able to instantiate them implicitly
+        from their point of invocation.". To work around this, you can creat and
+        implementation file (.tpp) and include this in the end of the header 
+        file.
+    -   I think the next steps to this would be to create a copy of this project
+        and work an a fork. 
+
