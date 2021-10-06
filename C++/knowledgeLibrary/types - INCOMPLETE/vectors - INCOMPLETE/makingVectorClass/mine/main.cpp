@@ -17,8 +17,8 @@ using namespace std;
 
 
 
+// Declarations
 void testFunctionality(vector* vectorPtr);
-
 void printer(string str, int var);
 
 int main(){

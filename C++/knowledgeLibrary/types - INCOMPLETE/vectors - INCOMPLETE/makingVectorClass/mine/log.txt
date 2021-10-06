@@ -49,3 +49,20 @@
 
 [ 10-3-2021 ]
     -   I think this is a good place to see how cherno did this: https://www.youtube.com/watch?v=ryRf4Jh_YC0&t=407s
+
+
+[ 10-5-2021 ]
+    -   I tried to add templates into this but it didn't seem as easy as adding 
+        template<typename T> above vector in the .h file. 
+        TLDR: 
+            look at stack overflow link: https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file
+        TL:
+            Stack overview is saying that I would need to add template infront 
+        of every member function in the .cpp file, and this shouldn't be done 
+        anyway becase "the compiler won't be able to instantiate them implicitly
+        from their point of invocation.". To work around this, you can creat and
+        implementation file (.tpp) and include this in the end of the header 
+        file.
+    -   I think the next steps to this would be to create a copy of this project
+        and work an a fork. 
+

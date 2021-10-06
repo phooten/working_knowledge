@@ -13,6 +13,7 @@
 #include<iostream>
 #include<cmath>
 
+
 struct vector{
 public:
 
