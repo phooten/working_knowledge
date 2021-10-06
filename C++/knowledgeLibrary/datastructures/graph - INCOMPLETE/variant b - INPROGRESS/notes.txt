@@ -1,0 +1,18 @@
+Questions to think about:
+    -   what is the pros/cons and similarities/differences of:
+            std::stirng arr[10]; 
+            std::string* arr[10];
+    -   How is data stored re allocated in the arr[] after initialized:
+
+            std::string arr[10] = {" ", " ", ....}
+            for(int i = 0; i < length; i++)
+                for(int j = 0; j < i + 1; j++)
+                    arr[i] = 'A' + i;
+    
+    -   Why does this give me segfault?
+            std::string* verticesListPtr[vLen];
+            for(int i = 0; i < vLen; i++){
+                *verticesListPtr[i] = 'A' + i;
+                std::cout << *verticesListPtr[i] << " ";
+            }
+

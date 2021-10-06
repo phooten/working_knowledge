@@ -1,0 +1,41 @@
+[ 10-5-2021 ]
+    Vector vs Set:
+        Below is a list of pros and cons on choosing to use vectors or sets. 
+        I think I'm going to use vectors because I'm not sure what I will need
+        quite yet, so more control is safer. If I find I can use sets, I'll go 
+        back and swap it. I'll probably regret this decision if that happens.
+            Sets: 
+                Pros:
+                -   Always ordered, no matter what is added/removed
+                -   Quick to insert/remove
+                -   No duplicates
+                Cons:
+                -   Less control
+
+            vectors: 
+                Pros:
+                -   Much more control
+                Cons:
+                -   Hard to insert and remove, and takes time proportional to 
+                    the items already in vector to do so
+
+    PROGRESS OVERVIEW:
+        Graph Class:
+            -   Holds vector of Vertex Classes
+            -   .addVertex()
+        Vertex Class:
+            -   Copy/Move functionality
+    
+    ISSUES:
+        Space/Speed:
+        -   Better way than to copy Graph Class into main
+        -   Eliminate all copy's in Vertex.h
+
+    NEXT STEPS:
+        -   add adjacent vertices to the vertex class
+        -   add adjacent weights to the vertex class
+
+
+
+
+
