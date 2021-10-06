@@ -1,10 +1,36 @@
 Goals:
-    - Be able to build multiple files in a current folder from vs Code. Right 
+    -   Be able to build multiple files in a current folder from vs Code. Right 
         now it works only if there is one .cpp file. Other wise I'm better off
         using makefiles, which isn't bad, it would just be nice to do either. 
 
+
+
 Hotkeys:
     ctrl + shift + b:   builds the program. 
+
+    ctrl + up/down:
+        Moves 5 lines at once. Coppied this into keybindings.json 
+            {
+                "key": "ctrl+up",
+                "command": "cursorMove",
+                "args": {
+                    "to": "up",
+                    "by": "line",
+                    "value": 10
+                },
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "ctrl+down",
+                "command": "cursorMove",
+                "args": {
+                    "to": "down",
+                    "by": "line",
+                    "value": 10
+                },
+                "when": "editorTextFocus"
+            },
+
 
 
 Tips:
