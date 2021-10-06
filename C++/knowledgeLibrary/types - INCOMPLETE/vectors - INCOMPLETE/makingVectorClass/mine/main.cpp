@@ -2,7 +2,9 @@
     Date:           2-29-2021
     File:           main.cpp
     Version:        1.0
-    Status:         INCOMPLETE
+    Status:         COMPLETE :
+                        A copy of this project will be made and added too at a 
+                        later time.
     
     Contributers:   Parker Hooten
 					
