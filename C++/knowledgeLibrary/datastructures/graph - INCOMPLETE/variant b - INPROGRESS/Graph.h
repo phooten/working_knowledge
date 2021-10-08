@@ -20,6 +20,9 @@ public:
 
     // Util
     bool addVertex(std::string& name);
+    bool addAdjacent(std::string& name, std::string& adjacentName, unsigned int weight);
+
+    unsigned int searchVertex(std::string& name);
     
     // Getters
     unsigned int getVertexCount();

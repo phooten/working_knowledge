@@ -35,7 +35,29 @@
         -   add adjacent vertices to the vertex class
         -   add adjacent weights to the vertex class
 
+[ 10-7-2021 ]
+    PROGRESS OVERVIEW:
+        Graph Class:
+            -   Added a function to search for a particular node
+            -   Added a function to add a Adjacent name and weight to a vertex
+                in the graph
+        Vertex Class:
+            -   Added a function to search for a adjacent node
+            -   Added a function to add an adjacent name and weight to this
+                vertex list
+        To think about:
+            -   To organize better, maybe try to think about what Graph needs, 
+                then base what Vertex handles from the view point of the Graph.
+                not everything will need to accessable and poked with, except
+                from the Graph's point of view. 
+            -   Do you really want remove capabilities with the graph? the purpose
+                would mainly be to search through, so the question is: Is it easier
+                to make a new Graph? or easier to change? If the answer is easier 
+                to change then you don't need remove functionality.
 
-
-
-
+    NEXT STEPS:
+        -   Clean up
+        -   Before adding anymore functions, figure out why you are building this. 
+            What functionality is needed from the Dijestras algorithm? Once you knnow this,
+            you can figure out if you need to be able to search search for, and 
+            if it in Graph, or in Vertex. 

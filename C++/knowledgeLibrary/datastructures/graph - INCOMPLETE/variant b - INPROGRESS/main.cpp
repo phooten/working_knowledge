@@ -32,11 +32,26 @@
 Graph buildGraph();
 
 int main(){
+    std::string a = "";
+    std::string b = "";
+    int c = 0;
 
     Graph MapPtr = buildGraph();
+    a = "C";
+    b = "A";
+    c = 5;
+    MapPtr.addAdjacent(a, b, c);
+    a = "B";
+    b = "A";
+    c = 7;
+    MapPtr.addAdjacent(a, b, c);
+    a = "C";
+    b = "B";
+    c = 9;
+    MapPtr.addAdjacent(a, b, c);
 
     MapPtr.printContents();
-    
+    MapPtr.m_vertices[2].printContent();    
 
     return 0;
 }
@@ -73,3 +88,4 @@ Graph buildGraph(){
 
     return Map;
 }
+
