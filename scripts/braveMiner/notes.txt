@@ -1,6 +1,6 @@
 Issues:
 	- 	Description: 
-			(running wsl 2, fresh from boot up)
+    		(running wsl 2, fresh from boot up)
 			./runBat.sh : 
 				"	Authorization required, but no authorization protocol specified		"
 					Unable to init server: Could not connect: Connection refused
@@ -11,9 +11,14 @@ Issues:
 			xeyes :
 				"	Authorization required, but no authorization protocol specified		"
 					Error: Can't open display: x.x.x.x:0
-		Solution:
-			Uninstalled then reinstalled vcxsrv. I think next time try to force quit in task manager then try to run
-			vcxsrv again and use xeyes to test
+        Cause:
+            Rebooting computer
+    
+    	Solution:
+			1   Force quit in task manager. Then try to run vcxsrv again and use
+                xeyes to test. This worked once: 10-7-2021
+                
+            2   Uninstalled then reinstalled vcxsrv. Better solutions above
 
 Notes:
 	chrontab:
