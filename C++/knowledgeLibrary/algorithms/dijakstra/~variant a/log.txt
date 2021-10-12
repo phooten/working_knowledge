@@ -1,0 +1,9 @@
+[ 9-28-2021 ]:
+    -   I am currently learning how to make a Graph data structure.
+        Once this is complete, i will move back to this algorithm 
+        to finish.  
+[ 10-12-2021 ]:
+    -   
+
+
+    
