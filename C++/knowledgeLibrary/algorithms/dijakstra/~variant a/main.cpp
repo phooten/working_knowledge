@@ -27,19 +27,74 @@
 
 #include<iostream>
 #include<vector>
-#include"graph/Graph.h"
-#include "graph/Vertex.h"
-#include"graph/macros.h"
+#include"../../../datastructures/graph/~variant a/Graph.h"
+#include "../../../datastructures/graph/~variant a/Vertex.h"
+#include"../../../datastructures/graph/~variant a/macros.h"
 
 // Declarations
 void buildGraph(Graph& graph);
 void testFunctionality(Graph& graph);
+
+
+/*
+    Purpose:
+
+    Arguments:
+
+    Return:
+*/
+unsigned int dijkstra(int start, int end, Graph& map){
+    printEveryTime("\n____dijkstra(int start, Graph& map)____\n");
+    
+    // Variables
+    unsigned int INFINITY = -1;
+    unsigned int shortestDistance = -1;
+    unsigned int pqPosition;
+    std::vector<unsigned int> distances(map.get_vertices_count(), INFINITY);     // All initialized to Infinity
+    std::vector<std::pair<int, int>> priorityQueue;                     // (index, distance)
+
+    std::vector<Vertex> mapCopy = map.get_verticesVector();
+    std::vector<std::pair<int, int>> avCopy;                            // Adjacent Vector Copy
+
+
+
+
+    // Adds starting point to Queue
+    priorityQueue.push_back({start, 0});
+
+    // Goes through Queue until it's been through every point
+    while(!priorityQueue.empty()){
+
+        // checks priority queue distances
+        for(int curr = 0; curr < priorityQueue.size(); curr++){
+            if(distances[priorityQueue[curr].first] > priorityQueue[curr].second ){
+                distances[priorityQueue[curr].first] = priorityQueue[curr].second;
+            }
+        }
+
+        printEveryTime("\nerase\n");
+    
+        priorityQueue.erase(priorityQueue.begin());
+
+        // // Add to Priority Queue
+        // avCopy = mapCopy[current].get_adjacentVertices_vector();
+        // for(int curr = 0; curr < avCopy.size(); curr++){
+        //     priorityQueue.push_back({avCopy[curr].first, avCopy[curr].second + distances[avCopy[curr].first]});
+        // }
+    }
+
+    shortestDistance = distances[end];
+
+    return shortestDistance;
+}
 
 int main(){
 
     Graph map;
     buildGraph(map);
     map.printContents();
+    
+    std::cout << dijkstra(0, 0, map) << std::endl;
 
     
     return 0;
@@ -66,40 +121,40 @@ void buildGraph(Graph& graph){
 
     // Adds Adjacent Vertex/Weights
     {
-        graph.addAdjacent(0, {1, 4});
-        graph.addAdjacent(0, {7, 8});
+        graph.addAdjacentVertex(0, {1, 4});
+        graph.addAdjacentVertex(0, {7, 8});
         
-        graph.addAdjacent(1, {0, 4});
-        graph.addAdjacent(1, {2, 8});
-        graph.addAdjacent(1, {7, 11});
+        graph.addAdjacentVertex(1, {0, 4});
+        graph.addAdjacentVertex(1, {2, 8});
+        graph.addAdjacentVertex(1, {7, 11});
         
-        graph.addAdjacent(2, {1, 8});
-        graph.addAdjacent(2, {3, 7});
-        graph.addAdjacent(2, {8, 2});
+        graph.addAdjacentVertex(2, {1, 8});
+        graph.addAdjacentVertex(2, {3, 7});
+        graph.addAdjacentVertex(2, {8, 2});
         
-        graph.addAdjacent(3, {2, 7});
-        graph.addAdjacent(3, {4, 9});
-        graph.addAdjacent(3, {5, 14});
+        graph.addAdjacentVertex(3, {2, 7});
+        graph.addAdjacentVertex(3, {4, 9});
+        graph.addAdjacentVertex(3, {5, 14});
         
-        graph.addAdjacent(4, {3, 9});
-        graph.addAdjacent(4, {5, 10});
+        graph.addAdjacentVertex(4, {3, 9});
+        graph.addAdjacentVertex(4, {5, 10});
         
-        graph.addAdjacent(5, {3, 14});
-        graph.addAdjacent(5, {4, 10});
-        graph.addAdjacent(5, {6, 2});
+        graph.addAdjacentVertex(5, {3, 14});
+        graph.addAdjacentVertex(5, {4, 10});
+        graph.addAdjacentVertex(5, {6, 2});
         
-        graph.addAdjacent(6, {5, 2});
-        graph.addAdjacent(6, {7, 1});
-        graph.addAdjacent(6, {8, 6});
+        graph.addAdjacentVertex(6, {5, 2});
+        graph.addAdjacentVertex(6, {7, 1});
+        graph.addAdjacentVertex(6, {8, 6});
         
-        graph.addAdjacent(7, {0, 8});
-        graph.addAdjacent(7, {1, 11});
-        graph.addAdjacent(7, {6, 1});
-        graph.addAdjacent(7, {8, 7});
+        graph.addAdjacentVertex(7, {0, 8});
+        graph.addAdjacentVertex(7, {1, 11});
+        graph.addAdjacentVertex(7, {6, 1});
+        graph.addAdjacentVertex(7, {8, 7});
         
-        graph.addAdjacent(8, {2, 2});
-        graph.addAdjacent(8, {6, 6});
-        graph.addAdjacent(8, {7, 7});
+        graph.addAdjacentVertex(8, {2, 2});
+        graph.addAdjacentVertex(8, {6, 6});
+        graph.addAdjacentVertex(8, {7, 7});
     }
 
     return;
