@@ -14,3 +14,19 @@
         -   Figure out what the move and copy constructors/overloaded operators
             are called, what they do, why they are needed, etc. I have a general
             understanding but still lack some context. Then comment these
+
+
+[ 10-13-2021 ]
+    Updated:
+        Functionality for Dijkstras algo:
+        
+        -   Graph.h/Graph.cpp:
+            -   std::vector<Vertex> get_verticesVector() const;
+                    To copy the contents outside the class
+            -   Name changes to allow easy readability
+        
+        -   Vertex.cpp/Vertex.h
+            -   std::vector<std::pair<int, int>> get_adjacentVertices_vector();
+                    To copy the contents outside the class
+            -   Name changes to allow easy readability
+

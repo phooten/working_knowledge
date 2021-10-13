@@ -23,7 +23,7 @@ Vertex::Vertex(const Vertex& other){
     printDebug("____Vertex::Vertex(const Vertex& other)____\n");
     printDebug("Copy.\n");
 
-    m_name = other.getName();
+    m_name = other.get_name();
 }
 
 
@@ -36,7 +36,7 @@ Vertex& Vertex::operator=(const Vertex& other) {
     printDebug("____Vertex& operator=(const Vertex& other)____\n");
     printDebug("Copy.\n");
 
-    m_name = other.getName();
+    m_name = other.get_name();
     
     return *this;
 }
@@ -51,7 +51,7 @@ Vertex::Vertex(Vertex&& other){
     printDebug("____Vertex(Vertex&& other)____\n");
     printDebug("Move.\n");
 
-    m_name = other.getName();
+    m_name = other.get_name();
 }
 
 
@@ -64,7 +64,7 @@ Vertex& Vertex::operator=(Vertex&& other) {
     printDebug("____Vertex& operator=(Vertex&& other)____\n");
     printDebug("Move.\n");
 
-    m_name = other.getName();
+    m_name = other.get_name();
     
     return *this;
 }
@@ -79,9 +79,9 @@ Vertex& Vertex::operator=(Vertex&& other) {
 
     Returns:    True if successful, False if not
 */
-bool Vertex::addAdjacent(std::pair<int, int> otherPair){
+bool Vertex::add_adjacentVertex(std::pair<int, int> otherPair){
     printDebug("____Vertex::addAdjacent(std::pair<int, int> otherPair)____\n");
-    m_adjacent.push_back(otherPair);
+    m_adjacentVector.push_back(otherPair);
 
     return true;
 }
@@ -93,15 +93,15 @@ bool Vertex::addAdjacent(std::pair<int, int> otherPair){
 
     Returns:    weight of the adjacent vertex if it excists, -1 otherwise
 */
-int Vertex::searchAdjacent(int name){
+int Vertex::search_adjacentVertex(int name){
     //Variables
     int weight = -1;
 
     // Looking for name in adjacent list
-    for(int curr = 0; curr < m_adjacent.size(); curr++){
+    for(int curr = 0; curr < m_adjacentVector.size(); curr++){
         // Returns weight if found
-        if(m_adjacent[curr].first == name){
-            weight = m_adjacent[curr].second;
+        if(m_adjacentVector[curr].first == name){
+            weight = m_adjacentVector[curr].second;
             return weight;
         }
     }
@@ -111,11 +111,12 @@ int Vertex::searchAdjacent(int name){
 
 
 // getters
-int Vertex::getName() const { return m_name; }
-int Vertex::getAdjacentListSize() const { return m_adjacent.size(); }
+int Vertex::get_name() const { return m_name; }
+int Vertex::get_adjacentVertices_size() const { return m_adjacentVector.size(); }
+std::vector<std::pair<int, int>> Vertex::get_adjacentVertices_vector() const { return m_adjacentVector;}
 
 // setters
-void Vertex::setName(int otherName) { m_name = otherName; return; }
+void Vertex::set_name(int otherName) { m_name = otherName; return; }
 
 
 /*
@@ -124,9 +125,9 @@ void Vertex::setName(int otherName) { m_name = otherName; return; }
 void Vertex::printContents(){
     printDebug("____Vertex::printContents()____\n");
     
-    for(int i = 0; i < m_adjacent.size(); i++){
-        std::cout << "Name: " << m_adjacent[i].first;
-        std::cout << "\tWeight: " << m_adjacent[i].second << std::endl;
+    for(int i = 0; i < m_adjacentVector.size(); i++){
+        std::cout << "Name: " << m_adjacentVector[i].first;
+        std::cout << "\tWeight: " << m_adjacentVector[i].second << std::endl;
     }
     
     return;

@@ -64,42 +64,42 @@ void buildGraph(Graph& graph){
 
     // Adds Adjacent Vertex/Weights
     {
-        graph.addAdjacent(0, {1, 4});
-        graph.addAdjacent(0, {7, 8});
+        graph.addAdjacentVertex(0, {1, 4});
+        graph.addAdjacentVertex(0, {7, 8});
         
-        graph.addAdjacent(1, {0, 4});
-        graph.addAdjacent(1, {2, 8});
-        graph.addAdjacent(1, {7, 11});
+        graph.addAdjacentVertex(1, {0, 4});
+        graph.addAdjacentVertex(1, {2, 8});
+        graph.addAdjacentVertex(1, {7, 11});
         
-        graph.addAdjacent(2, {1, 8});
-        graph.addAdjacent(2, {3, 7});
-        graph.addAdjacent(2, {8, 2});
+        graph.addAdjacentVertex(2, {1, 8});
+        graph.addAdjacentVertex(2, {3, 7});
+        graph.addAdjacentVertex(2, {8, 2});
         
-        graph.addAdjacent(3, {2, 7});
-        graph.addAdjacent(3, {4, 9});
-        graph.addAdjacent(3, {5, 14});
+        graph.addAdjacentVertex(3, {2, 7});
+        graph.addAdjacentVertex(3, {4, 9});
+        graph.addAdjacentVertex(3, {5, 14});
         
-        graph.addAdjacent(4, {3, 9});
-        graph.addAdjacent(4, {5, 10});
+        graph.addAdjacentVertex(4, {3, 9});
+        graph.addAdjacentVertex(4, {5, 10});
         
-        graph.addAdjacent(5, {3, 14});
-        graph.addAdjacent(5, {4, 10});
-        graph.addAdjacent(5, {6, 2});
+        graph.addAdjacentVertex(5, {3, 14});
+        graph.addAdjacentVertex(5, {4, 10});
+        graph.addAdjacentVertex(5, {6, 2});
         
-        graph.addAdjacent(6, {5, 2});
-        graph.addAdjacent(6, {7, 1});
-        graph.addAdjacent(6, {8, 6});
+        graph.addAdjacentVertex(6, {5, 2});
+        graph.addAdjacentVertex(6, {7, 1});
+        graph.addAdjacentVertex(6, {8, 6});
         
-        graph.addAdjacent(7, {0, 8});
-        graph.addAdjacent(7, {1, 11});
-        graph.addAdjacent(7, {6, 1});
-        graph.addAdjacent(7, {8, 7});
+        graph.addAdjacentVertex(7, {0, 8});
+        graph.addAdjacentVertex(7, {1, 11});
+        graph.addAdjacentVertex(7, {6, 1});
+        graph.addAdjacentVertex(7, {8, 7});
         
-        graph.addAdjacent(8, {2, 2});
-        graph.addAdjacent(8, {6, 6});
-        graph.addAdjacent(8, {7, 7});
+        graph.addAdjacentVertex(8, {2, 2});
+        graph.addAdjacentVertex(8, {6, 6});
+        graph.addAdjacentVertex(8, {7, 7});
     }
-
+    
     return;
 }
 

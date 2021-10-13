@@ -23,7 +23,7 @@ Graph::~Graph(){
 bool Graph::addVertex(Vertex&& otherVertex){
     printDebug("____Graph::addVertex(Vertex& otherVertex)____\n");
     
-    m_vertices.push_back(otherVertex);
+    m_verticesVector.push_back(otherVertex);
     m_size++;
 
     return true;
@@ -40,10 +40,10 @@ bool Graph::addVertex(Vertex&& otherVertex){
 
     Return:     True if successful, False if not
 */
-bool Graph::addAdjacent(int position, std::pair<int, int> otherPair){
+bool Graph::addAdjacentVertex(int position, std::pair<int, int> otherPair){
     printDebug("____Graph::addAdjacentVertex()____\n");
 
-    m_vertices[position].addAdjacent(otherPair);
+    m_verticesVector[position].add_adjacentVertex(otherPair);
     
     return true;
 }
@@ -65,9 +65,18 @@ int Graph::isAdjacent(int name, int adjacentName){
     // Variables
     int weight;
 
-    weight = m_vertices[name].searchAdjacent(adjacentName);
+    weight = m_verticesVector[name].search_adjacentVertex(adjacentName);
 
     return weight;
+}
+
+
+// Getters
+int Graph::get_vertices_count() const { return m_verticesVector.size(); }
+std::vector<Vertex> Graph::get_verticesVector() const { return m_verticesVector; }
+
+std::vector<std::pair<int, int>> Graph::get_adjacentVertices_vector(int name) const {    
+    return m_verticesVector[0].get_adjacentVertices_vector();
 }
 
 
@@ -81,9 +90,9 @@ void Graph::printContents(){
     std::cout << "Names: " << std::endl;
     for(int i = 0; i < m_size; i++){
 
-        std::cout << i << ": " << m_vertices[i].getName();
-        std::cout << "\tAdjacent Vertices: "  << m_vertices[i].getAdjacentListSize() << std::endl;
-        m_vertices[i].printContents();
+        std::cout << i << ": " << m_verticesVector[i].get_name();
+        std::cout << "\tAdjacent Vertices: "  << m_verticesVector[i].get_adjacentVertices_size() << std::endl;
+        m_verticesVector[i].printContents();
     }
     printf("\n");
 

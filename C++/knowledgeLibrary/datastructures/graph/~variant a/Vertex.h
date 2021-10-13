@@ -20,15 +20,16 @@ public:
     Vertex& operator=(Vertex&& other);
 
 
-    bool addAdjacent(std::pair<int, int> otherPair);
-    int searchAdjacent(int name);
+    bool add_adjacentVertex(std::pair<int, int> otherPair);
+    int search_adjacentVertex(int name);
 
     // getters
-    int getName() const;
-    int getAdjacentListSize() const;
+    int get_name() const;
+    int get_adjacentVertices_size() const;
+    std::vector<std::pair<int, int>> get_adjacentVertices_vector() const;
 
     // setters
-    void setName(int otherName);
+    void set_name(int otherName);
 
 
     void printContents();
@@ -36,7 +37,7 @@ public:
 private:
     // Variables
     int m_name;
-    std::vector<std::pair<int, int>> m_adjacent;
+    std::vector<std::pair<int, int>> m_adjacentVector;
 
 };
 
