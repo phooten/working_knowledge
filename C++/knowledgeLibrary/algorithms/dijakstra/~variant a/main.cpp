@@ -43,44 +43,125 @@ void testFunctionality(Graph& graph);
 
     Return:
 */
-unsigned int dijkstra(int start, int end, Graph& map){
+unsigned int  dijkstra(int start, int end, Graph& map){
     printEveryTime("\n____dijkstra(int start, Graph& map)____\n");
     
     // Variables
+    int stop = 0;
+    bool qPresent;
     unsigned int INFINITY = -1;
     unsigned int shortestDistance = -1;
-    unsigned int pqPosition;
-    std::vector<unsigned int> distances(map.get_vertices_count(), INFINITY);     // All initialized to Infinity
-    std::vector<std::pair<int, int>> priorityQueue;                     // (index, distance)
-
-    std::vector<Vertex> mapCopy = map.get_verticesVector();
+    unsigned int pqIndex, pqNode, pqWeight;
+    unsigned int bestIndex, bestWeight;
+    unsigned int runningWeight;
+    unsigned int mapSize = map.get_vertices_count();
+    
+    bool visited[mapSize] = {};
+    unsigned int distances[mapSize];
+    std::vector<std::pair<int, int>> priorityQueue;     // (index, distance)
     std::vector<std::pair<int, int>> avCopy;                            // Adjacent Vector Copy
 
-
+    // Initializing
+    for(unsigned int &i : distances)
+        i = INFINITY;
 
 
     // Adds starting point to Queue
-    priorityQueue.push_back({start, 0});
+    distances[start] = 0;
+    priorityQueue.push_back( {start, 0});
+        
 
     // Goes through Queue until it's been through every point
+    // while(!priorityQueue.empty() && stop < 20){
     while(!priorityQueue.empty()){
+        std::cout << "\n __________________ PQ_LOOP __________________ STOP: " << stop << "\n";
+        
+        std::cout << "\n\t____Priority Queue____ \n";
+        for(auto i : priorityQueue)
+            std::cout << "\t->   index: " << i.first << "   weight: " << i.second << std::endl;
 
-        // checks priority queue distances
-        for(int curr = 0; curr < priorityQueue.size(); curr++){
-            if(distances[priorityQueue[curr].first] > priorityQueue[curr].second ){
-                distances[priorityQueue[curr].first] = priorityQueue[curr].second;
+        std::cout << "\n\t____Distance____ \n\t" ;
+        for(auto i : distances)
+            std::cout << i << ", ";
+        std::cout << std::endl;
+
+        std::cout << "\n\t____Visited____ \n\t" ;
+        for(auto i : visited)
+            std::cout << i << ", ";
+        std::cout << std::endl;
+        
+        std::cout << "\n\t____adjacent vector copy____ \n" ;
+        for(auto i : avCopy)
+            std::cout << "\t->   index: " << i.first << "   weight: " << i.second << std::endl;
+        std::cout << std::endl;
+
+
+        // Picks the next best choice in the priority queue
+        //      --  Currently the adjacent nodes are sorted when building graph
+        //          so the next best node is next
+        pqWeight = INFINITY;
+        for(int i = 0; i < priorityQueue.size(); i++){
+            if(priorityQueue[i].second < pqWeight){
+                pqNode = priorityQueue[i].first;
+                pqWeight = priorityQueue[i].second;
+                pqIndex = i;
             }
         }
+        std::cout << "\n\t\t-> pqNode: " << pqNode << std::endl;
+        std::cout << "\t\t-> pqWeight: " << pqWeight << "\n\n"; // << " + " << distances[pqNode] << "\n\n";
 
-        printEveryTime("\nerase\n");
-    
-        priorityQueue.erase(priorityQueue.begin());
+        // Marks the current priority Q as seen
+        if(pqWeight < distances[pqNode]){
+            distances[pqNode] = pqWeight;
+        }
+        visited[pqNode] = true;
+        priorityQueue.erase(priorityQueue.begin() + pqIndex);
+        
+        // checks adjacent nodes not visited
+        avCopy = map.get_adjacentVertices_vector(pqNode);
+        //while(!avCopy.empty() && stop < 7){
+        while(!avCopy.empty() ){
+            std::cout << "\n\t____adjacent vector copy____ " << std::endl;
+            for(auto i : avCopy)
+                std::cout << "\t->   index: " << i.first << "   weight: " << i.second << std::endl;
+            std::cout << std::endl;
 
-        // // Add to Priority Queue
-        // avCopy = mapCopy[current].get_adjacentVertices_vector();
-        // for(int curr = 0; curr < avCopy.size(); curr++){
-        //     priorityQueue.push_back({avCopy[curr].first, avCopy[curr].second + distances[avCopy[curr].first]});
-        // }
+
+
+            if(visited[ avCopy[0].first ] == false){
+                // std::cout << "\n____ visited[ avCopy[0].first ] == false ____\n";
+                
+                // Checks to see if adjacent nodes are in priority q
+                qPresent = false;
+                for(int i = 0; i < priorityQueue.size(); i++){
+                    if(priorityQueue[i].first == avCopy[0].first ){
+
+                        qPresent = true;
+                        
+                        // updates distance in queue if needed
+                        if(priorityQueue[i].second > avCopy[0].second + distances[pqNode]){
+                            priorityQueue[i].second = avCopy[0].second + distances[pqNode];
+                        }
+                    }
+                }
+
+                // if not present in queue, add it
+                if(qPresent == false){
+                    priorityQueue.push_back( { avCopy[0].first, avCopy[0].second + distances[pqNode]} );
+                    std::cout << "\n\t\tqPresent == false " << std::endl;
+                    std::cout << "\n\t\t-> avCopy[0].first: " << avCopy[0].first << std::endl;
+                    std::cout << "\t\t-> avCopy[0].second + distances[pqNode]: " << avCopy[0].second + distances[pqNode] << "\n";
+                    std::cout << "\t\t-> distances[pqNode]: " << distances[pqNode] << "\n\n";
+                        
+                }
+            }
+
+            avCopy.erase(avCopy.begin());
+            // stop++;
+        }
+
+
+        stop++;
     }
 
     shortestDistance = distances[end];
@@ -89,12 +170,15 @@ unsigned int dijkstra(int start, int end, Graph& map){
 }
 
 int main(){
+    int ans;
 
     Graph map;
     buildGraph(map);
     map.printContents();
     
-    std::cout << dijkstra(0, 0, map) << std::endl;
+    ans = dijkstra(0, 4, map);
+
+    std::cout << "\n\nreturn: " << ans  << std::endl;
 
     
     return 0;
@@ -120,6 +204,7 @@ void buildGraph(Graph& graph){
     }   
 
     // Adds Adjacent Vertex/Weights
+    // SORTED BY WEIGHT
     {
         graph.addAdjacentVertex(0, {1, 4});
         graph.addAdjacentVertex(0, {7, 8});
@@ -128,9 +213,9 @@ void buildGraph(Graph& graph){
         graph.addAdjacentVertex(1, {2, 8});
         graph.addAdjacentVertex(1, {7, 11});
         
-        graph.addAdjacentVertex(2, {1, 8});
-        graph.addAdjacentVertex(2, {3, 7});
         graph.addAdjacentVertex(2, {8, 2});
+        graph.addAdjacentVertex(2, {3, 7});
+        graph.addAdjacentVertex(2, {1, 8});
         
         graph.addAdjacentVertex(3, {2, 7});
         graph.addAdjacentVertex(3, {4, 9});
@@ -139,18 +224,18 @@ void buildGraph(Graph& graph){
         graph.addAdjacentVertex(4, {3, 9});
         graph.addAdjacentVertex(4, {5, 10});
         
-        graph.addAdjacentVertex(5, {3, 14});
-        graph.addAdjacentVertex(5, {4, 10});
         graph.addAdjacentVertex(5, {6, 2});
+        graph.addAdjacentVertex(5, {4, 10});
+        graph.addAdjacentVertex(5, {3, 14});
         
-        graph.addAdjacentVertex(6, {5, 2});
         graph.addAdjacentVertex(6, {7, 1});
+        graph.addAdjacentVertex(6, {5, 2});
         graph.addAdjacentVertex(6, {8, 6});
         
-        graph.addAdjacentVertex(7, {0, 8});
-        graph.addAdjacentVertex(7, {1, 11});
         graph.addAdjacentVertex(7, {6, 1});
         graph.addAdjacentVertex(7, {8, 7});
+        graph.addAdjacentVertex(7, {0, 8});
+        graph.addAdjacentVertex(7, {1, 11});
         
         graph.addAdjacentVertex(8, {2, 2});
         graph.addAdjacentVertex(8, {6, 6});
