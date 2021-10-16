@@ -76,7 +76,7 @@ int Graph::get_vertices_count() const { return m_verticesVector.size(); }
 std::vector<Vertex> Graph::get_verticesVector() const { return m_verticesVector; }
 
 std::vector<std::pair<int, int>> Graph::get_adjacentVertices_vector(int name) const {    
-    return m_verticesVector[0].get_adjacentVertices_vector();
+    return m_verticesVector[name].get_adjacentVertices_vector();
 }
 
 

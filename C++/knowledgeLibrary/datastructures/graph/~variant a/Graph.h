@@ -29,8 +29,8 @@ public:
 
 private:
     // Variables
-    std::vector<Vertex> m_verticesVector;
     int m_size;
+    std::vector<Vertex> m_verticesVector;
 
 };
 

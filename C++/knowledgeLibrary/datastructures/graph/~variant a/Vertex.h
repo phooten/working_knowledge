@@ -34,6 +34,7 @@ public:
 
     void printContents();
 
+    
 private:
     // Variables
     int m_name;
