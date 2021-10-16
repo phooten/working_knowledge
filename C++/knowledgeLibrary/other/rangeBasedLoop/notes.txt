@@ -1,0 +1,6 @@
+Notes:
+    
+    
+Questions:
+    why do you need '&' when initializing an int array? If you don't use it, 
+    the array will be filled with random values. See 'q1.cpp' for example. 
