@@ -2,8 +2,15 @@
     -   I am currently learning how to make a Graph data structure.
         Once this is complete, i will move back to this algorithm 
         to finish.  
-[ 10-14-2021 ]:
-    -   
+[ 10-15-2021 ]:
+    -   This is NOT optimal in the slightest, but it works. At least for the 8 
+        node graph. I'll come back to this.
+
+    Next Steps:
+        -   Test different starting points
+        -   Finish commenting, organizing, and cleaning up debugging code
+        -   Make a way to input graphs easier and test with different graphs 
+        -   Optimize the code
 
 
     
