@@ -14,4 +14,3 @@ Portfolio:
                 exchange for its crypto currency BAT, so it maximizes the addes 
                 seen. 
 
-Knowledge base:
