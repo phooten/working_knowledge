@@ -11,7 +11,7 @@ and link to the original code when it is being used.
 Projects I thought were interesting
 
 * name  [ section / language ]
-* [**Graph [ Datastructures / c++ ]**](General-Practice/C++/knowledgeLibrary/datastructures/graph/): Automatic platform to validate Autonomous Driving stacks
+* [**Graph [ Datastructures / c++ ]**](C++/knowledgeLibrary/datastructures/graph/): Automatic platform to validate Autonomous Driving stacks
 *
 
 
