@@ -1,0 +1,18 @@
+Uniform initialization
+    -   Allows vectors to be initialized using curly braces
+
+
+Degrees:
+    -   Amount of paths connecting a vertex
+    
+Eularian:
+    -   Eular Graph:
+            IF there is a closed trail which includes every edge of the graph
+    -   Euler Path:
+            Path that uses every edge of a graph exactly once. It starts and 
+            ends at differtent vertices
+    -   Eular Circuit:
+            Uses every edge of a graph exatcly once. Always starts and ends at 
+            the same vertex. A connected graph is an Euler graph if and only if
+            all Vertices are of even degree, and a connected graph is Eulerian
+            if and only if its edge set can be decomposed into cylces

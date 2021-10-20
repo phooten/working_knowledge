@@ -1,0 +1,32 @@
+[10-11-2021]
+    -   I feel like I'm rewriting what I've already done in variant b ....
+    Next Steps:
+        -   Comment/Format Code
+        -   
+
+[ 10-12-2021 ]
+    Varaint A vs B:
+        I don't think there is too many differences. I think i'll end up just 
+        using variant A and archive B as a version 1.0, and this is 2.0, maybe?
+        Either way, I plan on using one of the two when working on Dijkstras 
+        algorithm. 
+    Next Steps:
+        -   Figure out what the move and copy constructors/overloaded operators
+            are called, what they do, why they are needed, etc. I have a general
+            understanding but still lack some context. Then comment these
+
+
+[ 10-13-2021 ]
+    Updated:
+        Functionality for Dijkstras algo:
+        
+        -   Graph.h/Graph.cpp:
+            -   std::vector<Vertex> get_verticesVector() const;
+                    To copy the contents outside the class
+            -   Name changes to allow easy readability
+        
+        -   Vertex.cpp/Vertex.h
+            -   std::vector<std::pair<int, int>> get_adjacentVertices_vector();
+                    To copy the contents outside the class
+            -   Name changes to allow easy readability
+
