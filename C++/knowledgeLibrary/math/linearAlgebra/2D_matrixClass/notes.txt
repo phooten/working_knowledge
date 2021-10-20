@@ -1,2 +1,3 @@
 QuantitativeBytes:
     https://www.youtube.com/watch?v=jmo_HN_-PxI&list=PL3WoIG-PLjSv9vFx2dg0BqzDZH_6qzF8-&index=2
+    left off: 20:50 mins in

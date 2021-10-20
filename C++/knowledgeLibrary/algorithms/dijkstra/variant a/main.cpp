@@ -2,7 +2,6 @@
     Date:           9-23-2021
     File:           main.cpp
     Version:        1.0
-    Status:         INCOMPLETE
     
     Contributers:   Parker Hooten
 
@@ -20,8 +19,6 @@
     Questions to think about:
         1. What is Dijkstra's time/space complexity?
         2. What are some different variations of this algorithm?
-
-
 */
 
 
@@ -33,21 +30,100 @@
 
 // Declarations
 void buildGraph(Graph& graph);
+unsigned int dijkstra(int start, int end, Graph& map);
 void testFunctionality(Graph& graph);
 
 
+int main(){
+    int ans;
+
+    Graph map;
+    buildGraph(map);
+    map.printContents();
+    
+    ans = dijkstra(0, 4, map);
+
+    std::cout << "\n\nreturn: " << ans  << std::endl;
+
+    
+    return 0;
+} 
+
+
 /*
-    Purpose:
+    Purpose:    Build a graph wihtout muddying up the main function
 
-    Arguments:
+    Argument:   Graph - Modifies the graph from main  
+*/
+void buildGraph(Graph& graph){
+    printDebug("____buildGraph(Graph& graph)____\n");
+    
+    // Variables
+    int name = 0;
+    int count = 9;
 
-    Return:
+    // Adding Vertices
+    for(name; name < count; name++){
+        printf("adding: %i\n", name);
+        graph.addVertex(Vertex(name));
+    }   
+
+    // Adds Adjacent Vertex/Weights     **THESE ARE SORTED BY WEIGHT
+    {
+        graph.addAdjacentVertex(0, {1, 4});
+        graph.addAdjacentVertex(0, {7, 8});
+        
+        graph.addAdjacentVertex(1, {0, 4});
+        graph.addAdjacentVertex(1, {2, 8});
+        graph.addAdjacentVertex(1, {7, 11});
+        
+        graph.addAdjacentVertex(2, {8, 2});
+        graph.addAdjacentVertex(2, {3, 7});
+        graph.addAdjacentVertex(2, {1, 8});
+        
+        graph.addAdjacentVertex(3, {2, 7});
+        graph.addAdjacentVertex(3, {4, 9});
+        graph.addAdjacentVertex(3, {5, 14});
+        
+        graph.addAdjacentVertex(4, {3, 9});
+        graph.addAdjacentVertex(4, {5, 10});
+        
+        graph.addAdjacentVertex(5, {6, 2});
+        graph.addAdjacentVertex(5, {4, 10});
+        graph.addAdjacentVertex(5, {3, 14});
+        
+        graph.addAdjacentVertex(6, {7, 1});
+        graph.addAdjacentVertex(6, {5, 2});
+        graph.addAdjacentVertex(6, {8, 6});
+        
+        graph.addAdjacentVertex(7, {6, 1});
+        graph.addAdjacentVertex(7, {8, 7});
+        graph.addAdjacentVertex(7, {0, 8});
+        graph.addAdjacentVertex(7, {1, 11});
+        
+        graph.addAdjacentVertex(8, {2, 2});
+        graph.addAdjacentVertex(8, {6, 6});
+        graph.addAdjacentVertex(8, {7, 7});
+    }
+
+    return;
+}
+
+
+/*
+    Purpose:    Find the shortest path from one node to every other node in the
+                graph
+
+    Arguments:  start - The start node used as a reference to every other node
+                end -   The node which a weight to the start node is requested
+                map -   graph class used to reprent every vertex and details added  
+
+    Return:     
 */
 unsigned int  dijkstra(int start, int end, Graph& map){
     printEveryTime("\n____dijkstra(int start, Graph& map)____\n");
     
     // Variables
-    int stop = 0;
     bool qPresent;
     unsigned int INFINITY = -1;
     unsigned int shortestDistance = -1;
@@ -58,8 +134,8 @@ unsigned int  dijkstra(int start, int end, Graph& map){
     
     bool visited[mapSize] = {};
     unsigned int distances[mapSize];
-    std::vector<std::pair<int, int>> priorityQueue;     // (index, distance)
-    std::vector<std::pair<int, int>> avCopy;                            // Adjacent Vector Copy
+    std::vector<std::pair<int, int>> priorityQueue;         // (index, distance)
+    std::vector<std::pair<int, int>> avCopy;                // Adjacent Vector Copy
 
     // Initializing
     for(unsigned int &i : distances)
@@ -72,9 +148,8 @@ unsigned int  dijkstra(int start, int end, Graph& map){
         
 
     // Goes through Queue until it's been through every point
-    // while(!priorityQueue.empty() && stop < 20){
     while(!priorityQueue.empty()){
-        std::cout << "\n __________________ PQ_LOOP __________________ STOP: " << stop << "\n";
+        std::cout << "\n __________________ PQ_LOOP __________________ STOP: \n";
         
         std::cout << "\n\t____Priority Queue____ \n";
         for(auto i : priorityQueue)
@@ -119,7 +194,6 @@ unsigned int  dijkstra(int start, int end, Graph& map){
         
         // checks adjacent nodes not visited
         avCopy = map.get_adjacentVertices_vector(pqNode);
-        //while(!avCopy.empty() && stop < 7){
         while(!avCopy.empty() ){
             std::cout << "\n\t____adjacent vector copy____ " << std::endl;
             for(auto i : avCopy)
@@ -155,94 +229,12 @@ unsigned int  dijkstra(int start, int end, Graph& map){
                         
                 }
             }
-
             avCopy.erase(avCopy.begin());
-            // stop++;
         }
-
-
-        stop++;
     }
 
     shortestDistance = distances[end];
-
     return shortestDistance;
-}
-
-int main(){
-    int ans;
-
-    Graph map;
-    buildGraph(map);
-    map.printContents();
-    
-    ans = dijkstra(0, 4, map);
-
-    std::cout << "\n\nreturn: " << ans  << std::endl;
-
-    
-    return 0;
-} 
-
-
-/*
-    Purpose:    Build a graph wihtout muddying up the main function
-
-    Argument:   Graph - Modifies the graph from main  
-*/
-void buildGraph(Graph& graph){
-    printDebug("____buildGraph(Graph& graph)____\n");
-    
-    // Variables
-    int name = 0;
-    int count = 9;
-
-    // Adding Vertices
-    for(name; name < count; name++){
-        printf("adding: %i\n", name);
-        graph.addVertex(Vertex(name));
-    }   
-
-    // Adds Adjacent Vertex/Weights
-    // SORTED BY WEIGHT
-    {
-        graph.addAdjacentVertex(0, {1, 4});
-        graph.addAdjacentVertex(0, {7, 8});
-        
-        graph.addAdjacentVertex(1, {0, 4});
-        graph.addAdjacentVertex(1, {2, 8});
-        graph.addAdjacentVertex(1, {7, 11});
-        
-        graph.addAdjacentVertex(2, {8, 2});
-        graph.addAdjacentVertex(2, {3, 7});
-        graph.addAdjacentVertex(2, {1, 8});
-        
-        graph.addAdjacentVertex(3, {2, 7});
-        graph.addAdjacentVertex(3, {4, 9});
-        graph.addAdjacentVertex(3, {5, 14});
-        
-        graph.addAdjacentVertex(4, {3, 9});
-        graph.addAdjacentVertex(4, {5, 10});
-        
-        graph.addAdjacentVertex(5, {6, 2});
-        graph.addAdjacentVertex(5, {4, 10});
-        graph.addAdjacentVertex(5, {3, 14});
-        
-        graph.addAdjacentVertex(6, {7, 1});
-        graph.addAdjacentVertex(6, {5, 2});
-        graph.addAdjacentVertex(6, {8, 6});
-        
-        graph.addAdjacentVertex(7, {6, 1});
-        graph.addAdjacentVertex(7, {8, 7});
-        graph.addAdjacentVertex(7, {0, 8});
-        graph.addAdjacentVertex(7, {1, 11});
-        
-        graph.addAdjacentVertex(8, {2, 2});
-        graph.addAdjacentVertex(8, {6, 6});
-        graph.addAdjacentVertex(8, {7, 7});
-    }
-
-    return;
 }
 
 
@@ -255,8 +247,8 @@ void testFunctionality(Graph& graph){
     printEveryTime("\n\n");
     printEveryTime("____testFunctionality(Graph& graph)____\n");
     
-    // Testing isAdjacent function
 /*
+    // Testing isAdjacent function
     int a = 2, b = 6, 
         c = 0, d = 8,
         e = 4, f = 6;
