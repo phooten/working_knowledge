@@ -19,57 +19,29 @@ Concepts I found interesting AND are documented enough to be referenced:
 
 
 ### Table of Contents
-
-- [ ] C++
-    - [ ] Algorithms
-        - [ ] Bubble sort
-
-- C++
-    - [ ] Algorithms
-
-- C++
-    - Algorithms
-        - [ ] Bubble Sort
-
-- C++
-    - Algorithms
-        - Bubble Sort [ ]
-
-
+    Location                Status          To-Do
     C++
-        Algorithms
-            Markup :    - Bubble Sort [ ] Complete
-                            - Variants: 1
-                            - [ ] Demo
-                            - [ ] Documentation
-            dijkstras -     Documentation
-            merge sort -    Documentation / Demo
-            quick sort -    Documentation / Demo
+        Algorithms          
+            Bubble Sort     IN-PROGRESS     Documentation / Demo
+            Dijkstras       IN-PROGRESS     Documentation / Demo
+            merge sort      IN-PROGRESS     Documentation / Demo
+            quick sort      IN-PROGRESS     Documentation / Demo
         Datastructure
-            binary search - Documentation / Demo
-            graph
-            Markup :    - Graph [x] Complete
-                            - Variants: 1
-                            - [x] Demo
-                            - [x] Documentation
-            
-            hashtable -     Documentation / Demo
-            linked lists -  Documentation / Demo
-            Sets -          Documentation / Demo
-            vectors -       Documentation / Demo
-        Math -              PAUSED pending algo/datastruct completion
-        types -             PAUSED pending algo/datastruct completion
+            binary search   IN-PROGRESS     Documentation / Demo
+            graph           COMPLETE
+            hashtable       IN-PROGRESS     Documentation / Demo
+            linked lists    IN-PROGRESS     Documentation / Demo
+            Sets            IN-PROGRESS     Documentation / Demo
+            vectors         IN-PROGRESS     Documentation / Demo
+        
+        Math                PAUSED pending algo/datastruct completion
+        
+        types               PAUSED pending algo/datastruct completion
+        
         others -            PAUSED pending algo/datastruct completion
 
-    BASH
-        Brave Miner         Documentation / Demo / README.md
+    PYTHON                  PAUSED pending C++ Organization completetion
 
+    BASH                    PAUSED pending C++ Organization completetion
+        Brave Miner
 
-### Favorite References
-Good Youtube Channel References:
-    -   Concepts:
-            [WilliamFiset](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)
-    -   C++
-            [The Cherno](https://www.youtube.com/c/TheChernoProject)
-    -   Javascript:
-            [Alvin the Programmer](https://www.youtube.com/channel/UCilIG8V10ZGXaLHxvEa_UfA)
