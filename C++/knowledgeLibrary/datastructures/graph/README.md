@@ -14,10 +14,10 @@ Graph
 
 # References and Links
 - Youtube:
-- [**Graph Data Structure - Creating Adjacency List in C++**](https://www.youtube.com/watch?v=dhgKr8942rs): created by 'Coding Blocks'
+    - [**Graph Data Structure - Creating Adjacency List in C++**](https://www.youtube.com/watch?v=dhgKr8942rs): created by 'Coding Blocks'
 
 - Articles: 
-- [**wikipedia - Graph Abstract Data Type**](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
+    - [**wikipedia - Graph Abstract Data Type**](https://en.wikipedia.org/wiki/Graph_(abstract_data_type))
 
 
 

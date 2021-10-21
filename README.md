@@ -8,13 +8,8 @@ other than a learning tool, but I wanted to make it public for anyone interested
 and articles, some will be completley written by me, and some will be a mixture of both. I try my best to make it clear 
 and link to the original code when it is being used. This will probably never be completed. 
 
-### Demo / Portfolio:
-* [**Graph Datastructure [ c++ ]**]() : NO LINK YET. WILL BE ADDING A DEMO SOON [10-20-2021]
-* [**Dijkstra's Algorithm [ c++ ]**]() : : NO LINK YET. WILL BE ADDING A DEMO SOON [10-20-2021]
-* [**Brave Miner [ BASH ]**]() : : NO LINK YET. WILL BE ADDING A DEMO SOON [10-20-2021]
 
-
-### Highlights
+### Quick References
 Concepts I found interesting AND are documented enough to be referenced: 
 
 * [**Vector Datastructure [ c++ ]**](C++/knowledgeLibrary/datastructures/graph/)
@@ -23,23 +18,24 @@ Concepts I found interesting AND are documented enough to be referenced:
 * [**Brave Miner [ BASH ]**](BASH_SCRIPTS/braveMiner/)
 
 
-### Favorite References
-Good Youtube Channel References:
-    -   WilliamFiset
-    -   Alvin the Programmer
-    -   Quantitative Bytes (for linear algebra)
-
-
-### Repo Status's
+### Table of Contents
     C++
         Algorithms
-            bubble sort -   Documentation / Demo
-            dijkstras -     Documentation / Demo
+            Markup :    - Bubble Sort [ ] Complete
+                            - Variants: 1
+                            - [ ] Demo
+                            - [ ] Documentation
+            dijkstras -     Documentation
             merge sort -    Documentation / Demo
             quick sort -    Documentation / Demo
         Datastructure
             binary search - Documentation / Demo
-            graph -         Documentation / Demo
+            graph
+            Markup :    - Graph [x] Complete
+                            - Variants: 1
+                            - [x] Demo
+                            - [x] Documentation
+            
             hashtable -     Documentation / Demo
             linked lists -  Documentation / Demo
             Sets -          Documentation / Demo
@@ -51,3 +47,12 @@ Good Youtube Channel References:
     BASH
         Brave Miner         Documentation / Demo / README.md
 
+
+### Favorite References
+Good Youtube Channel References:
+    -   Concepts:
+            [WilliamFiset](https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw)
+    -   C++
+            [The Cherno](https://www.youtube.com/c/TheChernoProject)
+    -   Javascript:
+            [Alvin the Programmer](https://www.youtube.com/channel/UCilIG8V10ZGXaLHxvEa_UfA)
