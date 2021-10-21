@@ -19,6 +19,23 @@ Concepts I found interesting AND are documented enough to be referenced:
 
 
 ### Table of Contents
+1
+Markup : - [ ] C++
+            - [ ] Algorithms
+               - [ ] Bubble sort
+
+2
+Markup : - [ ] C++
+            - [ ] Algorithms
+                - [ ] Bubble sort
+3
+Markup : - C++
+            - [ ] Algorithms
+4
+Markup : - C++
+            - Algorithms
+                - [ ] Bubble Sort
+
     C++
         Algorithms
             Markup :    - Bubble Sort [ ] Complete
