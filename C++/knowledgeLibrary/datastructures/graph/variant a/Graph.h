@@ -1,7 +1,6 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-
 #include<iostream>
 #include<vector>
 #include"Vertex.h"
@@ -9,29 +8,31 @@
 
 class Graph {
 public:
-    // Constrcutors
+    // Default constrcutor/destructor
     Graph();
     ~Graph();
     
-
-    // Main 
-    bool addVertex(Vertex&& otherVertex);
-    bool addAdjacentVertex(int position, std::pair<int, int> otherPair);
-    int isAdjacent(int name, int adjacentName);
+    
+    // Graph manipulation 
+    void addVertex(Vertex&& otherVertex);
+    void addAdjacentVertex(int position, std::pair<int, int> otherPair);
+    
 
     // Getters
     int get_vertices_count() const;
+    int get_adjacentWeight(int name, int adjacentName) const;
     std::vector<Vertex> get_verticesVector() const;
     std::vector<std::pair<int, int>> get_adjacentVertices_vector(int name) const;
     
-    // Debugging member functions
-    void printContents();
+
+    // Printing functionality
+    void print_graphContents();
     void print_adjacentDetails(int name);
 
 private:
     // Variables
-    int m_size;
-    std::vector<Vertex> m_verticesVector;
+    int m_size;                             
+    std::vector<Vertex> m_verticesVector;   
 
 };
 

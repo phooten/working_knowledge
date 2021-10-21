@@ -2,19 +2,19 @@
     Date:           10-11-2021
     File:           main.cpp
     Version:        1.0
-    Status:         INCOMPLETE
-    
+    Contributer:    koffee-byte    
 
-    Purpose:        To learn about graphs and how to implement them. 
+    Purpose:        This is a DEMO for the graphs datastructure I built. It is
+                    meant learn about graphs and how to implement implement them. 
 
-    Summary:
-        [ 10-12-2021 ]
-        The Graph gets built using the "buildGraph()" function in main.cpp, and 
-        relies on Graph.h (which relies on vertex.h). This graph was build based
-        on the jpg in this folder. To build a new graph, you can scrap most of
-        this main.cpp file and graph "Graph.h", "Vertex.h", and "marcos.h", then
-        use this main.cpp as reference. It will probably be updated in the future
-        as more functionality is required.
+    Usage:
+        Building the graph relies on 'Graph.h', 'Graph.cpp', 'vertex.h', 'vertex..cpp'
+        and 'macro.h'. To build a new graph all you need are these 5 files.  
+        
+        Code in 'buildGraph()' of 'main.cpp' shows sample code on how to build
+        a graph with these files. The code was based on the png's in the document 
+        folder which are called 'sample_a.png' and 'sample_b.png'. 'sample_b' is commented
+        out.  
 
 */
 
@@ -31,12 +31,15 @@ void testFunctionality(Graph& graph);
 
 int main(){
 
+    // Making an empty Fraph
     Graph map;
+
+    // Adding the graph
     buildGraph(map);
     
-    map.printContents();
+    // Showing graph contents
+    map.print_graphContents();
     map.print_adjacentDetails(3);
-
     
     return 0;
 } 
@@ -45,15 +48,15 @@ int main(){
 /*
     Purpose:    Build a graph wihtout muddying up the main function
 
-    Argument:   Graph - Modifies the graph from main  
+    Argument:   &Graph - Modifies the graph from main  
 */
 void buildGraph(Graph& graph){
     printDebug("____buildGraph(Graph& graph)____\n");
     
     // Variables
-    int count;
+    int count;          // Total vertices in graph
 
-    //  sample_A
+    //  sample_A ( scope )
     {    
         count = 9;
 
@@ -64,7 +67,6 @@ void buildGraph(Graph& graph){
         }
         
         // Adding Adjcent Vertices
-        // graph.addAdjacentVertex(Vertex, {Adjacent Vertex, Adjacent Vertex})
         graph.addAdjacentVertex(0, {1, 1});
         graph.addAdjacentVertex(0, {4, 3});
         
@@ -102,7 +104,7 @@ void buildGraph(Graph& graph){
     }
 
 
-    // sample_B
+    // sample_B ( scope )
     // {    
     //     count = 9;
         
@@ -113,7 +115,6 @@ void buildGraph(Graph& graph){
     //     }
         
     //     // Adding Adjcent Vertices
-    //     // graph.addAdjacentVertex(Vertex, {Adjacent Vertex, Adjacent Vertex})
     //     graph.addAdjacentVertex(0, {1, 4});
     //     graph.addAdjacentVertex(0, {7, 8});
         
@@ -155,25 +156,14 @@ void buildGraph(Graph& graph){
 
 
 /*
-    Purpose:    Test functionality of Graph class and Vertex Class
+    Purpose:    Test functionality of Graph class and Vertex Class. Soley for 
+                debugging and scratch usage. 
 
-    Argument:   Graph - Modifies the graph from main  
+    Argument:   Graph - Modifies the graph built in main  
 */
 void testFunctionality(Graph& graph){
     printEveryTime("\n\n");
     printEveryTime("____testFunctionality(Graph& graph)____\n");
     
-    // Testing isAdjacent function
-/*
-    int a = 2, b = 6, 
-        c = 0, d = 8,
-        e = 4, f = 6;
 
-    std::cout << "testing:\t" << a << " and " << b << "\t\tWeight = " << graph.isAdjacent(a, b);
-    printf("\n");
-    std::cout << "testing:\t" << c << " and " << d << "\t\tWeight = " << graph.isAdjacent(c, d);
-    printf("\n");
-    std::cout << "testing:\t" << e << " and " << f << "\t\tWeight = " << graph.isAdjacent(e, f);
-    printf("\n");
-*/
 }

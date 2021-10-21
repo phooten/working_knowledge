@@ -11,27 +11,26 @@ public:
     // Constructors / Destructors
     Vertex(int otherName);
     ~Vertex();
+    Vertex(const Vertex& other);
+    Vertex(Vertex&& other);
 
     // Copy / Move
-    Vertex(const Vertex& other);
     Vertex& operator=(const Vertex& other);
-
-    Vertex(Vertex&& other);
     Vertex& operator=(Vertex&& other);
 
+    // Vertex manipulation 
+    void add_adjacentVertex(std::pair<int, int> otherPair);
 
-    bool add_adjacentVertex(std::pair<int, int> otherPair);
-    int search_adjacentVertex(int name);
-
-    // getters
-    int get_name() const;
+    // Getters
+    int get_vertexName() const;
+    int get_adjacentVertex_weight(int name) const;
     int get_adjacentVertices_size() const;
     std::vector<std::pair<int, int>> get_adjacentVertices_vector() const;
 
-    // setters
-    void set_name(int otherName);
+    // Setters
+    void set_vertexName(int otherName);
 
-    // printing
+    // Printing functionality
     void printContents();
     
 private:

@@ -30,3 +30,7 @@
                     To copy the contents outside the class
             -   Name changes to allow easy readability
 
+[10-21-2021]
+    Decided to delete variant b, so all is left is variant a. 
+    I finished up eveything inside it and the demo, then uploaded the demo to 
+    youtube.

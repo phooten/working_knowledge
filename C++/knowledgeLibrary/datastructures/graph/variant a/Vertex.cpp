@@ -1,74 +1,69 @@
 #include "Vertex.h"
 
-// Default Constructor
+
+/*
+    Pupose:     Default constructor
+*/
 Vertex::Vertex(int otherName) : m_name(otherName){
     printDebug("____Vertex(int otherName)____\n");
 }
 
 
-// Default deconstructor
+/*
+    Pupose:     Default deconstructor
+*/
 Vertex::~Vertex(){
     printDebug("____~Vertex()____\n");
     
 }
 
 
-
 /*
-    Purpose:    
-
-    Argument:   
+    Purpose:    Copy constructor    
 */
 Vertex::Vertex(const Vertex& other){ 
     printDebug("____Vertex::Vertex(const Vertex& other)____\n");
     printDebug("Copy.\n");
 
-    m_name = other.get_name();
+    m_name = other.get_vertexName();
 }
 
 
 /*
-    Purpose:    
-
-    Argument:   
-*/
-Vertex& Vertex::operator=(const Vertex& other) {
-    printDebug("____Vertex& operator=(const Vertex& other)____\n");
-    printDebug("Copy.\n");
-
-    m_name = other.get_name();
-    
-    return *this;
-}
-
-
-/*
-    Purpose:    
-
-    Argument:   
+    Purpose:    Move constructor
 */
 Vertex::Vertex(Vertex&& other){ 
     printDebug("____Vertex(Vertex&& other)____\n");
     printDebug("Move.\n");
 
-    m_name = other.get_name();
+    m_name = other.get_vertexName();
 }
 
 
 /*
-    Purpose:    
+    Purpose:    copy assignment operator
+*/
+Vertex& Vertex::operator=(const Vertex& other) {
+    printDebug("____Vertex& operator=(const Vertex& other)____\n");
+    printDebug("Copy.\n");
 
-    Argument:   
+    m_name = other.get_vertexName();
+    
+    return *this;
+}
+
+
+/*
+    Purpose:    move assignment operator
 */
 Vertex& Vertex::operator=(Vertex&& other) {
     printDebug("____Vertex& operator=(Vertex&& other)____\n");
     printDebug("Move.\n");
 
-    m_name = other.get_name();
+    m_name = other.get_vertexName();
     
     return *this;
 }
-
 
 
 /*
@@ -76,15 +71,19 @@ Vertex& Vertex::operator=(Vertex&& other) {
                 it takes to get there from the original vertex
 
     Argument:   otherPair - Adjacent vertex and weight respectivley to be added 
-
-    Returns:    True if successful, False if not
 */
-bool Vertex::add_adjacentVertex(std::pair<int, int> otherPair){
+void Vertex::add_adjacentVertex(std::pair<int, int> otherPair){
     printDebug("____Vertex::addAdjacent(std::pair<int, int> otherPair)____\n");
     m_adjacentVector.push_back(otherPair);
 
-    return true;
+    return;
 }
+
+/*
+    Pupose:     returns the vertex name
+*/    
+int Vertex::get_vertexName() const { return m_name; }
+
 
 /*
     Purpose:    Searches for a name in this vertex's adjacent list
@@ -93,7 +92,7 @@ bool Vertex::add_adjacentVertex(std::pair<int, int> otherPair){
 
     Returns:    weight of the adjacent vertex if it excists, -1 otherwise
 */
-int Vertex::search_adjacentVertex(int name){
+int Vertex::get_adjacentVertex_weight(int name) const {
     //Variables
     int weight = -1;
 
@@ -109,14 +108,20 @@ int Vertex::search_adjacentVertex(int name){
     return weight;
 }
 
-
-// getters
-int Vertex::get_name() const { return m_name; }
+/*
+    Pupose:     returns the size of the adjacent vector bound to this vertex
+*/    
 int Vertex::get_adjacentVertices_size() const { return m_adjacentVector.size(); }
-std::vector<std::pair<int, int>> Vertex::get_adjacentVertices_vector() const { return m_adjacentVector;}
 
-// setters
-void Vertex::set_name(int otherName) { m_name = otherName; return; }
+/*
+    purpose:    returns adjacent vector bound to this vertex for external copying
+*/
+std::vector<std::pair<int, int>> Vertex::get_adjacentVertices_vector() const { return m_adjacentVector; }
+
+/*
+    purpose:    sets the vertex name
+*/
+void Vertex::set_vertexName(int otherName) { m_name = otherName; return; }
 
 
 /*

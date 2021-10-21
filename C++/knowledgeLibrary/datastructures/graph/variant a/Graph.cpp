@@ -1,12 +1,18 @@
 #include "Graph.h"
 
-// Default constructor
+
+/*
+    Purpose:    Default constructor
+*/
 Graph::Graph() : m_size(0) {
    printDebug("____Graph::Graph()____\n");
     
 }
 
-// Default deconstructor
+
+/*
+    Purpose:    Default deconstructor
+*/
 Graph::~Graph(){
     printDebug("____Graph::~Graph()____\n");
     
@@ -14,19 +20,17 @@ Graph::~Graph(){
 
 
 /*
-    Purpose:    Adds a vertex node to the graph structure
+    Purpose:    Adds a vertex to the graph structure
 
     Argument:   otherVertex - Vertex to be added to the graph
-
-    Return:     True if successful, False if not
 */
-bool Graph::addVertex(Vertex&& otherVertex){
+void Graph::addVertex(Vertex&& otherVertex){
     printDebug("____Graph::addVertex(Vertex& otherVertex)____\n");
     
     m_verticesVector.push_back(otherVertex);
     m_size++;
 
-    return true;
+    return;
 }
 
 
@@ -37,15 +41,13 @@ bool Graph::addVertex(Vertex&& otherVertex){
     Argument:   position -  Position of the vertex in the graph to add an 
                             adjacent point to.  
                 otherPair - Adjacent vertex and weight respectivley to be added
-
-    Return:     True if successful, False if not
 */
-bool Graph::addAdjacentVertex(int position, std::pair<int, int> otherPair){
+void Graph::addAdjacentVertex(int position, std::pair<int, int> otherPair){
     printDebug("____Graph::addAdjacentVertex()____\n");
 
     m_verticesVector[position].add_adjacentVertex(otherPair);
     
-    return true;
+    return;
 }
 
 
@@ -55,26 +57,41 @@ bool Graph::addAdjacentVertex(int position, std::pair<int, int> otherPair){
 
     Argument:   name -          name of the vertex being looked at  
                 adjacentName -  name of the vertex that will be scanned in 
-                                "name"'s adjacent list 
+                                "name"'s adjacent vertices vector 
 
     Return:     weight of the vertex if it's adjacent, else -1
 */
-int Graph::isAdjacent(int name, int adjacentName){
+int Graph::get_adjacentWeight(int name, int adjacentName) const {
     printDebug("____Graph::isAdjacent(int name, int adjacentName)____\n");
     
     // Variables
     int weight;
 
-    weight = m_verticesVector[name].search_adjacentVertex(adjacentName);
+    weight = m_verticesVector[name].get_adjacentVertex_weight(adjacentName);
 
     return weight;
 }
 
 
-// Getters
-int Graph::get_vertices_count() const { return m_verticesVector.size(); }
-std::vector<Vertex> Graph::get_verticesVector() const { return m_verticesVector; }
+/*
+    Purpose:    returns how many vertices are currently in the graph
+*/
+int Graph::get_vertices_count() const { 
+    return m_verticesVector.size(); 
+}
 
+
+/*
+    Purpose:    returns the graph vertices vector to be accessed
+*/
+std::vector<Vertex> Graph::get_verticesVector() const { 
+    return m_verticesVector; 
+}
+
+
+/*
+    Purpose:    returns the adjacent vertices vector of a specificied graph vertex
+*/
 std::vector<std::pair<int, int>> Graph::get_adjacentVertices_vector(int name) const {    
     return m_verticesVector[name].get_adjacentVertices_vector();
 }
@@ -83,7 +100,7 @@ std::vector<std::pair<int, int>> Graph::get_adjacentVertices_vector(int name) co
 /*
     Purpose:    Print out the contents of what is currently in the graph
 */
-void Graph::printContents(){
+void Graph::print_graphContents(){
     printDebug("____Graph::printContents()____\n");
     
     std::cout << "_______ Graph Created ______ \n";
@@ -91,7 +108,7 @@ void Graph::printContents(){
     std::cout << "Nodes and Adjacent Nodes: \n\n";
     for(int i = 0; i < m_size; i++){
 
-        std::cout << i << ": " << m_verticesVector[i].get_name();
+        std::cout << i << ": " << m_verticesVector[i].get_vertexName();
         std::cout << "\tAdjacent Vertices: "  << m_verticesVector[i].get_adjacentVertices_size() << std::endl;
         m_verticesVector[i].printContents();
         printf("\n");
@@ -101,6 +118,7 @@ void Graph::printContents(){
     return;
 }
 
+
 /*
     Purpose:    Print out the contents of what is currently in the graph
 */
@@ -108,7 +126,6 @@ void Graph::print_adjacentDetails(int name){
     printDebug("____Graph::print_adjacentDetails()____\n");
     
     std::cout << "_______ " << name << " : Adjacent Details ______ \n";
-
     std::cout << "\tTotal Adjacent Vertices: "  << m_verticesVector[name].get_adjacentVertices_size() << std::endl;
     m_verticesVector[name].printContents();
     printf("\n");
