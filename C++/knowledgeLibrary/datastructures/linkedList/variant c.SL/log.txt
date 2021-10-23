@@ -1,0 +1,12 @@
+[2/24/2020]
+    -   Somewhat of a continuation on "2_...2020.cpp". Ran code and got the first
+        linked list right, but also got a seg fault right after. I'll probably have
+        to valgrind if I can't visually check my code, so I'm taking a break for tonight. 
+        I have a much better grasp on this after drawing everything out. 
+[2/27/2020]
+    -   The memory leak was caused on line 106: " while(tmpHead->next != NULL){ ... etc.
+        When the "insertAtEnd" function was called and it was an empty list, there was
+        No tmpHead->next, so it was accessing illeagal memory. I created an if statement 
+        to counter this, but there is probably a better way to counter this. I'll probably 
+        look into this next time I work on this. Other than that, the code runs well and 
+        I have a much better understanding of this code. 

@@ -13,21 +13,20 @@ and how they work.
             a good starting point. It was built with the intention of using it 
             for learning about the standard library, and I wrote before
             reading / learning about vectors.
-
     -   [Demo/tutrial Video - empty]()
 -   **tutorial**   
     -   Overview: 
-        -   Code and notes I wrote while watching ['Paul Programming' tutorial](https://www.youtube.com/watch?v=oj6YWN4W-jk&list=PLTxllHdfUq4f7-uHOpxXnBUbsuLiI9pmb&index=12)
+        -   Code and notes I wrote while watching ['the cherno' tutorial](https://www.youtube.com/watch?v=ryRf4Jh_YC0)
+            and ['Tec with Tim' tutorial](https://www.youtube.com/watch?v=RXzzE2wnnlo). 
             It is not the same but code probably looks very similar.
-        -   Need to fix:
-            -   Global variables in hashTable.cpp
-            -   Brush up comments and syntax
 
 
 # References and Links
 - Youtube:
-    - [**How to Create A Hash Table Project... - (Paul Programming)**](https://www.youtube.com/watch?v=oj6YWN4W-jk&list=PLTxllHdfUq4f7-uHOpxXnBUbsuLiI9pmb&index=12)
-    
+    - [**Learn C++ With Me #18 - Vectors**](https://www.youtube.com/watch?v=RXzzE2wnnlo)
+    - [**VECTOR/DYNAMIC ARRAY - Making DATA STRUCTURES in C++ - (The Cherno)**](https://www.youtube.com/watch?v=ryRf4Jh_YC0&t=407s)
+
 - Articles: 
     - [**empty**]()
     
+

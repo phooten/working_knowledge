@@ -1,0 +1,14 @@
+[2/29/2020]
+    -   created what I believe to be a doubly linked list. I havent been able to 
+        test if everything is linked correctly or not. The program takes an input
+        as "n" total elements. Each number after is taken as an input and added to
+        the end of the list. The next step is to sort the list. 
+[3/2/2020]
+    -   started writing a delete function node function. It works except for the edge
+        cases of the initial node and the final node, expectedly. 
+[3/3/2020]
+    -   I had tons of memory leak, but was able to resolve all issues without valgrind. 
+        there are many checks I haven't accounted for, so for now just assume the 
+        inputs are what would be expected. The deleting of nodes function is 
+        complete and the next step is to sort the list with a function. Ideally I'd love to 
+        learn merge sorting and use it. 

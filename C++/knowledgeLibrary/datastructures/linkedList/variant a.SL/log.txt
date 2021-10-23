@@ -1,0 +1,5 @@
+[2/23/2020]
+    -   I have a pretty good idea about the basics of linked list and was 
+        able to create a small one. Everything created today was hardcoded
+        so the next step will be to try to implement an add/delete function.
+        MAKE SURE TO COMPILE WITH "g++ ..."

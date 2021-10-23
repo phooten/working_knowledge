@@ -1,9 +1,0 @@
-Log: 
----------------------------------
- [1/8/2020]
-		- got foundational code set up
- [1/12/2020]
-		- my idea is to set up a linked list from 2D matrix. I'm not sure
-		  how many elements in each list will be, nor how many groupings 
-		  there will be. 
----------------------------------

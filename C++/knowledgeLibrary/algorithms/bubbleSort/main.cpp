@@ -3,16 +3,12 @@
     File:           main.cpp
     Version:        1.0
     Status:         COMPLETE
-    
-    Contributers:   Parker Hooten
+    Contributer:    koffee-byte 
 
     Purpose:        To sort a given set of numbers using the bubble sort method. 
-                    In doing so, I will learn about how this algorithm works and
+                    In doing so, we will learn about how this algorithm works and
                     will be able to compare it's efficiency to other algorithms
-                    when I come in contact with them. 
-
-    sample input:
-                    Random generator written in main(). 
+                    when we come in contact with them.  
 
     Questions to think about:
         1. What is bubble sortings's time/space complexity?
@@ -31,17 +27,22 @@ void printArr(int* ptr, unsigned int len);
 int main(){
     // Variables
     unsigned int length = 10;
-    unsigned int i, rNum;
+    unsigned int rNum;
     int arr[length];
-    
+
     // Creates a random array of numbers
-    for(i = 0; i < length; i++){
+    for(unsigned int i = 0; i < length; i++){
         rNum = rand() % 100;
         arr[i] = rNum;
     }
 
+    // Prints out unsorted array 
     printArr(&arr[0], length);
+
+    // Sorts the array
     bubbleSort(&arr[0], length);
+    
+    // Prints out sorted array
     printArr(&arr[0], length);
 
     return 0;

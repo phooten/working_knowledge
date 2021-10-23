@@ -1,0 +1,19 @@
+Notes:
+    -   Binary Search on a sorted Array is O(log(n)), but inserting it will cost O(n)
+    -   search(x) = insert(x) = remove = O(log(n)) in average case, O(n) worst case
+    -   for each node, all nodes in the left subtree is greater than
+        all the nodes in the right subtree
+    -   Leaf nodes = Last node on a branch
+    -   Balanced tree = 
+    -   Perfect tree = 
+    -   The tree becomes unbalanced in inserting and deleting 
+    -   A new data point is always inserted at the leaf node
+
+
+learned:
+    Class a = new Class();
+    Class *aPtr = &a;
+
+    (*aPtr).method() =  aPtr->method()
+
+    The dot operator gives direct member selection via object name.
