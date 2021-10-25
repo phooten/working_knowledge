@@ -12,6 +12,10 @@ BsTree::BsTree() : data(0), left(NULL), right(NULL) {}
 */
 BsTree::BsTree(int num) : data (num), left(NULL), right(NULL) {}
 
+
+/*
+    Purpose:
+*/
 BsTree *BsTree::Insert(int num, BsTree *root){
     BsTree *current = root;
 

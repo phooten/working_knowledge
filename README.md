@@ -22,19 +22,19 @@ Concepts I found interesting AND are documented enough to be referenced:
     Location                Status          To-Do                               Timeline
     C++                                                                         November 5, 2021
         Algorithms          
-            Binary Search   INCOMPLETE      see tutorial issues / write own version  ?
-            Bubble Sort     -               walk-through video                  ?
-            Dijkstras       INCOMPLETE      write own version                       October 28, 2021
-            Merge Sort      -               write own version                   ?
-            Quick Sort      -               write own version                   ?
+            Binary Search   INCOMPLETE      see tutorial issues / write own version  
+            Bubble Sort     -               walk-through video                  
+            Dijkstras       INCOMPLETE      write own version                   
+            Merge Sort      -               write own version                   
+            Quick Sort      -               write own version                   
         
         Datastructure
-            Graph           -               walk-through video                  ?
-            Hashtable       INCOMPLETE      see tutorial issues / write own version  ?
-            Linked Lists    INCOMPLETE      catogorize clarify code / video     ?
-            Lists           NOT STARTED     follow tutorial / write own version ?
-            Sets            NOT STARTED     follow tutorial / write own version     ?
-            Vectors         -               improve code / walk-through video   ?
+            Graph           -               walk-through video                  
+            Hashtable       INCOMPLETE      see tutorial issues / write own version
+            Linked Lists    INCOMPLETE      catogorize clarify code / video     
+            Lists           NOT STARTED     follow tutorial / write own version 
+            Sets            NOT STARTED     follow tutorial / write own version 
+            Vectors         -               improve code / walk-through video   
         
         Math                PAUSED pending algo/datastruct completion
         
@@ -43,6 +43,8 @@ Concepts I found interesting AND are documented enough to be referenced:
         others -            PAUSED pending algo/datastruct completion
 
     PYTHON                  PAUSED pending C++ Organization completetion
+    
+    JAVASCRIPT              PAUSED pending C++ Organization completetion
 
     BASH                    PAUSED pending C++ Organization completetion
         Brave Miner
