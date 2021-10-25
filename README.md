@@ -2,6 +2,8 @@
 GENERAL 
 =======
 
+UNDERCONSTRUCTIONS*
+
 ### Description
 This repository is a personal collection and storage base for learning coding concepts and languages. It is not meant for anything
 other than a learning tool, but I wanted to make it public for anyone interested. Some of this code will be based on tutorials 
@@ -12,12 +14,8 @@ and link to the original code when it is being used. This will probably never be
 ### Quick References
 Concepts I found interesting AND are documented enough to be referenced: 
 
-* [**Vector Datastructure [ c++ ]**](C++/knowledgeLibrary/datastructures/graph/)
 * [**Graph Datastructure [ c++ ]**](C++/knowledgeLibrary/datastructures/graph/)
-* [**Dijkstra's Algorithm [ c++ ]**](C++/knowledgeLibrary/algorithms/dijkstra/)
-* [**Brave Miner [ BASH ]**](BASH_SCRIPTS/braveMiner/)
-
-
+* 
 ### Backlog
     Location                Status          To-Do                               Timeline
     C++                                                                         November 5, 2021
