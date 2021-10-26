@@ -20,10 +20,12 @@
 
 import cmath
 
-z = input()
+z = input()             # takes input from user
 print(z)
-z = complex(z);
+
+z = complex(z)
 print(z)
+
 z = cmath.polar(z)
 print(z)
 

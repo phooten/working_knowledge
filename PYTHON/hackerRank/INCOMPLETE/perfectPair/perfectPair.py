@@ -55,7 +55,7 @@ for x in range(0, T):
 	print(AN)
 	
 
-	total = hash(N, AN)
+	total = hash(AN, AN)
 	print(total)
 	
 
