@@ -1,13 +1,15 @@
 # https://www.youtube.com/watch?v=IEEhzQoKtQU
+# left off: 12:
 
 import threading
 import time
 
 start = time.perf_counter()
 
-def do_something():
-    print('sleeping 1 second...')
-    time.sleep(1)
+
+def do_something(seconds):                      # Figure out how to make 'seconds' default
+    print(f'sleeping {seconds} second(s)...')
+    time.sleep(seconds)
     print('done sleeping.')
 
 #  Note 2:
@@ -24,7 +26,7 @@ def do_something():
 
 threads = []
 for _ in range (10):                            # _ is a throw away variable
-    t = threading.Thread(target=do_something)
+    t = threading.Thread(target=do_something, args=[1.5])
     t.start()
     threads.append(t)
 
