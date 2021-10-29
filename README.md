@@ -2,7 +2,7 @@
 GENERAL 
 =======
 
-UNDERCONSTRUCTIONS*
+* **UNDERCONSTRUCTION** *
 
 ### Description
 This repository is a personal collection and storage base for learning coding concepts and languages. It is not meant for anything
