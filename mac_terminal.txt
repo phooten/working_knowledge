@@ -1,0 +1,11 @@
+Color Theme:
+    zsh:
+        git clone git://git.code.sf.net/p/zsh/code  
+        zsh
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/phoot/.zprofile        
+        eval "$(/opt/homebrew/bin/brew shellenv)"     
+
+
+        
+
