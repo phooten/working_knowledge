@@ -10,26 +10,26 @@ Table of contents
 =================
 
    * [Algorithms](/algorithms)
-      * [Dijkstra's Algorithm](/algorithms/dijkstra):       BLANK
+      * [Dijkstra's Algorithm](/algorithms/dijkstra) ------ BLANK
       * [](/algorithms/binarySearch)
       * [](/algorithms/bubbleSort)
       * [](/algorithms/mergeSort)
       * [](/algorithms/quickSort)
    * [Data Structures](/dataStructures)
-      * [Lists](/dataStructures/lists):                     BLANK
-      * [Sets](/dataStructures/sets):                       BLANK
+      * [Lists](/dataStructures/lists) -------------------- BLANK
+      * [Sets](/dataStructures/sets) ---------------------- BLANK
       * [](/dataStructures/linkedList)
       * [](/dataStructures/lists)
       * [](/dataStructures/sets)
       * [](/dataStructures/vectors)
    * [Basic](/basic)
-      * [Archive](/basic/archive):                          clean up
-      * [Classes](/basic/classes):                          clean up
-      * [Try](/basic/try):                                  BLANK
+      * [Archive](/basic/archive) ------------------------- clean up
+      * [Classes](/basic/classes) ------------------------- clean up
+      * [Try](/basic/try) --------------------------------- BLANK
    * [Other](/other)
-     * [Threading](/other/threading):                       finish / clean up
+     * [Threading](/other/threading) ---------------------- finish / clean up
    * [Libraries](/libraries)
-     * [Tkinter](/libraries/tknter):                        finish / clean up
+     * [Tkinter](/libraries/tknter) ----------------------- finish / clean up
      * [](/libraries/)
      * [](/libraries/)
      * [](/libraries/)

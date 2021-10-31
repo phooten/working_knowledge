@@ -26,23 +26,23 @@ Table of contents
 =================
 
    * [Algorithms](/algorithms)
-      * [Binary Search](/algorithms/binarySearch):      see tutorial issues / write own version
-      * [Bubble Sort](/algorithms/bubbleSort):          walk-through video 
-      * [Dijkstra's Algorithm](/algorithms/dijkstra):   write own version
-      * [Merge Sort](/algorithms/mergeSort):            write own version
-      * [Quick Sort](/algorithms/quickSort):            write own version
+      * [Binary Search](/algorithms/binarySearch). . . see tutorial issues / write own version
+      * [Bubble Sort](/algorithms/bubbleSort). . . . . walk-through video 
+      * [Dijkstra's Algorithm](/algorithms/dijkstra) . write own version
+      * [Merge Sort](/algorithms/mergeSort). . . . . . write own version
+      * [Quick Sort](/algorithms/quickSort). . . . . . write own version
    * [Data Structures](/dataStructures)
-      * [Graph](/dataStructures/graph):                 walk-through video
-      * [Hash Table](/dataStructures/hashtable):        see tutorial issues / write own version
-      * [Linked Lists](/dataStructures/linkedList):     catogorize clarify code / video  
-      * [Lists](/dataStructures/lists):                 follow tutorial / write own version 
-      * [Sets](/dataStructures/sets):                   follow tutorial / write own version  
-      * [Vectors](/dataStructures/vectors):             improve code / walk-through video
-   * [Math](/math):                                     PAUSED pending algo/datastruct completion
+      * [Graph](/dataStructures/graph) . . . . . . . . walk-through video
+      * [Hash Table](/dataStructures/hashtable)  . . . see tutorial issues / write own version
+      * [Linked Lists](/dataStructures/linkedList) . . catogorize clarify code / video  
+      * [Lists](/dataStructures/lists) . . . . . . . . follow tutorial / write own version 
+      * [Sets](/dataStructures/sets) . . . . . . . . . follow tutorial / write own version  
+      * [Vectors](/dataStructures/vectors) . . . . . . improve code / walk-through video
+   * [Math](/math) . . . . . . . . . . . . . . . . . . PAUSED pending algo/datastruct completion
       * [Linear Algebra](/math/linearAlgebra)
-   * [Other](/other):                                   PAUSED pending algo/datastruct completion
+   * [Other](/other) . . . . . . . . . . . . . . . . . PAUSED pending algo/datastruct completion
      * [Range Based Loops](/other/rangeBasedLoops)
-   * [types](/types):                                   PAUSED pending algo/datastruct completion
+   * [types](/types) . . . . . . . . . . . . . . . . . PAUSED pending algo/datastruct completion
      * [Arrays](/types/arrays)
      * [Data Types](/types/dataTypes)
      * [Iterators](/types/iterators)
