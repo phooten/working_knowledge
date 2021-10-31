@@ -22,32 +22,26 @@ Knowledge Library:
         concepts that interested me enough to record them. This is where a majority
         of the code will be.
    
-    Algorithms:
-        -   [**Bubble Sort**](algorithms/bubbleSort)
-        -   [**Dijkstra's Algorithm**](algorithms/dijkstra)
-        -   [**Merge Sort**](algorithms/mergeSort)
-        -   [**Quick Sort**](algorithms/quickSort)
-    Data Structures:
-        -   [**Binary Search**](dataStructures/binarySearch)    * INCOMPLETE
-        -   [**Graph**](dataStructures/graph)
-        -   [**Hash Table**](dataStructures/hashtable)
-        -   [**Linked Lists**](dataStructures/linkedList)
-        -   [**Lists**](types/lists)  * INCOMPLETE
-        -   [**Sets**](types/sets)  * INCOMPLETE
-        -   [**Vectors**](dataStructures/vectors)
-    Math:
-        -   [**Linear Algebra**](math/linearAlgebra)    * INCOMPLETE
-    Types:
-        -   [**Arrays**](types/arrays)
-        -   [**Data Types**](types/dataTypes)
-        -   [**Iterators**](types/iterators)    * INCOMPLETE
-        -   [**Move Semantics**](types/moveSemantics)
-        -   [**Pointers**](types/pointers)
-        -   [**R-values and L-values**](types/rvalue-lvalue)
-        -   [**Templates**](types/templates)
-        
-    Other:
-        -   [**Range Based Loops**](other/rangeBasedLoop)
+Level 1      | Level 2       | Level 3
+------------ | ------------- | ------------- 
+Algorithms  | INPROGRESS    | 
+            | Bubble Sort   | INCOMPLETE
+            | Dijkstra's Algorithm | INCOMPLETE
+            | Merge Sort    | INCOMPLETE
+            | Quick Sort    | INCOMPLETE
+Data Structures | INPROGRESS | 
+            | Binary Search | INCOMPLETE
+            | Graph         | INCOMPLETE
+            | Hash Table    | INCOMPLETE
+            | Linked Lists  | INCOMPLETE
+            | Lists         | INCOMPLETE
+            | Sets          | INCOMPLETE
+            | Vectors       | INCOMPLETE
+Math        | INCOMPLETE    |
+Types       | INCOMPLETE    | 
+Other       | INCOMPLETE    |
+            | Range Based Loops | INCOMPLETE 
+
 
 
 HackerRank:
