@@ -25,33 +25,31 @@ Knowledge Library:
 Table of contents
 =================
 
-<!--ts-->
-   * [Algorithms](#algorithms)
-      * [Binary Search](#binarySearch)
-      * [Bubble Sort](#bubbleSort)
-      * [Dijkstra's Algorithm](#dijkstra)
-      * [Merge Sort](#mergeSort)
-      * [Quick Sort](#quickSort)
-    * [Data Structures](#dataStructures)
-      * [Graph](#graph)
-      * [Hash Table](#hashtable)
-      * [Linked Lists](#linkedList)
-      * [Lists](#lists)
-      * [Sets](#sets)
-      * [Vectors](#vectors)
-   * [Math](#math)
-      * [Linear Algebra](#linearAlgebra)
-   * [Other](#other)
-     * [Range Based Loops](#rangeBasedLoops)
-   * [types](#other)
-     * [Arrays](#arrays)
-     * [Data Types](#dataTypes)
-     * [Iterators](#iterators)
-     * [Move Semantics](#moveSemantics)
-     * [Pointers](#pointers)
-     * [R-values and L-Values](#rvalue-lvalue)
-     * [Templates](#templates)
-<!--te-->
+   * [Algorithms](/algorithms)
+      * [Binary Search](/algorithms/binarySearch):      see tutorial issues / write own version
+      * [Bubble Sort](/algorithms/bubbleSort):          walk-through video 
+      * [Dijkstra's Algorithm](/algorithms/dijkstra):   write own version
+      * [Merge Sort](/algorithms/mergeSort):            write own version
+      * [Quick Sort](/algorithms/quickSort):            write own version
+   * [Data Structures](/dataStructures)
+      * [Graph](/dataStructures/graph):                 walk-through video
+      * [Hash Table](/dataStructures/hashtable):        see tutorial issues / write own version
+      * [Linked Lists](/dataStructures/linkedList):     catogorize clarify code / video  
+      * [Lists](/dataStructures/lists):                 follow tutorial / write own version 
+      * [Sets](/dataStructures/sets):                   follow tutorial / write own version  
+      * [Vectors](/dataStructures/vectors):             improve code / walk-through video
+   * [Math](/math):                                     PAUSED pending algo/datastruct completion
+      * [Linear Algebra](/math/linearAlgebra)
+   * [Other](/other):                                   PAUSED pending algo/datastruct completion
+     * [Range Based Loops](/other/rangeBasedLoops)
+   * [types](/types):                                   PAUSED pending algo/datastruct completion
+     * [Arrays](/types/arrays)
+     * [Data Types](/types/dataTypes)
+     * [Iterators](/types/iterators)
+     * [Move Semantics](/types/moveSemantics)
+     * [Pointers](/types/pointers)
+     * [R-values and L-Values](/types/rvalue-lvalue)
+     * [Templates](/types/templates)
 
 
 HackerRank:
