@@ -1,0 +1,4 @@
+First the code between the try and the except are executed. If there is 
+an exception, the rest of the code from the try isn't run, and the 
+program runs the except code. If there is not exception, that code is 
+skipped. 
