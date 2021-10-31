@@ -21,27 +21,37 @@ Knowledge Library:
         All the different algorithms, datastructures, types, and other c++ specific
         concepts that interested me enough to record them. This is where a majority
         of the code will be.
-   
-Level 1      | Level 2       | Level 3
------------- | ------------- | ------------- 
-Algorithms  | INPROGRESS    | 
-            | Bubble Sort   | INCOMPLETE
-            | Dijkstra's Algorithm | INCOMPLETE
-            | Merge Sort    | INCOMPLETE
-            | Quick Sort    | INCOMPLETE
-Data Structures | INPROGRESS | 
-            | Binary Search | INCOMPLETE
-            | Graph         | INCOMPLETE
-            | Hash Table    | INCOMPLETE
-            | Linked Lists  | INCOMPLETE
-            | Lists         | INCOMPLETE
-            | Sets          | INCOMPLETE
-            | Vectors       | INCOMPLETE
-Math        | INCOMPLETE    |
-Types       | INCOMPLETE    | 
-Other       | INCOMPLETE    |
-            | Range Based Loops | INCOMPLETE 
 
+Table of contents
+=================
+
+<!--ts-->
+   * [Algorithms](#algorithms)
+      * [Binary Search](#binarySearch)
+      * [Bubble Sort](#bubbleSort)
+      * [Dijkstra's Algorithm](#dijkstra)
+      * [Merge Sort](#mergeSort)
+      * [Quick Sort](#quickSort)
+    * [Data Structures](#dataStructures)
+      * [Graph](#graph)
+      * [Hash Table](#hashtable)
+      * [Linked Lists](#linkedList)
+      * [Lists](#lists)
+      * [Sets](#sets)
+      * [Vectors](#vectors)
+   * [Math](#math)
+      * [Linear Algebra](#linearAlgebra)
+   * [Other](#other)
+     * [Range Based Loops](#rangeBasedLoops)
+   * [types](#other)
+     * [Arrays](#arrays)
+     * [Data Types](#dataTypes)
+     * [Iterators](#iterators)
+     * [Move Semantics](#moveSemantics)
+     * [Pointers](#pointers)
+     * [R-values and L-Values](#rvalue-lvalue)
+     * [Templates](#templates)
+<!--te-->
 
 
 HackerRank:
@@ -54,7 +64,5 @@ HackerRank:
 ### Helpful Resources
 * [**The Cherno - Youtube Channel**](https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw): All things c++, Graphic Engines, and programming. I find his channel VERY helpful. 
 * [**Jamie King - Youtube Channel**](https://www.youtube.com/channel/UCda_RJU9-xB0Hswcrjn4SKw): All things c++, Graphic Engines, and programming. Unfortunatley he stopped posting in 2016, but his channel is still a good resource. 
-* [** - Youtube Channel**](): 
-* [** - Youtube Channel**](): 
 
 
