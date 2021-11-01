@@ -29,8 +29,8 @@ Table of contents
    * [Other](/other)
      * [Threading](/other/threading) ---------------------- finish / clean up
    * [Libraries](/libraries)
+     * [NumPy](/libraries/numpy) -------------------------- finish / clean up
      * [Tkinter](/libraries/tknter) ----------------------- finish / clean up
-     * [](/libraries/)
      * [](/libraries/)
      * [](/libraries/)
      * [](/libraries/)
