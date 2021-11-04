@@ -27,6 +27,9 @@ Jupyter IPython notebook:
     development environment for Jupyter notebooks, code, and data. 
 
 ### Dependencies
+numPy
+    pip install numpy
+
 pytest (unit testing)
     pip install pytest
 
