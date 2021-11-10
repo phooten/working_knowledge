@@ -66,7 +66,7 @@ public:
             curr = start;
             prev = nums[start];
             while(curr != start){
-
+                next = (curr + k) % nums.size(); // The % wraps arround after > nums.size so you don't need an if statement
             }
         }
 

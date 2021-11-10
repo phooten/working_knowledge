@@ -4,34 +4,31 @@
 #define DEFAULT_LENGTH 10
 #define DEFAULT_MAX 100
 
-// Declarations
-void insertSort(int *arr, int size);
 int* randomArray(int n=DEFAULT_LENGTH, int r=DEFAULT_MAX);
 void printArray(int *ptr, int len=DEFAULT_LENGTH);
 void printAddress(int *ptr);
 
-
 int main(){
     int *inputPtr;
+    
+    printAddress(inputPtr);
+    
+    // printAddress(*inputPtr);
     inputPtr = randomArray();
+    
+    printAddress(inputPtr);
+    // int *testing = new int[inputLen];
+    // std::cout << "inputPtr: " << inputPtr << " testing: " << testing << "\n";
+
+    std::cout << "\n";
     printArray(inputPtr);
 
-    
-    
-    
-    
     // clean up
     delete [] inputPtr;
 
     return 0;
 }
 
-void insertSort(int* arr, int size){
-    
-
-
-    return;
-}
 
 
 int* randomArray(int n, int r){
@@ -72,5 +69,3 @@ void printAddress(int* ptr){
 
     return;
 }
-
-
