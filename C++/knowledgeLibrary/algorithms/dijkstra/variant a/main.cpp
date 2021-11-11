@@ -24,9 +24,9 @@
 
 #include<iostream>
 #include<vector>
-#include"../../../datastructures/graph/~variant a/Graph.h"
-#include "../../../datastructures/graph/~variant a/Vertex.h"
-#include"../../../datastructures/graph/~variant a/macros.h"
+#include"../../../datastructures/graph/variant a/Graph.h"
+#include "../../../datastructures/graph/variant a/Vertex.h"
+#include"../../../datastructures/graph/variant a/macros.h"
 
 // Declarations
 void buildGraph(Graph& graph);
@@ -39,7 +39,7 @@ int main(){
 
     Graph map;
     buildGraph(map);
-    map.printContents();
+    map.print_graphContents();
     
     ans = dijkstra(0, 4, map);
 
