@@ -117,11 +117,6 @@ int main(){
 
     // B B_solution;
     // B_solution.reverseString(v_input);
-    // cout << "Answer: ";
-    // for(int i = 0; i < v_input.size(); i++){
-    //     cout << v_input[i];
-    // }
-    // cout << "\n";
 
     C C_solution;
     C_solution.reverseString(v_input);
