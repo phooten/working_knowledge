@@ -10,7 +10,7 @@
                     problem statement:  https://www.hackerrank.com/challenges/cpp-sets/problem
 
     sample input:
-                    "sampleInput.txt"
+                    "sets_stl_input.txt"
 
     Questions to think about:
         1. What is the difference between a vector and set?
