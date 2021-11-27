@@ -1,3 +1,12 @@
+# TODO [ 11-26-2021 ]
+1. Move data over to azure, github, notion, or gitlabs
+2. Fix README.md's
+3. Clean up C++ / Python.... Again.....
+4. Learn:
+   a. Virtual Functions
+   b. Maps ( also unordered )
+   c. Sets
+
 
 C++ Folder 
 ==========
