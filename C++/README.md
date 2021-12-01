@@ -1,11 +1,12 @@
 # TODO [ 11-26-2021 ]
-1. Move data over to azure, github, notion, or gitlabs
+1. Move todo / data over to azure, github, notion, or gitlabs
 2. Fix README.md's
 3. Clean up C++ / Python.... Again.....
 4. Learn:
    a. Virtual Functions
    b. Maps ( also unordered )
    c. Sets
+5. Clean up "Challenge" in a consistant format
 
 
 C++ Folder 
@@ -17,7 +18,23 @@ is not meant for anything other than a learning tool. While I'm learning, why
 not share?
 
 
-### Table of Contents
+### Content Descriptions
+Archive:
+    
+    Description:
+        Old documents I'm not ready to delete yet
+
+
+Challenges:
+    
+    Description:
+        Practice problems from sites like 'leetcode' and 'hackerrank'. Please 
+        **PLEASE NOTE: 
+            As with everything in this repo, I tried to note when I referenced 
+            or used someone elses code. All of the first attempts / solution A's 
+            are my own attempts without outside help. 
+
+
 Documents:
     
     Description:
@@ -30,6 +47,14 @@ Knowledge Library:
         All the different algorithms, datastructures, types, and other c++ specific
         concepts that interested me enough to record them. This is where a majority
         of the code will be.
+
+Utility:
+    
+    Description:
+        This folder is for files or cases I use often. 
+        i.e. -> randomly generate an array of 'x' size between 'y' and 'z' 
+
+
 
 Table of contents
 =================
@@ -59,13 +84,6 @@ Table of contents
      * [Pointers](/types/pointers)
      * [R-values and L-Values](/types/rvalue-lvalue)
      * [Templates](/types/templates)
-
-
-HackerRank:
-    
-    Description:
-        My solutions for some problems. There is very little substance currently 
-        [10-18-2021]. 
 
 
 ### Helpful Resources
