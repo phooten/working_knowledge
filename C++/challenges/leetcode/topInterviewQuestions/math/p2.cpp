@@ -57,9 +57,15 @@ public:
 };
 
 /*
+    **************************************************************
+    **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+    **  Referenced based on solutions discussed in comments.    **
+    **************************************************************
+
     Second attempt:
         Tried to understand the solution, and got ~O(n^2) reduced slightly. 
         Still not up to time constraints though. 
+
 */
 class B{
 public:

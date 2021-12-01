@@ -66,6 +66,10 @@ public:
 
 
 /*
+    **************************************************************
+    **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+    **  Referenced based on solutions discussed in comments.    **
+    **************************************************************
     Third attempt:
         Looked at the solution for a better space/time complexity
 

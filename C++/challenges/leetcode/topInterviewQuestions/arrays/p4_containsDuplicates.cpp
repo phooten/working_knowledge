@@ -16,8 +16,10 @@ using namespace std;
 
 class Solution {
 public:
+    /*
+        This solution was too slow to pass the tests. 
+    */
     bool A(vector<int>& nums) {
-        // Too slow
         int curr;
         int j;
         int i = 0;
@@ -36,6 +38,12 @@ public:
 
     }
 
+    /*
+        **************************************************************
+        **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+        **  Referenced based on solutions discussed in comments.    **
+        **************************************************************
+    */
     bool B(vector<int>& nums){
         // Beat 14.6% of entries on time
         set<int> sNums(nums.begin(), nums.end());

@@ -47,6 +47,11 @@ public:
 };
 
 /*
+    **************************************************************
+    **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+    **  Referenced based on solutions discussed in comments.    **
+    **************************************************************
+
     Second attempt:
         Success:        38/38 cases
         Runtime:        ~28 ms
