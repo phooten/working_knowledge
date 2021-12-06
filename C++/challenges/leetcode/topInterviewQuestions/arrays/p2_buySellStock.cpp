@@ -100,7 +100,12 @@ int solution_A(vector<int>& vec){
 
     return maxProfit;
 }
-// ______________________________________________________________________________
+
+
+
+
+
+
 int solution_B(vector<int>& prices) {
     return calculate_B(prices, 0);
 }
@@ -130,11 +135,16 @@ int calculate_B(vector<int>& prices_cp, int s){
     return maxProfit;
 }
 
-// ______________________________________________________________________________
+
+
+
 
 /*
+    **************************************************************
+    **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+    **  Referenced based on solutions discussed in comments.    **
+    **************************************************************
 */
-// ______________________________________________________________________________
 int solution_leetcode(vector<int>& vec){
     return calculate_leetcode(vec, 0);
 }

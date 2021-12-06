@@ -34,6 +34,9 @@ void printVector(vector<int>& tmp){
     return;
 }
 
+/*
+    
+*/
 int removeDuplicates_solutionA(vector<int>& nums){
     int copy_size = nums.size();
     int new_size = 1;
@@ -53,6 +56,13 @@ int removeDuplicates_solutionA(vector<int>& nums){
     return new_size;
 }
 
+
+/*
+    **************************************************************
+    **  THIS SOLUTION ISN'T COMPLETELY MY OWN.                  **
+    **  Referenced based on solutions discussed in comments.    **
+    **************************************************************
+*/
 int removeDuplicates_solutionB(vector<int>& nums){
     int size = nums.size();
     int index = 1;
