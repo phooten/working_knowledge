@@ -36,24 +36,24 @@ public:
             submissions.
     */
     ListNode* A(ListNode* head, int n) {
-        ListNode* tmp;
+        ListNode* curr = head;
         ListNode* root = head;
-
-        // Goes to node before 
-        for(int i = 0; i < n; i++){
-            head = head->next;            
-        }
-
-        // if it's the last 
-        if(head->next->next == NULL){
-            delete(head->next);
-            head->next = NULL;
+        int count;
         
-        } else {
-            tmp = head->next;
-            head->next = head->next->next;
-            delete(tmp);
+        while(curr->next != NULL){
+            count++;
+            curr = curr->next;
         }
+        
+        if(n == 1 && count == 1){
+            return NULL;
+        }
+
+        curr = head;
+        for(int i = 0; i < count - n - 1; i++){
+            curr = curr->next;
+        }
+        curr->next = curr->next->next;
 
         return root;
     }
