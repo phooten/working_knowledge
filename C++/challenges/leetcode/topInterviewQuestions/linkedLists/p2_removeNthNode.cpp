@@ -32,23 +32,33 @@ class Solution {
 public:
     /*
         1st Solution:
-            This solution was done without any outside help. It beat 80.97% of
-            submissions.
+            This solution was done without any outside help. It beat 78.92% of
+            submissions. I thin there are too many special cases though. I also 
+            don't like the list gets passed through almost twice. 
     */
     ListNode* A(ListNode* head, int n) {
+        // Variables
         ListNode* curr = head;
         ListNode* root = head;
-        int count;
+        int count = 0;
         
-        while(curr->next != NULL){
+        // Counts the total elements
+        while(curr != NULL){
             count++;
             curr = curr->next;
-        }
-        
+        };
+
+        // special cases: one element and the first element
         if(n == 1 && count == 1){
             return NULL;
+
+        } else if (count == n){
+            root = root->next;
+            return root;
+
         }
 
+        // Goes to the node and removes it
         curr = head;
         for(int i = 0; i < count - n - 1; i++){
             curr = curr->next;
@@ -72,8 +82,12 @@ void printList(ListNode* root);
 
 int main(){
     // Input
-    int arr[5] = {1,2,3,4,5};
+    int arr[2] = {1, 2};
     int node = 2;
+    // int arr[1] = {1};
+    // int node = 1;
+    // int arr[5] = {1,2,3,4,5};
+    // int node = 2;
 
     // Set up
     const int size = sizeof(arr) / sizeof(arr[0]);
