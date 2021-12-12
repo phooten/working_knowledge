@@ -1,5 +1,5 @@
 /*
-    Date:       12-10-2021
+    Date:       12-12-2021
     Status:     
     Source:     https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/771/
     
@@ -36,55 +36,57 @@ class Solution {
 public:
     /*
         1st Solution:
-            This solution was done without any outside help. It beat 80.97% of
-            submissions.
+            This solution was done without any outside help. It beat 35.56% of
+            submissions. It feels like I could do this in one loop and not rely
+            special cases. 
     */
     ListNode* A(ListNode* list1, ListNode* list2) {
         ListNode* curr1 = list1;
         ListNode* curr2 = list2;
         ListNode* ans = new ListNode;
-        int count = 0;
-
-        printf("ans->val: %d\n", ans->val);
+        ListNode* currAns = ans;
         
+        if(curr1 == NULL && curr2 == NULL){
+            return NULL;
+        }
+
         while(curr1 != NULL && curr2 != NULL){
-            printf("Count: %d\n", count);
             if(curr1->val <= curr2->val){
-                ans->val = curr1->val;
+                currAns->val = curr1->val;
                 curr1 = curr1->next;
-                ans->next = new ListNode;
-                ans = ans->next;
+                currAns->next = new ListNode;
+                currAns = currAns->next;
 
             } else {
-                ans->val = curr2->val;
+                currAns->val = curr2->val;
                 curr2 = curr2->next;
-                ans->next = new ListNode;
-                ans = ans->next;
+                currAns->next = new ListNode;
+                currAns = currAns->next;
             }
-            count++;
         }
         
 
         if(curr1 == NULL){
             // printf("curr1 == NULL\n");
-            while(curr2 != NULL){
-                printf("Count: %d\n", count);
-                ans->val = curr2->val;
+            while(curr2->next != NULL){
+                currAns->val = curr2->val;
                 curr2 = curr2->next;
-                ans->next = new ListNode;
-                ans = ans->next;
-                count++;
+                currAns->next = new ListNode;
+                currAns = currAns->next;
             }
+            currAns->val = curr2->val;
+            curr2 = curr2->next;
+
         } else if(curr2 == NULL) {
                 // printf("curr2 == NULL\n");
-            while(curr1 != NULL){
-                printf("Count: %d\n", count);
-
-                ans->val = curr1->val;
+            while(curr1->next != NULL){
+                currAns->val = curr1->val;
                 curr1 = curr1->next;
-                ans->next = new ListNode;
-                ans = ans->next;
+                currAns->next = new ListNode;
+                currAns = currAns->next;
             }
+            currAns->val = curr1->val;
+            curr1 = curr1->next;
         }
 
         return ans;
