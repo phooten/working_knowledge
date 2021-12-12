@@ -23,7 +23,9 @@ using namespace std;
 struct ListNode {
     int val;
     ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
 
@@ -37,21 +39,55 @@ public:
             This solution was done without any outside help. It beat 80.97% of
             submissions.
     */
-    void A(ListNode* node) {
-        ListNode* curr = node;
+    ListNode* A(ListNode* list1, ListNode* list2) {
+        ListNode* curr1 = list1;
+        ListNode* curr2 = list2;
+        ListNode* ans = new ListNode;
+        int count = 0;
 
-        // Shifts everything up
-        while(curr->next->next != NULL){
-            curr->val = curr->next->val;
-            curr = curr->next;
+        printf("ans->val: %d\n", ans->val);
+        
+        while(curr1 != NULL && curr2 != NULL){
+            printf("Count: %d\n", count);
+            if(curr1->val <= curr2->val){
+                ans->val = curr1->val;
+                curr1 = curr1->next;
+                ans->next = new ListNode;
+                ans = ans->next;
+
+            } else {
+                ans->val = curr2->val;
+                curr2 = curr2->next;
+                ans->next = new ListNode;
+                ans = ans->next;
+            }
+            count++;
         }
         
-        // Handles the last node
-        curr->val = curr->next->val;
-        delete[] curr->next;                // This depends on implementation
-        curr->next = NULL;
 
-        return;
+        if(curr1 == NULL){
+            // printf("curr1 == NULL\n");
+            while(curr2 != NULL){
+                printf("Count: %d\n", count);
+                ans->val = curr2->val;
+                curr2 = curr2->next;
+                ans->next = new ListNode;
+                ans = ans->next;
+                count++;
+            }
+        } else if(curr2 == NULL) {
+                // printf("curr2 == NULL\n");
+            while(curr1 != NULL){
+                printf("Count: %d\n", count);
+
+                ans->val = curr1->val;
+                curr1 = curr1->next;
+                ans->next = new ListNode;
+                ans = ans->next;
+            }
+        }
+
+        return ans;
     }
 
     /*
@@ -74,37 +110,43 @@ void printList(ListNode* root);
 
 int main(){
     // Input
-    int arr[4] = {4,5,1,9};
-    int node = 5;
-
+    int arr1[3] = {1,2,4};
+    int arr2[3] = {1,3,4};
+    int size1 = sizeof(arr1) / sizeof(arr1[0]);
+    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    
     // Set up
-    const int size = sizeof(arr) / sizeof(arr[0]);
-    ListNode root(arr[0]);
-    ListNode* curr = &root; 
+    ListNode list1(arr1[0]);
+    ListNode list2(arr2[0]);
+    ListNode* curr1 = &list1;
+    ListNode* curr2 = &list2;
+    ListNode* k;
     Solution Sol;
 
-    for(int i = 1; i < size; i++){ 
-        curr->next = new ListNode(arr[i]);
-        curr = curr->next;
+
+    for(int i = 1; i < size1; i++){ 
+        curr1->next = new ListNode(arr1[i]);
+        curr1 = curr1->next;
     }
     
-    printf("Pre Deleteion\n");
-    printList(&root);
+    for(int i = 1; i < size2; i++){ 
+        curr2->next = new ListNode(arr2[i]);
+        curr2 = curr2->next;
+    }
+    
+    printf("Pre Merge\n");
+    printList(&list1);
+    printList(&list2);
     printf("\n\n");
 
 
-    // Moves to the node to be deleted
-    curr = &root;
-    while(curr->val != node){
-        curr = curr->next;
-    }
 
     // Sends node to solutions
-    Sol.B(curr);    
+    k = Sol.A(&list1, &list2);    
     
 
-    printf("Post Deletion\n");
-    printList(&root);
+    printf("Post Merge\n");
+    printList(k);
     printf("\n\n");
 
 
@@ -129,10 +171,10 @@ int main(){
     Purpose:    Prints out the linked list
 */
 void printList(ListNode* curr){
-    
-    while(curr != NULL){
-        printf("%d, ", curr->val);
-        curr = curr->next;
+    ListNode* tmp = curr;
+    while(tmp != NULL){
+        printf("%d, ", tmp->val);
+        tmp = tmp->next;
     }
     printf("\n");
     
