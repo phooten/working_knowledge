@@ -36,13 +36,42 @@ class Solution {
 public:
     /*
         1st Solution:
-            This solution was done without any outside help. 
+            This solution was done without any outside help. This beat 25.61% of 
+            submissions. 
     */
-    bool A(ListNode* list) {
-        ListNode* curr = list;
-        bool ans = false;
-        
-       
+    bool A(ListNode* head) {
+        // Variables
+        ListNode* curr = head;
+        ListNode* reverse = new ListNode;
+        ListNode* prev;
+        bool ans = true;
+
+        // Empty list
+        if(curr == NULL){
+            return ans;
+        }
+
+        // Makes a new list but in reverse
+        reverse->next = NULL;
+        while(curr != NULL){
+            prev = reverse;
+            reverse->val = curr->val;
+            reverse = new ListNode;
+            reverse->next = prev;
+            curr = curr->next;
+        }
+
+        // Moves through list and reverse to compare
+        curr = head;
+        reverse = reverse->next;
+        while(reverse != NULL){
+            if(curr->val != reverse->val){
+                return false;
+            }
+
+            curr = curr->next;
+            reverse = reverse->next;
+        }
 
         return ans;
     }
@@ -51,9 +80,29 @@ public:
         2nd Solution:
             This wasn't my solution. It was taken from the discussion board as 
             I was trying to figure out a more efficient / better solution. 
-            This beat 98.23% solutions
+            This beat 54.44% solutions
     */
-    bool B(ListNode*list ) {
+    ListNode* tmp;
+    
+    bool B(ListNode* head) {
+        tmp = head;
+        return B_helper(head);
+    }
+
+    bool B_helper(ListNode* node){
+        bool flag;
+        bool check;
+
+        if(node == NULL){
+            return true;
+        }
+
+        flag = B_helper(node->next);
+        check = (node->val == tmp->val);
+
+        tmp = tmp->next;
+
+        return flag && check;
 
     }
 
@@ -63,43 +112,34 @@ void printList(ListNode* root);
 
 int main(){
     // Input
-    int arr1[3] = {1,2,4};
-    int arr2[3] = {1,3,4};
-    int size1 = sizeof(arr1) / sizeof(arr1[0]);
-    int size2 = sizeof(arr2) / sizeof(arr2[0]);
+    int arr[4] = {1,2,2,1};
+    int size1 = sizeof(arr) / sizeof(arr[0]);
     
     // Set up
-    ListNode list1(arr1[0]);
-    ListNode list2(arr2[0]);
-    ListNode* curr1 = &list1;
-    ListNode* curr2 = &list2;
-    ListNode* k;
+    ListNode list(arr[0]);
+    ListNode* curr = &list;
+    bool k;
     Solution Sol;
 
 
     for(int i = 1; i < size1; i++){ 
-        curr1->next = new ListNode(arr1[i]);
-        curr1 = curr1->next;
+        curr->next = new ListNode(arr[i]);
+        curr = curr->next;
     }
     
-    for(int i = 1; i < size2; i++){ 
-        curr2->next = new ListNode(arr2[i]);
-        curr2 = curr2->next;
-    }
-    
-    printf("Pre Merge\n");
-    printList(&list1);
-    printList(&list2);
+    printf("Original\n");
+    printList(&list);
     printf("\n\n");
 
-
-
     // Sends node to solutions
-    k = Sol.A(&list1, &list2);    
+    k = Sol.A(&list);    
     
 
-    printf("Post Merge\n");
-    printList(k);
+    if(k){
+        printf("True\n");
+    } else {
+        printf("False\n");
+    }
     printf("\n\n");
 
 
