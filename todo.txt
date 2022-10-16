@@ -1,3 +1,8 @@
+notes:
+	convert onenote files to vim / bash commands. Maybe convert over to README files on github
+
+
+
 Making Vector Class:	Comment cherno code
 
 

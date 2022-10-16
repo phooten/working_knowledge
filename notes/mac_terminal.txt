@@ -8,4 +8,19 @@ Color Theme:
 
 
         
+PS1 -> AKA prompt. This is the preface before terminal typing.
+
+
+
+locations:
+	~/.bashrc
+	~/.bash_config
+	
+
+
+
+
+
+
+
 
