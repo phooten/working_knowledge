@@ -1,0 +1,2 @@
+. "~/.bashrc"
+# [ -f "~.bashrc" ] && . "~/.bashrc"
