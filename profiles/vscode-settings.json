@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Monokai Dimmed",
+    "C_Cpp.updateChannel": "Insiders",
+    "terminal.integrated.ignoreProcessNames": [
+        // "starship",
+        // "oh-my-posh",
+        // "bash"
+    ],
+    "terminal.integrated.localEchoStyle": "dim",
+
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "editor.renderWhitespace": "all",
+    
+    "editor.rulers": [80,120],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#3284cb"
+    }
+}
