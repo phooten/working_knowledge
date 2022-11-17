@@ -12,6 +12,7 @@ alias source.bashrc="source ~/.bashrc"
 
 # Settings
 alias python="python3"
+#alias find="find ."
 
 # TIME: \[\e[31m\]\D{%c}\[\e[0m\]
 # USER: [\[\e[1;43m\]\u\[\e[0m\]@\H]
