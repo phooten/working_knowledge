@@ -34,12 +34,12 @@ if [[ "$#" -eq 0 ]]; then
     case ${SELECTION} in
         1)
             INPUT=".bashrc"
-            DEST_PATH="/Users/${ME}"
+            DEST_PATH="/Users/${ME}/"
             ;;
 
         2)
             INPUT=".bash_profile"
-            DEST_PATH="~/"
+            DEST_PATH="/Users/${ME}/"
             ;;
 
         *)
@@ -58,7 +58,8 @@ else
 fi
 
 
-#TARGET=${DEST_PATH}${INPUT}
+TARGET=${DEST_PATH}${INPUT}
+#TODO: Find out why "~/" doesn't work here.
 if [ ! -f $TARGET ]; then
     echo "$TARGET does not exist. Exiting script."
     exit 1
