@@ -1,0 +1,7 @@
+
+brew -> library manager
+cmake
+
+python3
+
+
