@@ -1,22 +1,33 @@
 # soucre ~/.bashrc to update changes
 
-# Navigation:
-alias me="cd ~/"
-alias me.code="cd ~/bin/code"
-alias me.profiles="cd ~/bin/code/working_knowledge/profiles; echo \"Run './update_profile.sh' to update changes.\""
-# alias me.edit.settings="cd ~/bin/code/working_knowledge/profile; code .; echo \"Run .update_profile.sh script.\""
 
-# Utility:
-alias la="ls -lra"
-alias source.bashrc="source ~/.bashrc"
 
-# Settings
-alias python="python3"
-#alias find="find ."
+# ALIAS
+    # Navigation:
+    alias me="cd ~/"
+    alias mecode="cd ~/bin/code"
+    alias meprofiles="cd ~/bin/code/working_knowledge/profiles; echo \"Run './update_profile.sh', then 'sbash' to update changes.\""
 
-# TIME: \[\e[31m\]\D{%c}\[\e[0m\]
-# USER: [\[\e[1;43m\]\u\[\e[0m\]@\H]
-#PS1="\[\e[36m\]\w\[\e[0m\]$ "
+    # Utility:
+    alias la="ls -lra"
+    alias sbashrc="source ~/.bashrc"
+    alias vbashrc="vim ~/bin/code/working_knowledge/profiles/.bashrc"
+    
+    #alias ubashrc="xargs 1 | ~/bin/code/working_knowledge/profiles/update_profile.sh; sleep(1); sbashrc"
+
+    # Settings
+    alias python="python3"
+
+
+
+# Terminal Colors:
+#   RESOURCES:
+#       - https://geoff.greer.fm/lscolors/
+export CLICOLOR=1
+
+
+
+# PROMPTS:
+#TIME: \[\e[31m\]\D{%c}\[\e[0m\]
+#USER: [\[\e[1;43m\]\u\[\e[0m\]@\H]
 PS1="\[\e[36m\]\w\n\[\e[0m\]$ "
-
-

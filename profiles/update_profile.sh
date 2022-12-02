@@ -74,6 +74,6 @@ cp $FILE $TARGET
 #cp .bashrc Users/phoot/.bashrc
 
 # TODO: Figure out how to source from this script
-echo "Run 'source $TARGET' to update current session."
+echo "Run 'source $TARGET' OR 'sbashrc' to update current session."
 # source ~/${FILE}
 # exec bash
