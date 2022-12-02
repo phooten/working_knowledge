@@ -22,23 +22,33 @@ echo
 echo
 
 # Checks arguments
+BRC=".bashrc"
+BPR=".bash_profile"
+VRC=".vimrc"
+
 if [[ "$#" -eq 0 ]]; then
 
     # Menu if no input from user
     echo "Select a file to update:"
-    echo "    1: .bashrc"
-    echo "    2: .bash_profile"
+    echo "    1: ${BRC}"
+    echo "    2: ${BPR}"
+    echo "    3: ${VRC}"
     echo
     read SELECTION
 
     case ${SELECTION} in
         1)
-            INPUT=".bashrc"
+            INPUT=${BRC}
             DEST_PATH="/Users/${ME}/"
             ;;
 
         2)
-            INPUT=".bash_profile"
+            INPUT=${BPR}
+            DEST_PATH="/Users/${ME}/"
+            ;;
+
+        3)
+            INPUT=${VRC}
             DEST_PATH="/Users/${ME}/"
             ;;
 
