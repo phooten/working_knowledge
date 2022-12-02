@@ -24,6 +24,8 @@
 #   RESOURCES:
 #       - https://geoff.greer.fm/lscolors/
 export CLICOLOR=1
+export LSCOLORS=DxFxCxFxBxegedabagacad
+export GREP_OPTIONS='--color=auto'
 
 
 
