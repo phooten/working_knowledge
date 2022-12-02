@@ -1,7 +1,3 @@
-. "~/.bashrc"
-# [ -f "~.bashrc" ] && . "~/.bashrc"
-
-
 # This came from: 
 #   https://treehouse.github.io/installation-guides/mac/homebrew
 #   running: 
@@ -11,3 +7,9 @@
 #       eval "$(/opt/homebrew/bin/brew shellenv)"
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+. "~/.bashrc"
+source ~/.bashrc
+# [ -f "~.bashrc" ] && . "~/.bashrc"
+

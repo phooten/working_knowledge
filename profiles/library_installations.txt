@@ -1,7 +1,12 @@
 
-brew -> library manager
-cmake
+cmake   ( used for building c++ )
+
+jupyter ( jupyter used for python )
+    location-mac: run ' jupyter --paths '
 
 python3
-
-
+    brew    ( library manager )
+    pip:
+        location-mac: /opt/homebrew/lib/python3.10/site-packages
+        XlsxWriter:
+            location-mac: /opt/homebrew/lib/python3.10/site-packages/
