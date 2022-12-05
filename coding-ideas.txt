@@ -1,0 +1,6 @@
+Project / Coding ideas:
+	12/4/2022		Machine to roll dice constantly and create a distrobution.
+					This could include computer visionicker_list = tddmp_tick_list
+
+
+
