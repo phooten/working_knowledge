@@ -14,7 +14,19 @@
 ME=$( whoami )
 ME_PATH=$( pwd )
 
-TARGET="/Users/${ME}/.bashrc"
+# Checks operating system
+OS=$(uname -r)
+if [ "${OS}" == "5.10.16.3-microsoft-standard-WSL2" ]; then
+    PREFACE="home"
+    # echo "Valid OS: ${OS}"
+# elif [ OS == "" ]
+
+else
+    PREFACE="User"
+    echo "OS isn't valid: $(uname -r) = \"${OS}\""
+fi
+
+TARGET="/${PREFACE}/${ME}/.bashrc"
 echo "Starting:     $0"
 echo "User running: ${ME}"
 echo "From:         ${ME_PATH}"
@@ -39,17 +51,17 @@ if [[ "$#" -eq 0 ]]; then
     case ${SELECTION} in
         1)
             INPUT=${BRC}
-            DEST_PATH="/Users/${ME}/"
+            DEST_PATH="/${PREFACE}/${ME}/"
             ;;
 
         2)
             INPUT=${BPR}
-            DEST_PATH="/Users/${ME}/"
+            DEST_PATH="/${PREFACE}/${ME}/"
             ;;
 
         3)
             INPUT=${VRC}
-            DEST_PATH="/Users/${ME}/"
+            DEST_PATH="/${PREFACE}/${ME}/"
             ;;
 
         *)
