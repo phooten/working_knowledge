@@ -9,7 +9,9 @@
     alias meprofiles="cd ~/bin/code/working_knowledge/profiles; echo \"Run './update_profile.sh', then 'sbash' to update changes.\""
 
     # Utility:
+    alias ls="ls --color=auto"
     alias la="ls -lra"
+    alias ll="ls -l"
     alias sbashrc="source ~/.bashrc"
     alias vbashrc="vim ~/bin/code/working_knowledge/profiles/.bashrc"
     
