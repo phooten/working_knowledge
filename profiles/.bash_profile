@@ -9,7 +9,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
-. "~/.bashrc"
-source ~/.bashrc
-# [ -f "~.bashrc" ] && . "~/.bashrc"
+if [ -f ~/.bashrc ]; then 
+        . ~/.bashrc; 
+fi 
 

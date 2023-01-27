@@ -37,7 +37,7 @@ export GREP_OPTIONS='--color=auto'
 #DEFUALT: PS1="\[\e[36m\]\w\n\[\e[0m\]$ "
 # Bold Yellow: 	1;93 
 # Bold Cyan: 	1;36
-export PS1="\[\033[1;93m\]\u@\H: \w\n\[\033[1;36m\]\t Line:\#$ \[\033[0;37m\]"
+export PS1="\[\033[1;36m\]\u@\H: \w\n\[\033[1;36m\]\t Line:\#$ \[\033[0;37m\]"
 
 
 

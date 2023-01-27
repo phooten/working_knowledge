@@ -15,15 +15,18 @@ ME=$( whoami )
 ME_PATH=$( pwd )
 
 # Checks operating system
-OS=$(uname -r)
-if [ "${OS}" == "5.10.16.3-microsoft-standard-WSL2" ]; then
-    PREFACE="home"
-    # echo "Valid OS: ${OS}"
-# elif [ OS == "" ]
+OS=$(uname -s)
+if [ "${OS}" == "" ]; then
+	# Windows, WSL2
+    PREFACE="UPDATE THE OS VERSION OF MAC"
+
+elif [ ${OS} == "Darwin" ]; then
+	# Mac
+	PREFACE="Users"
 
 else
-    PREFACE="User"
-    echo "OS isn't valid: $(uname -r) = \"${OS}\""
+    echo "OS isn't valid: $(uname -s) = \"${OS}\""
+	exit 1
 fi
 
 TARGET="/${PREFACE}/${ME}/.bashrc"
@@ -39,7 +42,6 @@ BPR=".bash_profile"
 VRC=".vimrc"
 
 if [[ "$#" -eq 0 ]]; then
-
     # Menu if no input from user
     echo "Select a file to update:"
     echo "    1: ${BRC}"
@@ -48,36 +50,37 @@ if [[ "$#" -eq 0 ]]; then
     echo
     read SELECTION
 
-    case ${SELECTION} in
-        1)
-            INPUT=${BRC}
-            DEST_PATH="/${PREFACE}/${ME}/"
-            ;;
-
-        2)
-            INPUT=${BPR}
-            DEST_PATH="/${PREFACE}/${ME}/"
-            ;;
-
-        3)
-            INPUT=${VRC}
-            DEST_PATH="/${PREFACE}/${ME}/"
-            ;;
-
-        *)
-            echo "$SELECTION is not a valid selection."
-            ;;
-    esac
 
 elif [[ "$#" -eq 1 ]]; then
-    # TODO: Check if input file exists
-    read INPUT
-    echo "User Input: $INPUT"
+    SELECTION=$1
+	#echo "User Input: $SELECTION"
 
 else
     echo "$# arguments not allowed"
 
 fi
+
+
+case ${SELECTION} in
+    1)
+        INPUT=${BRC}
+        DEST_PATH="/${PREFACE}/${ME}/"
+        ;;
+
+    2)
+        INPUT=${BPR}
+        DEST_PATH="/${PREFACE}/${ME}/"
+        ;;
+
+    3)
+        INPUT=${VRC}
+        DEST_PATH="/${PREFACE}/${ME}/"
+        ;;
+
+    *)
+        echo "$SELECTION is not a valid selection."
+        ;;
+esac
 
 
 TARGET=${DEST_PATH}${INPUT}
@@ -93,9 +96,10 @@ echo
 echo "Copying '${ME_PATH}$FILE' to '$TARGET'"
 echo
 cp $FILE $TARGET
-#cp .bashrc Users/phoot/.bashrc
+
 
 # TODO: Figure out how to source from this script
 echo "Run 'source $TARGET' OR 'sbashrc' to update current session."
-# source ~/${FILE}
-# exec bash
+echo
+echo
+
