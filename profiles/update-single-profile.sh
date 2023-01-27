@@ -17,16 +17,16 @@ ME_PATH=$( pwd )
 # Checks operating system
 OS=$(uname -s)
 if [ "${OS}" == "" ]; then
-	# Windows, WSL2
+    # Windows, WSL2
     PREFACE="UPDATE THE OS VERSION OF MAC"
 
 elif [ ${OS} == "Darwin" ]; then
-	# Mac
-	PREFACE="Users"
+    # Mac
+    PREFACE="Users"
 
 else
     echo "OS isn't valid: $(uname -s) = \"${OS}\""
-	exit 1
+    exit 1
 fi
 
 TARGET="/${PREFACE}/${ME}/.bashrc"
@@ -53,7 +53,7 @@ if [[ "$#" -eq 0 ]]; then
 
 elif [[ "$#" -eq 1 ]]; then
     SELECTION=$1
-	#echo "User Input: $SELECTION"
+    #echo "User Input: $SELECTION"
 
 else
     echo "$# arguments not allowed"

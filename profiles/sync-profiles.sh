@@ -6,13 +6,13 @@
 # TODO: Figure out how to pass this as a variable
 # FLAG=""
 # if [ $# == 1 ] && [ $1 == "sh" ]; then
-#	FLAG=">/dev/null 2>&1"
+#    FLAG=">/dev/null 2>&1"
 # fi
 
 # argument checking
 if [ $# -ne 1 ] && [ $# -ne 0 ]; then
-	echo "Zero or one argument can be used."
-	exit 1
+    echo "Zero or one argument can be used."
+    exit 1
 fi
 FLAG=$1
 
@@ -25,21 +25,22 @@ echo "'v' as the argument. Note that no files will be"
 echo "sourced. This must be done manually."
 echo
 echo "usage:"
-echo "	1:	'./sync-profile.sh v'"
-echo "	2:	'./sync-profile.sh'"
+echo "    1:    './sync-profile.sh v'"
+echo "    2:    './sync-profile.sh'"
 echo
 echo "- - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "List to synced:"
-echo "		.bashrc"
-echo
+echo "        .bashrc"
+echo "        .vimrc"
+echo 
 echo "------------------------------------------------"
 echo
 echo
 
-for OPT in 1; do
-	if [ "$FLAG" = "v" ]; then
-		./update-single-profile.sh ${OPT} 
-	else
-		./update-single-profile.sh ${OPT} >/dev/null 2>&1
-	fi
+for OPT in 1 3; do
+    if [ "$FLAG" = "v" ]; then
+        ./update-single-profile.sh ${OPT} 
+    else
+        ./update-single-profile.sh ${OPT} >/dev/null 2>&1
+    fi
 done

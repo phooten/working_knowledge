@@ -11,7 +11,8 @@
     # Utility:
     alias ls="ls --color=auto"
     alias la="ls -lra"
-    alias ll="ls -ltra"
+    alias ll="ls -lr"
+    alias lt="ls -ltra"
     alias sbashrc="source ~/.bashrc"
     alias vbashrc="vim ~/bin/code/working_knowledge/profiles/.bashrc"
     
