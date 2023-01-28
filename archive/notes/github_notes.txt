@@ -1,8 +1,0 @@
-Notes:
-    rebase vs merge: 
-        https://www.youtube.com/watch?v=7Mh259hfxJg
-
-
-Organizations:
-    - https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
-

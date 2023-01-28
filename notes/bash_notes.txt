@@ -5,4 +5,8 @@ See what an alias is:
     type <command> -> type ll
     alias
 
+Environmental Variables:
+    'env'       to see all environmental variables
+    'export'    sets variables for the entire terminal session
+
 
