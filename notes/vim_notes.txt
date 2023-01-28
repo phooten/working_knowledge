@@ -1,0 +1,42 @@
+to disable the bell sound:
+    terminal ->  "vim ~/.inputrc" add  "set bell-style none"
+    vim      ->  "vim ~/.vimrc"   add  "set visualbellC"
+
+
+Utility:
+    Replace all tabs w/ spaces:
+        -> ':retab'
+        -> ':%s/\t/  /g'
+
+
+
+general
+    i   ->  insert at cursor
+    I   ->  insert at begining of the line
+    a   ->  insert after cursor
+    A   ->  insert at the end of the line
+    ctrl + [ OR esc -> exit insert mode
+
+
+
+navigation:
+    $   ->  end of line
+    0   ->  first character of line
+
+    h   ->  move left
+    j   ->  move down
+    k   ->  move up
+    l   ->  move right 
+
+    w   ->  move one word forward ( via alphanumeric - end on first letter )
+    W   ->  move one word forward ( via space - end on first letter)
+    e   ->  move one word forward ( via alphanumeric - end on last letter )
+    E   ->  move one word forward ( via space - end on last letter )
+    b   ->  move one word backwards ( via alphanumeric )
+    B   ->  move one word backwards ( via space )
+
+
+
+
+
+

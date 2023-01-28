@@ -1,0 +1,19 @@
+
+
+
+commands:
+    Change Default Shell Prompt:
+        export PS1='[\u ~]: '    
+        export PS1='\e[0;36m[\u ~]\$ \e[m : '
+        References:
+            https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+            https://access.redhat.com/solutions/505983#:~:text=PS1%20is%20a%20primary%20prompt,logs%20in%20using%20a%20terminal.
+
+
+Questions:
+    zShell
+        - What is this?
+
+
+
+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

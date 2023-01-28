@@ -1,0 +1,29 @@
+
+    Brave 
+        sudo apt install apt-transport-https curl gnupg
+        curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+        echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+        sudo apt update
+        sudo apt install brave-browser
+
+
+    WSL:
+        - "wsl -l -v" -> in powershell as admin to see what version of wsl
+
+        - To upgrade to wsl2 from wsl1: https://winaero.com/install-windows-subsystem-for-linux-2-in-windows-10/
+            - "wsl --set-version Ubuntu 2"
+
+        - If you're seeing 3 IP ADDRESSES (including 8.8.8.8) with: , you're probably on WSL 1 
+
+	xserver (VcXsrv):
+		- Helpful Links:
+			- Install xServer for WSL 2: https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242
+			- Install xServer for WSL 2: https://www.youtube.com/watch?v=4SZXbl9KVsw
+		- IP ADDRESS FOR WINDOWS MACHINE: cat /etc/resolv.conf
+			1: nameserver
+			2: nameserver
+			3: nameserver
+		- export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+
+
+

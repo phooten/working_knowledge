@@ -1,0 +1,8 @@
+
+
+
+See what an alias is:
+    type <command> -> type ll
+    alias
+
+

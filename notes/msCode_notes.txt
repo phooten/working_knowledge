@@ -1,0 +1,66 @@
+Goals:
+    -   Be able to build multiple files in a current folder from vs Code. Right 
+        now it works only if there is one .cpp file. Other wise I'm better off
+        using makefiles, which isn't bad, it would just be nice to do either. 
+
+
+
+Hotkeys:
+    ctrl + shift + b:   builds the program. 
+
+    ctrl + up/down:
+        Moves 5 lines at once. Coppied this into keybindings.json 
+            {
+                "key": "ctrl+up",
+                "command": "cursorMove",
+                "args": {
+                    "to": "up",
+                    "by": "line",
+                    "value": 10
+                },
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "ctrl+down",
+                "command": "cursorMove",
+                "args": {
+                    "to": "down",
+                    "by": "line",
+                    "value": 10
+                },
+                "when": "editorTextFocus"
+            },
+
+
+
+Tips:
+    Compiilers:
+        There are 9 compilers to choose from including: g++, cpp, gcc etc. which 
+        are mostly in /usr/bin or /bin. to configure the default in msvs Code, 
+        got to Terminal > Configure Default Build Task, and select the compiler.
+        You should be able to use the hot key and then press "f5" to run the 
+        executable. 
+    
+    files.exclude:
+        files -> preferences -> settings -> seach: "file exclude"
+        - I have hidden:
+                .bash_history
+                .bash_logout
+                .bashrc
+                .cache
+                .gitconfig
+                .landscape
+                .local
+                .motd_shown
+                .profile
+                .ssh
+                .sudo_as_admin_successful
+                .viminfo
+                .vs-liveshare-keychain
+                .vscode-server
+                .wget-hsts
+                supplimentalGithub
+
+    Task.json:
+
+
