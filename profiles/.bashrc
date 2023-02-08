@@ -10,8 +10,8 @@
 
     # Utility:
     alias ls="ls --color=auto"
-    alias la="ls -lra"
-    alias ll="ls -lr"
+    alias la="ls -la"
+    alias ll="ls -l"
     alias lt="ls -ltra"
     alias sbashrc="source ~/.bashrc"
     alias vbashrc="vim ~/bin/code/working_knowledge/profiles/.bashrc"
