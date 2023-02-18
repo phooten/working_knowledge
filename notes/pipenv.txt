@@ -1,0 +1,13 @@
+Notes:
+    pipfile is in TOML
+
+
+Commands:
+    pipenv graph
+    pipenv uninstall --all
+
+
+references:
+- https://realpython.com/python-toml/
+- https://realpython.com/python-virtual-environments-a-primer/
+- https://realpython.com/pipenv-guide/
