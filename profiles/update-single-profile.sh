@@ -8,7 +8,7 @@
 #   
 #   
 
-
+echo "This file only updates one file at a time. \"sync-profiles.sh\" syncs all profiles."
 
 # General Setup
 ME=$( whoami )
@@ -16,16 +16,16 @@ ME_PATH=$( pwd )
 
 # Checks operating system
 OS=$(uname -s)
-if [ "${OS}" == "" ]; then
+if [ "${OS}" == "Linux" ]; then
     # Windows, WSL2
-    PREFACE="UPDATE THE OS VERSION OF MAC"
+    PREFACE="home"
 
 elif [ ${OS} == "Darwin" ]; then
     # Mac
     PREFACE="Users"
 
 else
-    echo "OS isn't valid: $(uname -s) = \"${OS}\""
+    echo "This OS ( $(uname -s) ) isn't valid."
     exit 1
 fi
 
@@ -85,7 +85,7 @@ esac
 
 TARGET=${DEST_PATH}${INPUT}
 #TODO: Find out why "~/" doesn't work here.
-if [ ! -f $TARGET ]; then
+if [[ ! -f $TARGET ]]; then
     echo "$TARGET does not exist. Exiting script."
     exit 1
 fi
@@ -97,9 +97,4 @@ echo "Copying '${ME_PATH}$FILE' to '$TARGET'"
 echo
 cp $FILE $TARGET
 
-
-# TODO: Figure out how to source from this script
-echo "Run 'source $TARGET' OR 'sbashrc' to update current session."
-echo
-echo
 
