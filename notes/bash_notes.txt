@@ -1,12 +1,11 @@
 
 
 
-See what an alias is:
-    type <command> -> type ll
-    alias
+See what an alias / keyword is:
+    'alias'             -> shows all aliases
+    'type <command>'    -> shows if a word is a key word / alias
 
 Environmental Variables:
-    'env'       to see all environmental variables
-    'export'    sets variables for the entire terminal session
-
+    'env'                   -> to see all environmental variables
+    'export <name>=<value'  -> sets variables for the entire terminal session
 
