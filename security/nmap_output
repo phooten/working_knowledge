@@ -1,0 +1,14 @@
+# Nmap 7.93 scan initiated Wed Apr 26 19:45:38 2023 as: nmap -sn -oG nmap_output 10.0.0.0/24
+Host: 10.0.0.1 ()	Status: Up
+Host: 10.0.0.42 ()	Status: Up
+Host: 10.0.0.44 ()	Status: Up
+Host: 10.0.0.46 ()	Status: Up
+Host: 10.0.0.63 ()	Status: Up
+Host: 10.0.0.69 ()	Status: Up
+Host: 10.0.0.156 ()	Status: Up
+Host: 10.0.0.204 ()	Status: Up
+Host: 10.0.0.214 ()	Status: Up
+Host: 10.0.0.216 ()	Status: Up
+Host: 10.0.0.252 ()	Status: Up
+Host: 10.0.0.254 ()	Status: Up
+# Nmap done at Wed Apr 26 19:45:41 2023 -- 256 IP addresses (12 hosts up) scanned in 2.96 seconds
