@@ -26,13 +26,35 @@ ShowTemplate() { echo "
 #
 #   PURPOSE:    None.
 #
-#   PARAMETERS: None.
+#   USAGE:      ${FILE_NAME}
+#               ${FILE_NAME} help
+#               ${FILE_NAME} debug
 #
 #   MODIFICATION HISTORY:
 #       ${NOW}  ${ME}  Original creation.
 #
 ###############################################################################
 \">&2; exit; }; [ \"\$1\" = \"help\" ] && usage
+
+
+# Common lines for consisancy
+LINE_A=\\
+\"==============================================================================\"
+LINE_B=\\
+\"------------------------------------------------------------------------------\"
+
+
+# Starting script message
+echo \"\${LINE_A}\"
+echo \"Starting script: \${BASH_SOURCE}\"
+echo
+
+
+
+
+echo
+echo \"End of script.\"
+echo \"\${LINE_A}\"
 "
 
 
