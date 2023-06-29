@@ -1,1 +1,3 @@
-Function Pointers -> https://www.cprogramming.com/tutorial/function-pointers.html
+Function Pointers   -> https://www.cprogramming.com/tutorial/function-pointers.html
+Polymorphism        -> https://www.cprogramming.com/tutorial/function-pointers.html
+Virtual Functions   -> https://www.cprogramming.com/tutorial/function-pointers.html
