@@ -10,53 +10,66 @@ using namespace std;
 class Solution {
 public:
     int myAtoi( string s ) {
+
+        if ( s.size() == 0 )
+        {
+            return 0;
+        }
+
         // Variables
         double ans_doub = 0.0;
         int ans = 0;
         int int_offset = 48;    // ascii 0 starts at 48
         bool neg = false;
+        bool num_start = false;
         string tmp = "";
-
-        // Find blank until first -/+
-        // find -/+ until first #
-        // find # until first A/Z
-
+        char last = ' ';
 
         for( int curr = 0; curr < s.size(); curr++ )
         {
+            cout << "curr: " << s[curr] << endl;
+            if( num_start && s[curr] != ' ' )
+            {
+                cout << "line 32" << endl;
+                if( s[curr] < '0' || s[curr] > '9' )
+                {
+                    cout << "Not a number" << endl;
+                    break;
+                }
+
+                if( s[curr] == '-' )
+                {
+                    neg = true;
+                    cout << "-" << endl;
+                }
+                else if( s[curr] == '+' )
+                {
+                    neg = false;
+                    cout << "+" << endl;
+                }
+
+                tmp += s[curr];
+                cout << tmp << endl;
+
+            }
+
             if( s[curr] == ' ' )
             {
+                cout << "Space" << endl;
                 continue;
             }
-            else if( s[curr] == '-' )
+
+
+            if( s[curr] >= '0' && s[curr] <= '9' )
             {
-                neg = true;
+                num_start = true;
+                cout << "num = true" << endl;
             }
-            else if( s[curr] >= '0' && s[curr] <= '9' )
-            {
-                tmp += s[curr];
-            }
-            else
-            {
-                cout << "Issue: " << s[curr] << endl;
-            }
+            curr++;
         }
 
-        for( int i = 0; i < tmp.size(); i++ )
-        {
-            double x = (int)tmp[tmp.size() - i - 1] - int_offset;
-            ans_doub += ( x * ( pow(10, i) ) );
-        }
-        cout << "ans_doub: " << ans_doub << endl;
 
-        if( neg )
-        {
-            ans_doub *= -1;
-        }
-        else
-        {
-            
-        }
+
         ans = (int)ans_doub;
 
         cout << endl << "Tmp: " << tmp << endl;
