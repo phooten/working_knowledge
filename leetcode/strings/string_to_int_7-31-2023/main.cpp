@@ -4,6 +4,7 @@
 #include<iostream>
 #include<cstring>
 #include<locale>
+#include<cmath>
 
 using namespace std;
 
@@ -22,53 +23,99 @@ public:
         int int_offset = 48;    // ascii 0 starts at 48
         bool neg = false;
         bool num_start = false;
-        string tmp = "";
         char last = ' ';
+
+        // Instructions:
+        //  1. Read in any leading white space
+        //  2. Check if next character is - or + 
+        //  3. Read in all digits until non-digit. Ignore anything after
+        //  4. Read in leading 0's
+        //  5. If out of range, clamp to an integer
+        bool leading_space = true;
+        bool leading_sign = true;
+        bool positive = true;
+        bool digits = true;
+        string tmp = "";
 
         for( int curr = 0; curr < s.size(); curr++ )
         {
-            cout << "curr: " << s[curr] << endl;
-            if( num_start && s[curr] != ' ' )
+            // Checks for the space
+            if( s[curr] == ' ' && leading_space == true )
             {
-                cout << "line 32" << endl;
-                if( s[curr] < '0' || s[curr] > '9' )
+                //cout << "Space. Continuing.\n" << endl;
+                continue;
+            }
+            else
+            {
+                leading_space = false;
+
+                // Checks for the sign
+                if( leading_sign == true )
                 {
-                    cout << "Not a number" << endl;
+                    leading_sign = false;
+                    if( s[curr] == '-' )
+                    {
+                        cout << "Negative." << endl;
+                        positive = false;
+                        continue;
+                    }
+                    else if( s[curr] == '+' )
+                    {
+                        cout << "Positive." << endl;
+                        continue;
+                    }
+                    else
+                    {
+                        cout << "No sign. Assuming Positive." << endl;
+                    }
+
+                }
+
+                // Digits
+                if( digits == true )
+                {
+                    if( s[curr] >= '0' && s[curr] <= '9' )
+                    {
+                        tmp += s[curr];
+                    }
+                    else
+                    {
+                        digits = false;
+                    }
+                }
+                else
+                {
+                    cout << "end of parsing." << endl;
                     break;
                 }
 
-                if( s[curr] == '-' )
-                {
-                    neg = true;
-                    cout << "-" << endl;
-                }
-                else if( s[curr] == '+' )
-                {
-                    neg = false;
-                    cout << "+" << endl;
-                }
-
-                tmp += s[curr];
-                cout << tmp << endl;
-
+                // Prints out the remaining letters
+                cout << endl << "New Tmp: " << tmp << endl;
             }
-
-            if( s[curr] == ' ' )
-            {
-                cout << "Space" << endl;
-                continue;
-            }
-
-
-            if( s[curr] >= '0' && s[curr] <= '9' )
-            {
-                num_start = true;
-                cout << "num = true" << endl;
-            }
-            curr++;
         }
 
+        for( int i = 0; i < tmp.size(); i++ )
+        {
+            int num = pow( 10, tmp.size() - i - 1 ) * ( tmp[i] - '0' );
+            cout << "Number: " << num << endl;
+            cout << "ans_doub = " << ans_doub << endl;
+            ans_doub += num;
+        }
 
+        if( ( ans_doub > pow(2, 31) - 1 ) && ( positive == true ) )
+        {
+            ans_doub = pow(2, 31) - 1;
+        }
+        else if( ( ans_doub > pow( 2, 31 ) ) && ( positive == false ) )
+        {
+            ans_doub = pow(2, 31);
+        }
+
+        // Make correct sign
+        if( ! positive )
+        {
+            ans_doub *= -1;
+        }
 
         ans = (int)ans_doub;
 
@@ -80,10 +127,14 @@ public:
 
 int main()
 {
-    string s1 = "   -42";
+    string s1 = "";
+    s1 = "42";
+    s1 = "   -42";
+    s1 = "4193 with words";
+    s1 = "-91283472332";
 
     Solution test;
     int ans = test.myAtoi( s1 );
 
-    cout << endl << endl << "answer: " << ans << endl << endl << endl;
+    cout << endl << "answer: " << ans << endl << endl << endl;
 }
