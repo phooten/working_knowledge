@@ -23,7 +23,7 @@ flags:
 USAGE_TXT
 }
 
-print_selection() 
+print_selection()
 {
     # printf "\n\n-----------------------------------------------------\n"
     printf "\nUser Input:\n"
@@ -95,7 +95,7 @@ case ${TYPE} in
         # for id in $IPCS_S; do
         #   ipcrm -s $id;
         # done
-        ;; 
+        ;;
     msgq)
         printf "msgq"
         # for id in $IPCS_Q; do
