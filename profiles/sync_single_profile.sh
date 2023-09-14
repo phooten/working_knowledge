@@ -8,7 +8,10 @@
 #   
 #   
 
-echo "This file only updates one file at a time. \"sync-profiles.sh\" syncs all profiles."
+echo
+echo "This script only updates one file at a time based on selection below. It takes a file in this directory and copies"
+echo "it to your local machine \"$(uname -n)\" for \"$(whoami)\". \"sync_all_profiles.sh\" syncs all profiles."
+echo
 
 # General Setup
 ME=$( whoami )
