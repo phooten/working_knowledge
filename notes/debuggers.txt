@@ -1,0 +1,4 @@
+pdb:
+---- to run 'python -m pdb <script>'
+---- https://realpython.com/python-debugging-pdb/
+---- 
