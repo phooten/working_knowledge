@@ -1,0 +1,15 @@
+Organization:
+    typical structure:
+
+        project
+            ├── antigravity
+            │   ├── __init__.py
+            │   └── antigravity.py
+            └── test
+                ├── __init__.py
+                └── test_antigravity.py
+
+    __init__.py files:
+        *   used to make a directory as a python package. It's used to be a required part of the package
+        *   
+
