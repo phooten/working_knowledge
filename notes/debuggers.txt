@@ -1,4 +1,19 @@
-pdb:
----- to run 'python -m pdb <script>'
----- https://realpython.com/python-debugging-pdb/
----- 
+pdb
+----------------------------------------------------
+Overview:
+    python debugger
+
+
+Quickstart:
+    python -m pdb <script>
+
+    Helpful Commands
+        pp inspect.getmembers( <object> )
+            Available attributes with the values
+
+        pp dir( <object )
+            Available attributes
+
+
+References:
+    https://realpython.com/python-debugging-pdb/
