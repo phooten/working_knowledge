@@ -4,7 +4,7 @@
         "prefix" : "method-header",
                             "body" : [
                                 "/**",
-                                "* @purpose:    "
+                                "* @purpose:    ",
                                 "* ",
                                 "* @param:      ",
                                 "* @return:     ",

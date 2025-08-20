@@ -1,3 +1,7 @@
+###############################################################################
+# .bash_profile templat
+###############################################################################
+
 # This came from: 
 #   https://treehouse.github.io/installation-guides/mac/homebrew
 #   running: 

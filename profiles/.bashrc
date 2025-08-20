@@ -1,12 +1,11 @@
-# soucre ~/.bashrc to update changes
-
-
+###############################################################################
+# .bashrc template
+###############################################################################
 
 # ALIAS
     # Navigation:
     alias me="cd ~/"
-    alias mecode="cd ~/bin/code"
-    alias meprofiles="cd ~/bin/code/working_knowledge/profiles; echo \"Run './update_profile.sh', then 'sbash' to update changes.\""
+    alias mecode="cd ~/code"
 
     # Utility:
     alias ls="ls --color=auto"
@@ -16,8 +15,6 @@
     alias sbashrc="source ~/.bashrc"
     alias vbashrc="vim ~/bin/code/working_knowledge/profiles/.bashrc"
     
-    #alias ubashrc="xargs 1 | ~/bin/code/working_knowledge/profiles/update_profile.sh; sleep(1); sbashrc"
-
     # Settings
     alias python="python3"
 

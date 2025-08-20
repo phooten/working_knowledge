@@ -1,7 +1,0 @@
-
-.bashrc:
-    https://github.com/rkirti/bashrc/blob/master/.shells/prompt
-
-
-
-
