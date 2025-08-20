@@ -1,7 +1,8 @@
-# REPO TODOS:
-1. Update the remove icprm script
-2. Add script to run checks on files. Maybe I should look at something like SonarQube?
-    i.e.
-        - check for tabs vs spaces. 
-        - check for space at end of line.
-        - spell check. 
+# Overview
+Repository exists to allow quick access to my default profiles, scripts, notes, etc.
+
+
+# TODO
+1. Move leet code into a private gitlab repo.
+2. Clean up archive.
+3. Organize scripts better.
