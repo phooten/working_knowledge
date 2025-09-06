@@ -17,7 +17,8 @@ alias lt="ls -ltra"
 
 # Settings
 alias python="python3"
-
+alias py="python"
+export PYTHONPYCACHEPREFIX=/tmp/pycache
 
 # ==============================================================================
 # Aesthetics
