@@ -14,3 +14,6 @@ hi ColorColumn ctermbg=lightgrey guibg=blue
 "highlight ColorColumn ctermbg=0 guibg=lightgrey
 "highlight ColorColumn ctermbg=1 guibg=lightgrey
 
+" Turn off bell sound
+set visualbell
+set t_vb=
