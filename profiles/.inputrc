@@ -1,7 +1,0 @@
-
-
-# on Windows / wsl, this has to be changed on command prompt drop down settings
-# do not bell on tab-completion
-#set bell-style none
-set bell-style visible
-
